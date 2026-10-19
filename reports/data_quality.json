@@ -1,0 +1,245 @@
+{
+  "dataset_version": "meiyu-493c58d793af9bf4",
+  "status_label": "ready_offline_fixed_lead",
+  "summary": {
+    "sample_count": 636,
+    "candidate_window_count": 670,
+    "configured_nominal_day_window_count": 731,
+    "paired_window_count": 636,
+    "quarantined_record_count": 4681,
+    "observation_reference_count": 1154,
+    "ssod_quarantine_measurement_code_counts": {
+      "I": 58
+    },
+    "ssod_quarantine_reason_counts": {
+      "missing_precipitation_sentinel": 58,
+      "no_precipitation_data_or_occurrence_record": 58
+    },
+    "missing_reference_day_count": 61,
+    "unpaired_candidate_window_count": 34
+  },
+  "monthly": [
+    {
+      "month": "2024-01",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 0
+    },
+    {
+      "month": "2024-02",
+      "configured_nominal_days": 29,
+      "candidate_windows": 29,
+      "missing_candidate_windows": 0,
+      "paired_windows": 26
+    },
+    {
+      "month": "2024-03",
+      "configured_nominal_days": 31,
+      "candidate_windows": 29,
+      "missing_candidate_windows": 2,
+      "paired_windows": 29
+    },
+    {
+      "month": "2024-04",
+      "configured_nominal_days": 30,
+      "candidate_windows": 30,
+      "missing_candidate_windows": 0,
+      "paired_windows": 30
+    },
+    {
+      "month": "2024-05",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2024-06",
+      "configured_nominal_days": 30,
+      "candidate_windows": 30,
+      "missing_candidate_windows": 0,
+      "paired_windows": 30
+    },
+    {
+      "month": "2024-07",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2024-08",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2024-09",
+      "configured_nominal_days": 30,
+      "candidate_windows": 27,
+      "missing_candidate_windows": 3,
+      "paired_windows": 27
+    },
+    {
+      "month": "2024-10",
+      "configured_nominal_days": 31,
+      "candidate_windows": 21,
+      "missing_candidate_windows": 10,
+      "paired_windows": 21
+    },
+    {
+      "month": "2024-11",
+      "configured_nominal_days": 30,
+      "candidate_windows": 12,
+      "missing_candidate_windows": 18,
+      "paired_windows": 12
+    },
+    {
+      "month": "2024-12",
+      "configured_nominal_days": 31,
+      "candidate_windows": 8,
+      "missing_candidate_windows": 23,
+      "paired_windows": 8
+    },
+    {
+      "month": "2025-01",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2025-02",
+      "configured_nominal_days": 28,
+      "candidate_windows": 28,
+      "missing_candidate_windows": 0,
+      "paired_windows": 28
+    },
+    {
+      "month": "2025-03",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2025-04",
+      "configured_nominal_days": 30,
+      "candidate_windows": 30,
+      "missing_candidate_windows": 0,
+      "paired_windows": 30
+    },
+    {
+      "month": "2025-05",
+      "configured_nominal_days": 31,
+      "candidate_windows": 29,
+      "missing_candidate_windows": 2,
+      "paired_windows": 29
+    },
+    {
+      "month": "2025-06",
+      "configured_nominal_days": 30,
+      "candidate_windows": 30,
+      "missing_candidate_windows": 0,
+      "paired_windows": 30
+    },
+    {
+      "month": "2025-07",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2025-08",
+      "configured_nominal_days": 31,
+      "candidate_windows": 29,
+      "missing_candidate_windows": 2,
+      "paired_windows": 29
+    },
+    {
+      "month": "2025-09",
+      "configured_nominal_days": 30,
+      "candidate_windows": 29,
+      "missing_candidate_windows": 1,
+      "paired_windows": 29
+    },
+    {
+      "month": "2025-10",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    },
+    {
+      "month": "2025-11",
+      "configured_nominal_days": 30,
+      "candidate_windows": 30,
+      "missing_candidate_windows": 0,
+      "paired_windows": 30
+    },
+    {
+      "month": "2025-12",
+      "configured_nominal_days": 31,
+      "candidate_windows": 31,
+      "missing_candidate_windows": 0,
+      "paired_windows": 31
+    }
+  ],
+  "findings": [
+    {
+      "title": "SSOD 同站完整报告只能作为参考观测",
+      "severity": "high",
+      "evidence": "CHI0000ZSHC/XIAOSHAN 有 670 条 D/F/G/24 完整层；另有 58 条隔离记录，其中 H=0（有发生记录但总量为零或无法计算），I=58（未报告降水数据及发生记录）。",
+      "impact": "可做 offline_fixed_lead 回测，但不能宣称高精度国家站真值。",
+      "remediation": "保留 reference_kind=ssod_derived_station，并在结果中披露低报和缺测风险。"
+    },
+    {
+      "title": "ISD AA1-AA4 没有形成可信的完整24小时真值",
+      "severity": "high",
+      "evidence": "24小时字段条件码计数为 {'9': 2758, '3': 1818, '2': 13}；condition=3/9 表示累计未结束或缺失，trace 不等于精确0mm。",
+      "impact": "ISD 记录只能留在隔离审计表，不作为主表观测标签。",
+      "remediation": "等待明确 condition=4 且质量码可接受的记录，再单独设计配对规则。"
+    },
+    {
+      "title": "GHCN 日降水仍是跨站参考",
+      "severity": "blocking",
+      "evidence": "CHM00058457 是 Hangzhou（约30.2330,120.1670），SSOD/ISD 是 Xiaoshan（约30.2283,120.4317）；GHCN .dly 的 PRCP 单元没有逐条结束时刻。",
+      "impact": "不把 GHCN PRCP 与机场 SSOD 合并成同一站点或精确日界。",
+      "remediation": "如需跨源校验，单独标记 reference_only，并取得同址逐小时或明确日界资料。"
+    },
+    {
+      "title": "主表仅定义离线固定提前量实验",
+      "severity": "medium",
+      "evidence": "成功配对 636 个24小时窗口；forecast_kind=fixed_lead_composite。",
+      "impact": "不能据此声称可在当时刻获得单一初始化的生产预报。",
+      "remediation": "展示为可复现实验基线，另行补充真实发布时间证据才可做 operational_replay。"
+    },
+    {
+      "title": "部分候选日缺少完整预报小时",
+      "severity": "high",
+      "evidence": "SSOD 完整候选日 670 个，成功配对 636 个；其余窗口进入 quarantined_records.csv。",
+      "impact": "样本覆盖不等于完整日历覆盖，不能把缺失窗口当作无雨或负例。",
+      "remediation": "只在获得完整逐小时 Previous Runs 后补建对应窗口，不补零。"
+    },
+    {
+      "title": "SSOD 覆盖少于配置的731个名义日",
+      "severity": "high",
+      "evidence": "2024—2025 配置范围为731个 UTC 名义日，SSOD 完整候选 670 个，缺 61 个；缺日不作为无雨样本。",
+      "impact": "月度覆盖不完整，样本分母必须使用实际候选日并单列缺测。",
+      "remediation": "保留缺测日为未观测；若补源，按相同站号和报告码规则重新审计。"
+    }
+  ],
+  "limitations": [
+    "SSOD 仅保留 D/F/G/数值24 完整报告；H 表示有降水发生记录但总量为零或无法计算，I 表示未报告降水数据及发生记录；H/I、A/B/C/E、未知码和缺测均进入隔离表。",
+    "SSOD 为名义 UTC 00–24 日汇总，存在低报与站点缺测风险；不是高精度国家站真值。",
+    "GHCN CHM00058457 与 SSOD/ISD 站点不同，且 .dly PRCP 单元没有逐条实际结束时刻。",
+    "ISD AA1-AA4 的 trace、condition=3/9、9999 深度和未知质量码不被补零或提升为标签。",
+    "Previous Runs 是固定提前量合成序列；样本仅支持 offline_fixed_lead。"
+  ],
+  "sample_file_sha256": "493c58d793af9bf4d9c8e84c8b0a5de48691024925cfa8013a81e4e2c4d1b0db",
+  "source_manifest_file_sha256": "083a59053aec1687e59a1a84c7a1ef6fc4fa33528ac5de5033314ee2a6d69a81",
+  "dataset_version_basis": "sha256(samples.csv actual bytes)"
+}

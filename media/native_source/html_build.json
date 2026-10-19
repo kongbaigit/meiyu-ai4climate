@@ -1,0 +1,32 @@
+{
+  "kind": "原生代码动画，未使用截图、图片或视频作为画面输入",
+  "canvas": "Three.js WebGL → Canvas 2D合成",
+  "duration": 169.0,
+  "html_sha256": "44417a91a3540b4914df12a91264b55c79f886047c633881fa5da265cd5712fb",
+  "html_bytes": 6595142,
+  "data_version": "meiyu-493c58d793af9bf4",
+  "input_sha256": {
+    "data/samples.csv": "493c58d793af9bf4d9c8e84c8b0a5de48691024925cfa8013a81e4e2c4d1b0db",
+    "data/source_manifest.json": "083a59053aec1687e59a1a84c7a1ef6fc4fa33528ac5de5033314ee2a6d69a81",
+    "artifacts/predictions.csv": "65096b2db07625826ad9ea90e2ca9d373fe5f18c088bc50b80a0dc6e349fc961",
+    "artifacts/model_parameters.json": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418",
+    "reports/evaluation.json": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2",
+    "reports/temporal_validation.json": "fa2baf5626bb3a14b4452033394ea641b23b5f25ea42dc9b2f5fcf0d81465f77"
+  },
+  "original_score": "雨前的刻度",
+  "third_party_runtime": "three@0.160.1 MIT, inline",
+  "audio_sha256": {
+    "score.wav": "3b24c542b1f363929db81d110afe9e575f15e52f89072a443b2a55262f68817c",
+    "music_playback.mp3": "107d74528cbb1220c98263b696750f0ce5c2c135ddc71dc46e7ede68aa814a20",
+    "narration.mp3": "5492f354e795ed4eb8d10f3cba9ed5c3f29f7e0d3a49708726e5ee459e374166",
+    "mix.mp3": "cfa26acc7a36af9b734d9110c6b89f3e05aede2b2a6b2f8ff1f2a2f6fd8b1cd1"
+  },
+  "source_sha256": {
+    "app.js": "1739cdf79c494dcf24672a959a3c730d3fdafc871a0df3531d51eb902ac323f4",
+    "player.html": "86f82b4724473b5066dd5fcd9a71d8d9122f2ebeaf3aab5a95ce12f6da0d5ea1",
+    "evidence.json": "3eb6ce8b20ca96fb44dbf82124a5f6d052946910e592e698e215525521898b91",
+    "timeline.json": "7de9f672ff458528c3fd67b98da66f140413837b2185b17d3d726dae1884aaa1",
+    "compose_audio.py": "8b9a13336bd659be71f1787d2c6044b8d80dc614472e1441db74518eba0e07ed",
+    "score_manifest.json": "7c9cdcd6e7e72ebcf19de62de41abe132ca1d9c76fded6afa4b889dadc7b4e8f"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source_id": "openmeteo_2eded124572882a3",
+  "title": "Open-Meteo ecmwf_ifs025 固定提前量1日 · 2025",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=30.2283&longitude=120.4317&start_date=2025-01-01&end_date=2026-01-01&hourly=precipitation_previous_day1%2Ctemperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1&models=ecmwf_ifs025&timezone=UTC",
+  "retrieved_at_utc": "2026-10-13T13:30:11.325037Z",
+  "sha256": "40a655af32c9bf198982bff76ccd5ca2961c35290a6ac28ff75e4334d70386b1",
+  "bytes": 279650,
+  "content_type": "application/json; charset=utf-8",
+  "licence": "CC BY 4.0；免费接口仅限非商业用途",
+  "local_path": "data/raw/openmeteo_2eded124572882a3.json",
+  "requested_latitude": 30.2283,
+  "requested_longitude": 120.4317,
+  "returned_latitude": 30.25,
+  "returned_longitude": 120.5,
+  "returned_elevation": 5.0,
+  "forecast_model": "ecmwf_ifs025",
+  "forecast_kind": "fixed_lead_composite",
+  "model_initialisation_time": "not_unique",
+  "time_semantics": "precipitation is the sum of the preceding hour; fixed lead varies by valid hour"
+}

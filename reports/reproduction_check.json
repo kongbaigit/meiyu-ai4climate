@@ -1,0 +1,195 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-13T14:22:15.751035Z",
+  "dataset_version": "meiyu-493c58d793af9bf4",
+  "official_run": "reports/experiment_run.json",
+  "hash_checks": [
+    {
+      "label": "主表 samples.csv",
+      "path": "data\\samples.csv",
+      "expected_sha256": "493c58d793af9bf4d9c8e84c8b0a5de48691024925cfa8013a81e4e2c4d1b0db",
+      "actual_sha256": "493c58d793af9bf4d9c8e84c8b0a5de48691024925cfa8013a81e4e2c4d1b0db",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "来源清单 source_manifest.json",
+      "path": "data\\source_manifest.json",
+      "expected_sha256": "083a59053aec1687e59a1a84c7a1ef6fc4fa33528ac5de5033314ee2a6d69a81",
+      "actual_sha256": "083a59053aec1687e59a1a84c7a1ef6fc4fa33528ac5de5033314ee2a6d69a81",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "实验配置 experiment.yaml",
+      "path": "config\\experiment.yaml",
+      "expected_sha256": "e0631554fa20fbddd6ed75e56b34dc2f8fa5b4f8d446d644b044008511b5ecb2",
+      "actual_sha256": "e0631554fa20fbddd6ed75e56b34dc2f8fa5b4f8d446d644b044008511b5ecb2",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "冻结输出 predictions",
+      "path": "artifacts\\predictions.csv",
+      "expected_sha256": "65096b2db07625826ad9ea90e2ca9d373fe5f18c088bc50b80a0dc6e349fc961",
+      "actual_sha256": "65096b2db07625826ad9ea90e2ca9d373fe5f18c088bc50b80a0dc6e349fc961",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "冻结输出 evaluation",
+      "path": "reports\\evaluation.json",
+      "expected_sha256": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2",
+      "actual_sha256": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "冻结输出 sample_splits",
+      "path": "artifacts\\sample_splits.csv",
+      "expected_sha256": "3bea3f8abfa77ea621aa9eb993d7404729aa74071f7fb20b85847fe6c4c615de",
+      "actual_sha256": "3bea3f8abfa77ea621aa9eb993d7404729aa74071f7fb20b85847fe6c4c615de",
+      "passed": true,
+      "error": null
+    },
+    {
+      "label": "冻结输出 model_parameters",
+      "path": "artifacts\\model_parameters.json",
+      "expected_sha256": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418",
+      "actual_sha256": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418",
+      "passed": true,
+      "error": null
+    }
+  ],
+  "prediction_reconstruction": {
+    "row_count": 2544,
+    "method_count": 4,
+    "tolerance": 1e-10,
+    "max_abs_error": 2.7755575615628914e-16,
+    "methods": {
+      "training_climatology": {
+        "sample_count": 636,
+        "max_abs_error": 2.0816681711721685e-17,
+        "passed": true
+      },
+      "raw_nwp_rule": {
+        "sample_count": 636,
+        "max_abs_error": 0.0,
+        "passed": true
+      },
+      "logistic_rain": {
+        "sample_count": 636,
+        "max_abs_error": 1.1102230246251565e-16,
+        "passed": true
+      },
+      "logistic_weather": {
+        "sample_count": 636,
+        "max_abs_error": 2.7755575615628914e-16,
+        "passed": true
+      }
+    },
+    "passed": true
+  },
+  "evaluation_recheck": {
+    "threshold_mm": 25.0,
+    "probability_threshold": 0.1,
+    "sample_count": 240,
+    "event_count": 18,
+    "methods": {
+      "training_climatology": {
+        "sample_count": 240,
+        "event_count": 18,
+        "computed_brier": 0.06966498634740599,
+        "official_brier": 0.069664986347406,
+        "brier_difference": -1.3877787807814457e-17,
+        "computed_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 222,
+          "false_positive": 0,
+          "false_negative": 18,
+          "true_positive": 0
+        },
+        "official_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 222,
+          "false_positive": 0,
+          "false_negative": 18,
+          "true_positive": 0
+        },
+        "passed": true
+      },
+      "raw_nwp_rule": {
+        "sample_count": 240,
+        "event_count": 18,
+        "computed_brier": 0.0625,
+        "official_brier": 0.0625,
+        "brier_difference": 0.0,
+        "computed_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 218,
+          "false_positive": 4,
+          "false_negative": 11,
+          "true_positive": 7
+        },
+        "official_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 218,
+          "false_positive": 4,
+          "false_negative": 11,
+          "true_positive": 7
+        },
+        "passed": true
+      },
+      "logistic_rain": {
+        "sample_count": 240,
+        "event_count": 18,
+        "computed_brier": 0.04548272459426538,
+        "official_brier": 0.045482724594265375,
+        "brier_difference": 6.938893903907228e-18,
+        "computed_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 213,
+          "false_positive": 9,
+          "false_negative": 6,
+          "true_positive": 12
+        },
+        "official_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 213,
+          "false_positive": 9,
+          "false_negative": 6,
+          "true_positive": 12
+        },
+        "passed": true
+      },
+      "logistic_weather": {
+        "sample_count": 240,
+        "event_count": 18,
+        "computed_brier": 0.04441552368174087,
+        "official_brier": 0.04441552368174086,
+        "brier_difference": 1.3877787807814457e-17,
+        "computed_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 212,
+          "false_positive": 10,
+          "false_negative": 3,
+          "true_positive": 15
+        },
+        "official_confusion_at_probability_0_1": {
+          "threshold": 0.1,
+          "true_negative": 212,
+          "false_positive": 10,
+          "false_negative": 3,
+          "true_positive": 15
+        },
+        "passed": true
+      }
+    },
+    "passed": true
+  },
+  "limitations": [
+    "这是对冻结输入、参数、预测文件和数学计算的复现检查，不是独立外部验证，也没有产生新的预测效果。",
+    "复现使用已导出的 SSOD 参考观测和 fixed_lead_composite 数据包；名义 UTC 日与低报限制仍然存在。",
+    "测试事件数较少，指标一致只能证明文件和公式复现，不能证明泛化能力。"
+  ]
+}

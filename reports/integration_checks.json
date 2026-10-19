@@ -1,0 +1,33 @@
+{
+  "checked_at_utc": "2026-10-13T15:34:55.040894+00:00",
+  "dataset_version": "meiyu-493c58d793af9bf4",
+  "passed": true,
+  "sample_count": 636,
+  "checks": [
+    {
+      "name": "主表协议、内容版本与来源引用",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "CSV 与 Parquet 内容一致",
+      "passed": true
+    },
+    {
+      "name": "来源原始快照 SHA256",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "观测记录关联与配对基数",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "隔离记录数一致",
+      "passed": true,
+      "actual": 4681,
+      "expected": 4681
+    }
+  ]
+}

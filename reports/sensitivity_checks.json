@@ -1,0 +1,61 @@
+{
+  "generated_at_utc": "2026-10-13T14:22:14.614405+00:00",
+  "dataset_version": "meiyu-493c58d793af9bf4",
+  "predictions_file_sha256": "65096b2db07625826ad9ea90e2ca9d373fe5f18c088bc50b80a0dc6e349fc961",
+  "kind": "冻结预测的补充描述性检查，不重新选择模型",
+  "raw_continuous_rain_roc_auc": 0.9712212212212212,
+  "selected_probability_roc_auc": 0.9712212212212212,
+  "interpretation": "降水逻辑回归为原始预报雨量的单调映射，保持其排序。AUC相同；本次改进证据针对概率表达和预定成本情景，不能说AI增加了天气排序能力。",
+  "period_metrics": {
+    "2025年5至7月固定月份子集": {
+      "logistic_rain": {
+        "sample_count": 90,
+        "event_count": 16,
+        "brier": 0.10378314101923018
+      },
+      "logistic_weather": {
+        "sample_count": 90,
+        "event_count": 16,
+        "brier": 0.10086294204080934
+      },
+      "raw_nwp_rule": {
+        "sample_count": 90,
+        "event_count": 16,
+        "brier": 0.13333333333333333
+      },
+      "training_climatology": {
+        "sample_count": 90,
+        "event_count": 16,
+        "brier": 0.16052650003500663
+      }
+    },
+    "2025年8至12月其余测试日": {
+      "logistic_rain": {
+        "sample_count": 150,
+        "event_count": 2,
+        "brier": 0.010502474739286494
+      },
+      "logistic_weather": {
+        "sample_count": 150,
+        "event_count": 2,
+        "brier": 0.010547072666299779
+      },
+      "raw_nwp_rule": {
+        "sample_count": 150,
+        "event_count": 2,
+        "brier": 0.02
+      },
+      "training_climatology": {
+        "sample_count": 150,
+        "event_count": 2,
+        "brier": 0.015148078134845618
+      }
+    }
+  },
+  "limitations": [
+    "5至7月仅为固定月份子集，不是官方逐年梅雨日期。",
+    "子集使用已冻结预测作描述，不参与选择参数、模型或阈值。",
+    "没有与集合预报概率产品或所有更强校准方法比较。",
+    "本次追加检查已见过完整测试结果，不能包装成新的盲测。"
+  ]
+}

@@ -1,0 +1,1668 @@
+{
+  "dataset_version": "meiyu-493c58d793af9bf4",
+  "sample_count": 636,
+  "sample_id": "sample-ssod-ssod_CHI0000ZSHC_2025-20250601-openmeteo_2eded124572882a3",
+  "probability": 0.6785901411285075,
+  "forecast_mm": 52.5,
+  "reference_mm": 29.0,
+  "event_threshold_mm": 25.0,
+  "selected_method": "logistic_rain",
+  "splits": {
+    "train": {
+      "sample_count": 276,
+      "event_count": 16
+    },
+    "validation": {
+      "sample_count": 120,
+      "event_count": 3
+    },
+    "test": {
+      "sample_count": 240,
+      "event_count": 18
+    }
+  },
+  "test_metrics": {
+    "training_climatology": {
+      "sample_count": 240,
+      "event_count": 18,
+      "brier": 0.069664986347406,
+      "roc_auc": 0.5,
+      "average_precision": 0.075,
+      "confusion_at_probability_0_1": {
+        "threshold": 0.1,
+        "true_negative": 222,
+        "false_positive": 0,
+        "false_negative": 18,
+        "true_positive": 0
+      },
+      "calibration_bins": [
+        {
+          "bin": "[0.0,0.2)",
+          "count": 240,
+          "event_count": 18,
+          "mean_probability": 0.05797101449275364,
+          "observed_event_rate": 0.075
+        },
+        {
+          "bin": "[0.2,0.4)",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        },
+        {
+          "bin": "[0.4,0.6)",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        },
+        {
+          "bin": "[0.6,0.8)",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        },
+        {
+          "bin": "[0.8,1.0]",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        }
+      ]
+    },
+    "raw_nwp_rule": {
+      "sample_count": 240,
+      "event_count": 18,
+      "brier": 0.0625,
+      "roc_auc": 0.6854354354354354,
+      "average_precision": 0.2933080808080808,
+      "confusion_at_probability_0_1": {
+        "threshold": 0.1,
+        "true_negative": 218,
+        "false_positive": 4,
+        "false_negative": 11,
+        "true_positive": 7
+      },
+      "calibration_bins": [
+        {
+          "bin": "[0.0,0.2)",
+          "count": 229,
+          "event_count": 11,
+          "mean_probability": 0.0,
+          "observed_event_rate": 0.048034934497816595
+        },
+        {
+          "bin": "[0.2,0.4)",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        },
+        {
+          "bin": "[0.4,0.6)",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        },
+        {
+          "bin": "[0.6,0.8)",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        },
+        {
+          "bin": "[0.8,1.0]",
+          "count": 11,
+          "event_count": 7,
+          "mean_probability": 1.0,
+          "observed_event_rate": 0.6363636363636364
+        }
+      ]
+    },
+    "logistic_rain": {
+      "sample_count": 240,
+      "event_count": 18,
+      "brier": 0.045482724594265375,
+      "roc_auc": 0.9712212212212212,
+      "average_precision": 0.7091303085290069,
+      "confusion_at_probability_0_1": {
+        "threshold": 0.1,
+        "true_negative": 213,
+        "false_positive": 9,
+        "false_negative": 6,
+        "true_positive": 12
+      },
+      "calibration_bins": [
+        {
+          "bin": "[0.0,0.2)",
+          "count": 224,
+          "event_count": 8,
+          "mean_probability": 0.01127828310919982,
+          "observed_event_rate": 0.03571428571428571
+        },
+        {
+          "bin": "[0.2,0.4)",
+          "count": 7,
+          "event_count": 4,
+          "mean_probability": 0.2714656979323354,
+          "observed_event_rate": 0.5714285714285714
+        },
+        {
+          "bin": "[0.4,0.6)",
+          "count": 4,
+          "event_count": 2,
+          "mean_probability": 0.5205641912034263,
+          "observed_event_rate": 0.5
+        },
+        {
+          "bin": "[0.6,0.8)",
+          "count": 5,
+          "event_count": 4,
+          "mean_probability": 0.6974195826313843,
+          "observed_event_rate": 0.8
+        },
+        {
+          "bin": "[0.8,1.0]",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        }
+      ]
+    },
+    "logistic_weather": {
+      "sample_count": 240,
+      "event_count": 18,
+      "brier": 0.04441552368174086,
+      "roc_auc": 0.9712212212212212,
+      "average_precision": 0.690097812592888,
+      "confusion_at_probability_0_1": {
+        "threshold": 0.1,
+        "true_negative": 212,
+        "false_positive": 10,
+        "false_negative": 3,
+        "true_positive": 15
+      },
+      "calibration_bins": [
+        {
+          "bin": "[0.0,0.2)",
+          "count": 223,
+          "event_count": 7,
+          "mean_probability": 0.012546721378477559,
+          "observed_event_rate": 0.03139013452914798
+        },
+        {
+          "bin": "[0.2,0.4)",
+          "count": 7,
+          "event_count": 5,
+          "mean_probability": 0.27167600972612216,
+          "observed_event_rate": 0.7142857142857143
+        },
+        {
+          "bin": "[0.4,0.6)",
+          "count": 4,
+          "event_count": 1,
+          "mean_probability": 0.49820720333168017,
+          "observed_event_rate": 0.25
+        },
+        {
+          "bin": "[0.6,0.8)",
+          "count": 6,
+          "event_count": 5,
+          "mean_probability": 0.7132060271524067,
+          "observed_event_rate": 0.8333333333333334
+        },
+        {
+          "bin": "[0.8,1.0]",
+          "count": 0,
+          "event_count": 0,
+          "mean_probability": null,
+          "observed_event_rate": null
+        }
+      ]
+    }
+  },
+  "logistic_rain": {
+    "feature_order": [
+      "forecast_rain_mm"
+    ],
+    "features": [
+      "log1p(forecast_rain_mm)"
+    ],
+    "imputer_statistics": [
+      0.4700036292457356
+    ],
+    "scaler_mean": [
+      1.0095282546442093
+    ],
+    "scaler_scale": [
+      1.2003691906890184
+    ],
+    "class_labels": [
+      0,
+      1
+    ],
+    "positive_class_label": 1,
+    "selected_C": 10.0,
+    "grid_scores": [
+      {
+        "C": 0.1,
+        "validation_brier": 0.017439361612026173
+      },
+      {
+        "C": 1.0,
+        "validation_brier": 0.014594731713559529
+      },
+      {
+        "C": 10.0,
+        "validation_brier": 0.014074107513906753
+      }
+    ],
+    "coefficients_after_scaled_features": [
+      2.477822367280579
+    ],
+    "intercept": -5.383740640064925,
+    "model_version": "logistic_rain-v1-C10-cfge0631554",
+    "fit_split": "train",
+    "selection_split": "validation"
+  },
+  "test_outcomes": [
+    {
+      "date": "2025-05-01",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-08",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-05-09",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-10",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-16",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-05-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-20",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-05-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-22",
+      "outcome": "fn"
+    },
+    {
+      "date": "2025-05-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-05-31",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-06-01",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-06-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-08",
+      "outcome": "fn"
+    },
+    {
+      "date": "2025-06-09",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-06-10",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-06-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-14",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-06-15",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-06-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-21",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-06-22",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-06-23",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-06-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-29",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-06-30",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-01",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-08",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-07-09",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-10",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-11",
+      "outcome": "fn"
+    },
+    {
+      "date": "2025-07-12",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-07-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-18",
+      "outcome": "fn"
+    },
+    {
+      "date": "2025-07-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-22",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-25",
+      "outcome": "fn"
+    },
+    {
+      "date": "2025-07-26",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-07-27",
+      "outcome": "fn"
+    },
+    {
+      "date": "2025-07-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-07-29",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-07-30",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-07-31",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-01",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-08",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-09",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-10",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-22",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-08-29",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-02",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-09-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-08",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-09",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-09-10",
+      "outcome": "tp"
+    },
+    {
+      "date": "2025-09-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-22",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-29",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-09-30",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-01",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-08",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-09",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-10",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-22",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-29",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-10-30",
+      "outcome": "fp"
+    },
+    {
+      "date": "2025-10-31",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-01",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-08",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-09",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-10",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-22",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-29",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-11-30",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-01",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-02",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-03",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-04",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-05",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-06",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-07",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-08",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-09",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-10",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-11",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-12",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-13",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-14",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-15",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-16",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-17",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-18",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-19",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-20",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-21",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-22",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-23",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-24",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-25",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-26",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-27",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-28",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-29",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-30",
+      "outcome": "tn"
+    },
+    {
+      "date": "2025-12-31",
+      "outcome": "tn"
+    }
+  ],
+  "temporal_observations": [
+    {
+      "date": "2026-01-01",
+      "event": false
+    },
+    {
+      "date": "2026-01-02",
+      "event": false
+    },
+    {
+      "date": "2026-01-03",
+      "event": false
+    },
+    {
+      "date": "2026-01-04",
+      "event": false
+    },
+    {
+      "date": "2026-01-05",
+      "event": false
+    },
+    {
+      "date": "2026-01-06",
+      "event": false
+    },
+    {
+      "date": "2026-01-07",
+      "event": false
+    },
+    {
+      "date": "2026-01-08",
+      "event": false
+    },
+    {
+      "date": "2026-01-09",
+      "event": false
+    },
+    {
+      "date": "2026-01-10",
+      "event": false
+    },
+    {
+      "date": "2026-01-11",
+      "event": false
+    },
+    {
+      "date": "2026-01-12",
+      "event": false
+    },
+    {
+      "date": "2026-01-13",
+      "event": false
+    },
+    {
+      "date": "2026-01-14",
+      "event": false
+    },
+    {
+      "date": "2026-01-15",
+      "event": false
+    },
+    {
+      "date": "2026-01-16",
+      "event": false
+    },
+    {
+      "date": "2026-01-17",
+      "event": false
+    },
+    {
+      "date": "2026-01-18",
+      "event": false
+    },
+    {
+      "date": "2026-01-19",
+      "event": false
+    },
+    {
+      "date": "2026-01-20",
+      "event": false
+    },
+    {
+      "date": "2026-01-21",
+      "event": false
+    },
+    {
+      "date": "2026-01-22",
+      "event": false
+    },
+    {
+      "date": "2026-01-23",
+      "event": false
+    },
+    {
+      "date": "2026-01-24",
+      "event": false
+    },
+    {
+      "date": "2026-01-25",
+      "event": false
+    },
+    {
+      "date": "2026-01-26",
+      "event": false
+    },
+    {
+      "date": "2026-01-27",
+      "event": false
+    },
+    {
+      "date": "2026-01-28",
+      "event": false
+    },
+    {
+      "date": "2026-01-29",
+      "event": false
+    },
+    {
+      "date": "2026-01-30",
+      "event": false
+    },
+    {
+      "date": "2026-01-31",
+      "event": false
+    },
+    {
+      "date": "2026-02-01",
+      "event": false
+    },
+    {
+      "date": "2026-02-02",
+      "event": false
+    },
+    {
+      "date": "2026-02-03",
+      "event": false
+    },
+    {
+      "date": "2026-02-04",
+      "event": false
+    },
+    {
+      "date": "2026-02-05",
+      "event": false
+    },
+    {
+      "date": "2026-02-06",
+      "event": false
+    },
+    {
+      "date": "2026-02-07",
+      "event": false
+    },
+    {
+      "date": "2026-02-08",
+      "event": false
+    },
+    {
+      "date": "2026-02-09",
+      "event": false
+    },
+    {
+      "date": "2026-02-10",
+      "event": false
+    },
+    {
+      "date": "2026-02-11",
+      "event": false
+    },
+    {
+      "date": "2026-02-12",
+      "event": false
+    },
+    {
+      "date": "2026-02-13",
+      "event": false
+    },
+    {
+      "date": "2026-02-14",
+      "event": false
+    },
+    {
+      "date": "2026-02-15",
+      "event": false
+    },
+    {
+      "date": "2026-02-16",
+      "event": false
+    },
+    {
+      "date": "2026-02-17",
+      "event": false
+    },
+    {
+      "date": "2026-02-18",
+      "event": false
+    },
+    {
+      "date": "2026-02-19",
+      "event": false
+    },
+    {
+      "date": "2026-02-20",
+      "event": false
+    },
+    {
+      "date": "2026-02-21",
+      "event": false
+    },
+    {
+      "date": "2026-02-22",
+      "event": false
+    },
+    {
+      "date": "2026-02-23",
+      "event": false
+    },
+    {
+      "date": "2026-02-24",
+      "event": false
+    },
+    {
+      "date": "2026-02-25",
+      "event": false
+    },
+    {
+      "date": "2026-02-26",
+      "event": true
+    },
+    {
+      "date": "2026-02-27",
+      "event": false
+    },
+    {
+      "date": "2026-02-28",
+      "event": false
+    },
+    {
+      "date": "2026-03-01",
+      "event": false
+    },
+    {
+      "date": "2026-03-02",
+      "event": false
+    },
+    {
+      "date": "2026-03-03",
+      "event": false
+    },
+    {
+      "date": "2026-03-04",
+      "event": false
+    },
+    {
+      "date": "2026-03-05",
+      "event": false
+    },
+    {
+      "date": "2026-03-06",
+      "event": false
+    },
+    {
+      "date": "2026-03-07",
+      "event": false
+    },
+    {
+      "date": "2026-03-08",
+      "event": false
+    },
+    {
+      "date": "2026-03-09",
+      "event": false
+    },
+    {
+      "date": "2026-03-10",
+      "event": false
+    },
+    {
+      "date": "2026-03-11",
+      "event": false
+    },
+    {
+      "date": "2026-03-12",
+      "event": false
+    },
+    {
+      "date": "2026-03-13",
+      "event": false
+    },
+    {
+      "date": "2026-03-14",
+      "event": false
+    },
+    {
+      "date": "2026-03-15",
+      "event": false
+    },
+    {
+      "date": "2026-03-16",
+      "event": false
+    },
+    {
+      "date": "2026-03-17",
+      "event": false
+    },
+    {
+      "date": "2026-03-18",
+      "event": false
+    },
+    {
+      "date": "2026-03-19",
+      "event": false
+    },
+    {
+      "date": "2026-03-20",
+      "event": false
+    },
+    {
+      "date": "2026-03-21",
+      "event": false
+    },
+    {
+      "date": "2026-03-22",
+      "event": false
+    },
+    {
+      "date": "2026-03-23",
+      "event": false
+    },
+    {
+      "date": "2026-03-24",
+      "event": false
+    },
+    {
+      "date": "2026-03-25",
+      "event": false
+    },
+    {
+      "date": "2026-03-26",
+      "event": false
+    }
+  ],
+  "temporal_counts": {
+    "configured_days": 273,
+    "complete_candidate_days": 85,
+    "missing_complete_reference_days": 188,
+    "paired_windows": 85,
+    "unpaired_candidate_days": 0,
+    "complete_observations_outside_protocol": 0,
+    "ssod_quarantine_rows_all_raw": 199,
+    "forecast_quarantine_rows": 0,
+    "event_count": 1,
+    "source_row_count": 284,
+    "ssod_quarantine_rows_in_period": 188,
+    "paired_calendar_coverage": 0.31135531135531136
+  },
+  "monthly_coverage": [
+    {
+      "month": "2026-01",
+      "configured_days": 31,
+      "complete_candidate_days": 31,
+      "paired_windows": 31,
+      "event_count": 0
+    },
+    {
+      "month": "2026-02",
+      "configured_days": 28,
+      "complete_candidate_days": 28,
+      "paired_windows": 28,
+      "event_count": 1
+    },
+    {
+      "month": "2026-03",
+      "configured_days": 31,
+      "complete_candidate_days": 26,
+      "paired_windows": 26,
+      "event_count": 0
+    },
+    {
+      "month": "2026-04",
+      "configured_days": 30,
+      "complete_candidate_days": 0,
+      "paired_windows": 0,
+      "event_count": null
+    },
+    {
+      "month": "2026-05",
+      "configured_days": 31,
+      "complete_candidate_days": 0,
+      "paired_windows": 0,
+      "event_count": null
+    },
+    {
+      "month": "2026-06",
+      "configured_days": 30,
+      "complete_candidate_days": 0,
+      "paired_windows": 0,
+      "event_count": null
+    },
+    {
+      "month": "2026-07",
+      "configured_days": 31,
+      "complete_candidate_days": 0,
+      "paired_windows": 0,
+      "event_count": null
+    },
+    {
+      "month": "2026-08",
+      "configured_days": 31,
+      "complete_candidate_days": 0,
+      "paired_windows": 0,
+      "event_count": null
+    },
+    {
+      "month": "2026-09",
+      "configured_days": 30,
+      "complete_candidate_days": 0,
+      "paired_windows": 0,
+      "event_count": null
+    }
+  ],
+  "inputs_sha256": {
+    "data/samples.csv": "493c58d793af9bf4d9c8e84c8b0a5de48691024925cfa8013a81e4e2c4d1b0db",
+    "data/source_manifest.json": "083a59053aec1687e59a1a84c7a1ef6fc4fa33528ac5de5033314ee2a6d69a81",
+    "artifacts/predictions.csv": "65096b2db07625826ad9ea90e2ca9d373fe5f18c088bc50b80a0dc6e349fc961",
+    "artifacts/model_parameters.json": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418",
+    "reports/evaluation.json": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2",
+    "reports/temporal_validation.json": "fa2baf5626bb3a14b4452033394ea641b23b5f25ea42dc9b2f5fcf0d81465f77"
+  },
+  "narration_voice": "Microsoft Huihui Desktop",
+  "original_score": "雨前的刻度",
+  "scene_geometry": "示意几何，不表示真实门店、真实积水范围或数值天气空间分布"
+}

@@ -1,0 +1,66 @@
+{
+  "source_id": "openmeteo_60001f4d2d615cdf",
+  "url": "https://previous-runs-api.open-meteo.com/v1/forecast?latitude=30.2283&longitude=120.4317&start_date=2026-01-01&end_date=2026-10-01&hourly=precipitation_previous_day1%2Ctemperature_2m_previous_day1%2Crelative_humidity_2m_previous_day1&models=ecmwf_ifs025&timezone=UTC",
+  "requested_latitude": 30.2283,
+  "requested_longitude": 120.4317,
+  "forecast_model": "ecmwf_ifs025",
+  "forecast_kind": "fixed_lead_composite",
+  "model_initialisation_time": "not_unique",
+  "time_semantics": "precipitation is the sum of the preceding hour; fixed lead varies by valid hour",
+  "local_path": "data/raw/openmeteo_60001f4d2d615cdf.json",
+  "metadata_local_path": "data/raw/openmeteo_60001f4d2d615cdf.metadata.json",
+  "retrieved_at_utc": "2026-10-13T15:13:24.454694Z",
+  "sha256": "9e7301125ffd840974e9aa0adc35ea0ddb84a29c581bd9bf8f92737b31fb7b7c",
+  "bytes": 210052,
+  "content_type": "application/json; charset=utf-8",
+  "http_status": 200,
+  "last_modified": null,
+  "etag": null,
+  "attempts": 1,
+  "cache_hit": true,
+  "title": "Open-Meteo ecmwf_ifs025 固定提前量1日 · 2026",
+  "licence": "CC BY 4.0；免费接口仅限非商业用途",
+  "role": "2026 same-station fixed-lead forecast source; source fetch only",
+  "returned_latitude": 30.25,
+  "returned_longitude": 120.5,
+  "returned_elevation": 5.0,
+  "requested_scope": {
+    "start_date": "2026-01-01",
+    "end_date": "2026-10-01",
+    "formal_end_exclusive": "2026-10-01T00:00:00Z"
+  },
+  "checks": {
+    "parser": "src.forecasts.parse_previous_response",
+    "utc_offset_seconds": 0,
+    "utc_offset_ok": true,
+    "hourly_units": {
+      "time": "iso8601",
+      "precipitation_previous_day1": "mm",
+      "temperature_2m_previous_day1": "°C",
+      "relative_humidity_2m_previous_day1": "%"
+    },
+    "unit_checks": {
+      "precipitation_previous_day1": true,
+      "temperature_2m_previous_day1": true,
+      "relative_humidity_2m_previous_day1": true
+    },
+    "hourly_fields": [
+      "precipitation_previous_day1",
+      "temperature_2m_previous_day1",
+      "relative_humidity_2m_previous_day1"
+    ],
+    "hourly_length": 6576,
+    "time_start_utc": "2026-01-01T00:00:00Z",
+    "time_end_utc": "2026-10-01T23:00:00Z",
+    "formal_range": {
+      "start_inclusive": "2026-01-01T00:00:00Z",
+      "end_exclusive": "2026-10-01T00:00:00Z",
+      "hours": 6552
+    },
+    "october_1_boundary_hours": 24,
+    "expected_formal_hours": 6552,
+    "temperature_finite_count": 6576,
+    "relative_humidity_finite_count": 6447,
+    "precipitation_finite_count": 6576
+  }
+}

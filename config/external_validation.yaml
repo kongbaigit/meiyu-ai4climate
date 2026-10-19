@@ -1,0 +1,28 @@
+experiment_version: ningbo-transfer-v1
+station:
+  station_id: CHI0000ZSNB
+  expected_name: LISHE
+  year: 2025
+  station_list_path: data/raw/ghcnh-station-list.txt
+  station_list_url: https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh-station-list.txt
+ssod:
+  prefix_url_template: https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day?prefix=v2%2Faccess%2Fby-year%2F{year}%2Fcsv%2FSSOD_{station_id}_{year}.csv&max-keys=10
+  download_url_template: https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/access/by-year/{year}/csv/SSOD_{station_id}_{year}.csv
+  documentation_url: https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/doc/ssodv2_DOCUMENTATION.pdf
+forecast:
+  model: ecmwf_ifs025
+  source: Open-Meteo Previous Runs
+  licence: CC BY 4.0；免费接口仅限非商业用途
+frozen_hangzhou:
+  run_path: reports/experiment_run.json
+  model_parameters_path: artifacts/model_parameters.json
+  evaluation_path: reports/evaluation.json
+  required_method: logistic_rain
+event:
+  threshold_mm: 25.0
+evaluation:
+  probability_threshold: 0.1
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20261013
+output:
+  root: external/ningbo

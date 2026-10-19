@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light"><meta name="description" content="梅雨有数原生三维动效演示，含原创配乐，支持离线播放、章节跳转和分别调整旁白与音乐。">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; media-src data: blob:; img-src data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2C12 8 5 15 5 21a11 11 0 0 0 22 0C27 15 20 8 16 2' fill='%230a84d6'/%3E%3C/svg%3E">
+<title>梅雨有数 · 原生动效影片</title>
+<style>
+:root{font-family:'Segoe UI','Microsoft YaHei','PingFang SC',system-ui,sans-serif;color:#1d2630;background:#f5f6f8;--blue:#087fbf;--muted:#69727d}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #32a3d7;outline-offset:4px}.shell{max-width:1460px;margin:auto;padding:23px 32px 25px}header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:17px}h1{font-size:21px;letter-spacing:1px;margin:0;font-weight:650}header p{margin:4px 0 0;color:var(--muted);font-size:12px}.badge{color:#477887;font-size:11px;letter-spacing:1px}.viewer{position:relative;overflow:hidden;border:1px solid #e2e7ec;border-radius:18px;background:#f7f8fa;box-shadow:0 24px 85px #24334b0a}canvas#film{display:block;width:100%;height:auto;aspect-ratio:16/9}.center-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;border:1px solid #ffffffc0;background:#ffffffbd;color:#087fbf;box-shadow:0 15px 55px #203b6320;backdrop-filter:blur(18px);display:grid;place-items:center;transition:opacity .2s,transform .2s}.center-play:hover{transform:translate(-50%,-50%) scale(1.06)}.center-play svg{width:27px;height:27px;margin-left:5px;fill:currentColor}.viewer.playing .center-play{opacity:0;pointer-events:none}.controls{display:flex;align-items:center;gap:15px;padding:17px 4px 9px}button.quiet{border:1px solid #dce3e8;background:white;color:#33434d;border-radius:10px;padding:9px 15px;font-size:12px;white-space:nowrap}button.quiet.primary{background:#087fbf;border-color:#087fbf;color:white;min-width:82px}.seek{flex:1;accent-color:#087fbf;height:20px;min-width:50px}.time{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:12px;color:#5e6b77}.sound{display:flex;gap:23px;align-items:center;margin:6px 2px 12px;font-size:12px;color:#65717b}.sound label{display:flex;align-items:center;gap:9px}.sound input{width:110px;accent-color:#087fbf}.chapters{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.chapters button{border:1px solid #dfe6eb;background:transparent;color:#6b7580;padding:7px 12px;border-radius:8px;font-size:11px}.chapters button.active{border-color:#b7d6e6;background:#e9f3f8;color:#0877b1}.notes{display:flex;gap:25px;justify-content:space-between;margin-top:16px;border-top:1px solid #e1e7ec;padding-top:14px;font-size:11px;line-height:1.8;color:#7a848d}.notes p{margin:0}.notes b{color:#3e5667;font-weight:550}.now{color:#3c576a;font-size:12px;min-height:20px;margin:9px 3px 0}.viewer:fullscreen{display:flex;align-items:center;justify-content:center;background:#f5f6f8;border:0;border-radius:0}.viewer:fullscreen canvas{max-width:100vw;max-height:100vh;object-fit:contain;width:100%;height:100%}.viewer:fullscreen .center-play{width:85px;height:85px}.visually-hidden{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}@media(max-width:680px){.shell{padding:15px 12px 22px}h1{font-size:18px}header{margin-bottom:14px}.badge{display:none}header p{font-size:10px}.viewer{border-radius:12px}.center-play{width:52px;height:52px}.center-play svg{width:20px;height:20px}.controls{gap:8px;padding-top:12px}button.quiet{padding:8px 9px;font-size:10px}button.quiet.primary{min-width:58px}.time{font-size:10px}.sound{gap:15px;flex-wrap:wrap;font-size:10px}.sound input{width:90px}.chapters{gap:6px}.chapters button{padding:6px 8px;font-size:10px}.notes{display:block;font-size:10px}.notes p+p{margin-top:6px}.now{font-size:11px}.fullscreen-word{display:none}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header><div><h1>梅雨有数</h1><p>原生三维动效影片 · 原创配乐《雨前的刻度》</p></div><span class="badge">AI FOR CLIMATE · 研究原型</span></header>
+<section class="viewer" id="viewer" aria-label="梅雨有数动效影片">
+<canvas id="film" width="1920" height="1080" role="img" aria-label="梅雨有数三维动画画面"></canvas>
+<button class="center-play" id="center-play" aria-label="从头播放影片"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18l16-9z"/></svg></button>
+</section>
+<div class="controls"><button id="play" class="quiet primary">播放</button><button id="restart" class="quiet">重播</button><label class="visually-hidden" for="seek">播放进度</label><input id="seek" class="seek" type="range" min="0" max="169" step="0.01" value="0"><span class="time" id="time">00:00 / 02:49</span><button id="fullscreen" class="quiet" aria-label="全屏播放">⛶ <span class="fullscreen-word">全屏</span></button></div>
+<div class="sound"><label>旁白 <input id="voice-volume" type="range" min="0" max="100" step="1" value="100" aria-label="旁白音量"></label><label>原创配乐 <input id="music-volume" type="range" min="0" max="100" step="1" value="100" aria-label="原创配乐音量"></label><span id="audio-status">点击播放后开启声音</span></div>
+<nav class="chapters" id="chapters" aria-label="影片章节"></nav>
+<p class="now" id="now" aria-live="polite"></p>
+<div class="notes"><p><b>操作</b>　空格播放／暂停，左右方向键跳转章节。支持拖动进度。手机建议横屏或全屏观看。</p><p>历史离线原型 · 三维地点与结构均为示意。旁白为本地合成语音。<br>用户试点、完整2026梅雨验证与实际收益尚未完成。</p></div>
+</main>
+<script>/*__THREE__*/</script>
+<script>const FILM_INPUT=/*__INPUT__*/;</script>
+<script>/*__APP__*/</script>
+</body></html>

@@ -1,0 +1,98 @@
+{
+  "status": "blocked",
+  "result_kind": "cross_station_transfer_exploration",
+  "generated_at_utc": "2026-10-13T14:53:04.485660Z",
+  "block_reason": "宁波 SSOD 对象可访问，但所有行都没有 D/F/G/24 完整降水日量；不能形成可配对样本。",
+  "station": {
+    "station_id": "CHI0000ZSNB",
+    "station_name": "LISHE",
+    "latitude": 29.8249,
+    "longitude": 121.4651,
+    "elevation_m": 4.0,
+    "station_evidence_line": "CHI0000ZSNB  29.8249  121.4651    4.0    LISHE                                        CN",
+    "coordinate_consistency": "没有完整 SSOD 行可比较；坐标仅来自官方 GHCNh 站表，不猜测或替换。"
+  },
+  "scope": {
+    "year": 2025,
+    "source_row_date_range": {
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2025-12-31T00:00:00Z"
+    },
+    "candidate_date_range": null,
+    "paired_date_range": null,
+    "forecast_model": "ecmwf_ifs025",
+    "experiment_kind": "offline_fixed_lead transfer; forecast not called because reference is blocked"
+  },
+  "ssod_access": {
+    "prefix_url": "https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day?prefix=v2%2Faccess%2Fby-year%2F2025%2Fcsv%2FSSOD_CHI0000ZSNB_2025.csv&max-keys=10",
+    "download_url": "https://www.ncei.noaa.gov/oa/synoptic-summary-of-the-day/v2/access/by-year/2025/csv/SSOD_CHI0000ZSNB_2025.csv",
+    "expected_key": "v2/access/by-year/2025/csv/SSOD_CHI0000ZSNB_2025.csv",
+    "prefix_sha256": "3ca513578159fa8604421dd5dd06de32340ec00270c3df38315789546dcec214",
+    "csv_sha256": "53d2e221540a9f4b00fea084ea9cc5bb3703a6ca535a68ddfa665b0f935f9708",
+    "csv_rows": 362
+  },
+  "counts": {
+    "ssod_csv_rows": 362,
+    "complete_candidate_days": 0,
+    "ssod_quarantine_rows": 362,
+    "paired_windows": 0,
+    "forecast_quarantine_rows": 0,
+    "event_threshold_mm": 25.0,
+    "event_count": null,
+    "quarantine_measurement_code_counts": {
+      "I": 362
+    },
+    "quarantine_reason_counts": {
+      "missing_precipitation_sentinel;no_precipitation_data_or_occurrence_record": 362
+    }
+  },
+  "methods": {},
+  "paired_brier_bootstrap": [],
+  "frozen_hangzhou": {
+    "dataset_version": "meiyu-493c58d793af9bf4",
+    "selected_method": "logistic_rain",
+    "model_versions": {
+      "training_climatology": "training_climatology-v1-cfge0631554",
+      "raw_nwp_rule": "raw_nwp_rule-v1-cfge0631554",
+      "logistic_rain": "logistic_rain-v1-C10-cfge0631554",
+      "logistic_weather": "logistic_weather-v1-C10-cfge0631554"
+    },
+    "model_parameters_sha256": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418",
+    "evaluation_sha256": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2"
+  },
+  "forecast_call": {
+    "status": "cached_but_not_used_no_complete_ssod_days",
+    "requested_latitude": 29.8249,
+    "requested_longitude": 121.4651,
+    "forecast_model": "ecmwf_ifs025",
+    "cached_source_ids": [
+      "openmeteo_9f7488a6e6c104b2"
+    ]
+  },
+  "source_hashes": {
+    "source_manifest_sha256": "0a267688c3055c9ed8701829eeb6d129a4492efd9e3bfaebf3a06710b879e31a",
+    "samples_sha256": "4d68bcb6c5e424a077887af7d500c25c7afd7b47ae74a158ba9a7d3ba7e69786",
+    "quarantine_sha256": "c6d333bbc2642693e501a6dd694828626ddece73ff99d4b3002d764cee6fcbfa",
+    "predictions_sha256": null,
+    "ghcnh_station_evidence": "a46f288bc43b6a68ded98f4c47c2b139b24e8fa04814d127abad3b007f2dfc14",
+    "ssod_prefix_CHI0000ZSNB_2025": "3ca513578159fa8604421dd5dd06de32340ec00270c3df38315789546dcec214",
+    "ssod_CHI0000ZSNB_2025": "53d2e221540a9f4b00fea084ea9cc5bb3703a6ca535a68ddfa665b0f935f9708",
+    "openmeteo_9f7488a6e6c104b2": "bcfe0b52189f4e21fa2cd0f1999119167941ad7ef7793563e7b5e29fe4725cd0",
+    "frozen_hz_experiment_run": "00d2fc12d5b4132bf009e331d57994cd174b6826f1811393bb5b12d11f1917c0",
+    "frozen_hz_model_parameters": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418",
+    "frozen_hz_evaluation": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2"
+  },
+  "files": {
+    "manifest": "external/ningbo/data/source_manifest.json",
+    "samples": "external/ningbo/data/samples.csv",
+    "quarantine": "external/ningbo/data/quarantined_records.csv",
+    "predictions": null
+  },
+  "selection_policy": "宁波结果不用于选择站点、模型、C 或方法；因 SSOD 无完整日量，未运行迁移指标。",
+  "limitations": [
+    "宁波机场源本身可访问，但 362 行 total_precipitation 均为 -9999.9 且测量码为 I，无法证明 2025 年降水为零。",
+    "没有替换为其他站点，也没有把缺失观测强行配对或继续计算 Brier。",
+    "若目录中保留了预先缓存的 Open-Meteo 文件，它们仅作为调用证据，未参与任何宁波样本或指标。",
+    "这是数据可行性阻塞证据，不是杭州模型在宁波的效果结论。"
+  ]
+}

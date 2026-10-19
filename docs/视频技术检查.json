@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "video_sha256": "085c0ea556b42fad0c3939ca27c217e7b534aeddeff255eb35a37cabc9fe3504",
+  "manifest_matches": true,
+  "fps": 30.0,
+  "width": 1920,
+  "height": 1080,
+  "expected_frames": 5070,
+  "decoded_frames": 5070,
+  "duration_seconds": 169.0,
+  "caption_count": 28,
+  "captions_within_video_and_nonoverlapping": true,
+  "last_caption_end_seconds": 165.65,
+  "elapsed_seconds": 52.11,
+  "limitations": [
+    "仅验证视频帧解码、文件身份和字幕时间，不代表音轨已完整听审。",
+    "画面仅抽取35、100、139秒检查；无自动检测全部视觉内容。",
+    "最终影片认可仍需两名成员完整看听。"
+  ]
+}

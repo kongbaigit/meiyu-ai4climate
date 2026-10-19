@@ -1,0 +1,34 @@
+experiment_version: meiyu-experiment-v1
+data:
+  samples_path: data/samples.csv
+  quality_path: reports/data_quality.json
+splits:
+  train_start: 1900-01-01T00:00:00Z
+  validation_start: 2025-01-01T00:00:00Z
+  test_start: 2025-05-01T00:00:00Z
+event:
+  threshold_mm: 25.0
+model:
+  random_seed: 20261013
+  max_iter: 3000
+  c_grid: [0.1, 1.0, 10.0]
+  class_weight: null
+  preprocessing:
+    imputer: median
+    scaler: standard
+    fit_split: train
+methods:
+  - training_climatology
+  - raw_nwp_rule
+  - logistic_rain
+  - logistic_weather
+evaluation:
+  validation_metric: brier
+  fixed_probability_threshold: 0.1
+  bootstrap: calendar_week
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20261013
+cost_scenarios:
+  loss_unit: 1.0
+  prepare_cost_ratios: [0.02, 0.05, 0.1, 0.2, 0.4, 0.6]
+  assumption: prepare完全避免事件损失；输出为相对成本单位
