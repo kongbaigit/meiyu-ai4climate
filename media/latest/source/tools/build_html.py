@@ -16,7 +16,7 @@ def main():
     for marker, value in replacements.items():
         assert html.count(marker) == 1
         html = html.replace(marker, value)
-    for marker, name in [('__VOICE__', 'narration.mp3'), ('__MUSIC__', 'music_playback.mp3')]:
+    for marker, name in [('__MUSIC__', 'music_playback.mp3')]:
         audio = ROOT / 'audio' / name
         assert audio.exists(), audio
         html = html.replace(marker, 'data:audio/mpeg;base64,' + base64.b64encode(audio.read_bytes()).decode('ascii'))

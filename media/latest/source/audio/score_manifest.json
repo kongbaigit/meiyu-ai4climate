@@ -1,291 +1,151 @@
 {
-  "schema_version": 2,
-  "title": "雨前的刻度·60秒有据版",
+  "schema_version": 3,
+  "title": "雨前的刻度·60秒纯配乐版",
+  "edition": "纯配乐与动态文字",
+  "source_storyboard": "storyboard.json",
+  "audio_mode": "instrumental_only",
+  "instrumental_only": true,
+  "speech_tracks": 0,
+  "ducking": {
+    "enabled": false,
+    "applied": false,
+    "reason": "instrumental_only"
+  },
   "duration_seconds": 60.0,
   "sample_rate": 48000,
+  "channels": 2,
   "bpm": 96,
   "meter": "4/4",
   "bar_count": 24,
   "bar_duration_seconds": 2.5,
-  "arrangement": "24 小节全新 60 秒编排；复用旧版程序合成音色，未使用第三方歌曲采样。",
-  "voice": {
-    "engine": "Microsoft Edge zh-CN-XiaoxiaoNeural via edge-tts",
-    "rate": "+5%",
-    "speech_offset_seconds": 0.65,
-    "scenes": [
-      {
-        "id": "opening",
-        "scene_start": 0.0,
-        "scene_end": 6.0,
-        "start": 0.65,
-        "end": 3.986,
-        "duration": 3.336,
-        "offset": 0.65,
-        "within_scene": 2.014,
-        "sha256": "0e37760c41884880e6d25f6697089f4cea821e48a2c7947432d2b540dc8300ea",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "start": 0.75,
-            "end": 3.985714,
-            "text": "明天下雨，这批货要不要先搬高？"
-          }
-        ]
-      },
-      {
-        "id": "live",
-        "scene_start": 6.0,
-        "scene_end": 16.0,
-        "start": 6.65,
-        "end": 12.098,
-        "duration": 5.448,
-        "offset": 0.65,
-        "within_scene": 3.902,
-        "sha256": "6399c456b3b0c86c73fdb873918d6c6743d1f1d381ee982c4361141a51695e56",
-        "boundary_count": 2,
-        "boundaries": [
-          {
-            "start": 6.75,
-            "end": 8.735714,
-            "text": "打开自动取天气。"
-          },
-          {
-            "start": 8.685714,
-            "end": 12.030953,
-            "text": "数据过期或不完整，就暂停建议。"
-          }
-        ]
-      },
-      {
-        "id": "inputs",
-        "scene_start": 16.0,
-        "scene_end": 28.0,
-        "start": 16.65,
-        "end": 25.194,
-        "duration": 8.544,
-        "offset": 0.65,
-        "within_scene": 2.806,
-        "sha256": "9d1be92940c5c5af7f92aaf59b833e890c72fe0a88f73dbf5a0e9939bb30d4d6",
-        "boundary_count": 2,
-        "boundaries": [
-          {
-            "start": 16.75,
-            "end": 22.128572,
-            "text": "下面用百分之六十的假设情景，填搬货成本和预计货损。"
-          },
-          {
-            "start": 22.078572,
-            "end": 25.126191,
-            "text": "搬后剩下的损失，也要算进去。"
-          }
-        ]
-      },
-      {
-        "id": "move",
-        "scene_start": 28.0,
-        "scene_end": 38.0,
-        "start": 28.65,
-        "end": 33.282,
-        "duration": 4.632,
-        "offset": 0.65,
-        "within_scene": 4.718,
-        "sha256": "2f288b878fa7219bd282efce42b9d6ca823444dc615685d124fb7a64bbe61cc2",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "start": 28.75,
-            "end": 33.271429,
-            "text": "这组设定里，不搬预计六百元，搬货一百四十元。"
-          }
-        ]
-      },
-      {
-        "id": "keep",
-        "scene_start": 38.0,
-        "scene_end": 47.0,
-        "start": 38.65,
-        "end": 42.346,
-        "duration": 3.696,
-        "offset": 0.65,
-        "within_scene": 4.654,
-        "sha256": "e6dd8fbdb6e54ceaa822ec43f7ad373053c5987b0ba94cd05d04da493362f4b5",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "start": 38.75,
-            "end": 42.342857,
-            "text": "搬货费用提高，结果也会自动改变。"
-          }
-        ]
-      },
-      {
-        "id": "actions",
-        "scene_start": 47.0,
-        "scene_end": 55.0,
-        "start": 47.65,
-        "end": 51.082,
-        "duration": 3.432,
-        "offset": 0.65,
-        "within_scene": 3.918,
-        "sha256": "d3597d4037e76631e08099a8aa1bfce468b872a591bacb9102b832ca8c5021ef",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "start": 47.75,
-            "end": 51.069048,
-            "text": "确认怎么处理，再把这次账单留下。"
-          }
-        ]
-      },
-      {
-        "id": "closing",
-        "scene_start": 55.0,
-        "scene_end": 60.0,
-        "start": 55.65,
-        "end": 59.49,
-        "duration": 3.84,
-        "offset": 0.65,
-        "within_scene": 0.51,
-        "sha256": "ed55891f9a86e3d1a38caf22dfaf7b39853252330cc22aa734c11744c3618490",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "start": 55.75,
-            "end": 59.47381,
-            "text": "梅雨有数，先算清楚，再决定搬不搬。"
-          }
-        ]
-      }
-    ],
-    "metadata": [
-      {
-        "scene_id": "opening",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_opening.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_opening.mp3",
-        "sha256": "0e37760c41884880e6d25f6697089f4cea821e48a2c7947432d2b540dc8300ea",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 32357144,
-            "start_seconds": 0.1,
-            "end_seconds": 3.3357144,
-            "text": "明天下雨，这批货要不要先搬高？"
-          }
-        ]
-      },
-      {
-        "scene_id": "live",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_live.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_live.mp3",
-        "sha256": "6399c456b3b0c86c73fdb873918d6c6743d1f1d381ee982c4361141a51695e56",
-        "boundary_count": 2,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 19857143,
-            "start_seconds": 0.1,
-            "end_seconds": 2.0857143,
-            "text": "打开自动取天气。"
-          },
-          {
-            "offset_100ns": 20357143,
-            "duration_100ns": 33452382,
-            "start_seconds": 2.0357143,
-            "end_seconds": 5.3809525,
-            "text": "数据过期或不完整，就暂停建议。"
-          }
-        ]
-      },
-      {
-        "scene_id": "inputs",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_inputs.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_inputs.mp3",
-        "sha256": "9d1be92940c5c5af7f92aaf59b833e890c72fe0a88f73dbf5a0e9939bb30d4d6",
-        "boundary_count": 2,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 53785716,
-            "start_seconds": 0.1,
-            "end_seconds": 5.4785716,
-            "text": "下面用百分之六十的假设情景，填搬货成本和预计货损。"
-          },
-          {
-            "offset_100ns": 54285716,
-            "duration_100ns": 30476191,
-            "start_seconds": 5.4285716,
-            "end_seconds": 8.4761907,
-            "text": "搬后剩下的损失，也要算进去。"
-          }
-        ]
-      },
-      {
-        "scene_id": "move",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_move.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_move.mp3",
-        "sha256": "2f288b878fa7219bd282efce42b9d6ca823444dc615685d124fb7a64bbe61cc2",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 45214287,
-            "start_seconds": 0.1,
-            "end_seconds": 4.6214287,
-            "text": "这组设定里，不搬预计六百元，搬货一百四十元。"
-          }
-        ]
-      },
-      {
-        "scene_id": "keep",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_keep.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_keep.mp3",
-        "sha256": "e6dd8fbdb6e54ceaa822ec43f7ad373053c5987b0ba94cd05d04da493362f4b5",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 35928573,
-            "start_seconds": 0.1,
-            "end_seconds": 3.6928573,
-            "text": "搬货费用提高，结果也会自动改变。"
-          }
-        ]
-      },
-      {
-        "scene_id": "actions",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_actions.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_actions.mp3",
-        "sha256": "d3597d4037e76631e08099a8aa1bfce468b872a591bacb9102b832ca8c5021ef",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 33190477,
-            "start_seconds": 0.1,
-            "end_seconds": 3.4190477,
-            "text": "确认怎么处理，再把这次账单留下。"
-          }
-        ]
-      },
-      {
-        "scene_id": "closing",
-        "metadata_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_closing.json",
-        "audio_path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_closing.mp3",
-        "sha256": "ed55891f9a86e3d1a38caf22dfaf7b39853252330cc22aa734c11744c3618490",
-        "boundary_count": 1,
-        "boundaries": [
-          {
-            "offset_100ns": 1000000,
-            "duration_100ns": 37238096,
-            "start_seconds": 0.1,
-            "end_seconds": 3.8238096,
-            "text": "梅雨有数，先算清楚，再决定搬不搬。"
-          }
-        ]
-      }
-    ]
-  },
+  "arrangement": "24 小节纯器乐编排；沿用已验证的程序合成音色，移除全部语音轨与语音 duck。",
+  "original_synth_timbres": true,
+  "third_party_music_assets": false,
+  "third_party_songs": false,
+  "instruments": [
+    "Warm pad",
+    "Soft bass",
+    "Glass motif",
+    "Light percussion"
+  ],
+  "scene_timeline": [
+    {
+      "id": "opening",
+      "label": "搬不搬",
+      "start": 0,
+      "end": 6
+    },
+    {
+      "id": "live",
+      "label": "自动天气",
+      "start": 6,
+      "end": 16
+    },
+    {
+      "id": "inputs",
+      "label": "填两笔钱",
+      "start": 16,
+      "end": 28
+    },
+    {
+      "id": "move",
+      "label": "建议搬货",
+      "start": 28,
+      "end": 38
+    },
+    {
+      "id": "keep",
+      "label": "改变成本",
+      "start": 38,
+      "end": 47
+    },
+    {
+      "id": "actions",
+      "label": "留下账单",
+      "start": 47,
+      "end": 55
+    },
+    {
+      "id": "closing",
+      "label": "梅雨有数",
+      "start": 55,
+      "end": 60
+    }
+  ],
+  "text_cues": [
+    {
+      "start": 0.9,
+      "end": 5.5,
+      "text": "先看天气，再算准备成本。",
+      "accent": "准备成本"
+    },
+    {
+      "start": 6.7,
+      "end": 10.7,
+      "text": "自动获取天气，先核对完整度。",
+      "accent": "完整度"
+    },
+    {
+      "start": 11.1,
+      "end": 15.5,
+      "text": "数据过期或缺失，暂停当前建议。",
+      "accent": "暂停当前建议"
+    },
+    {
+      "start": 16.7,
+      "end": 21.3,
+      "text": "搬一次的成本 + 这类降雨下的平均货损",
+      "accent": "平均货损"
+    },
+    {
+      "start": 22.0,
+      "end": 27.4,
+      "text": "搬后仍可能受损，这笔损失也要算。",
+      "accent": "也要算"
+    },
+    {
+      "start": 28.7,
+      "end": 32.7,
+      "text": "不搬预计 ¥600，搬货预计 ¥140。",
+      "accent": "¥140"
+    },
+    {
+      "start": 33.2,
+      "end": 37.5,
+      "text": "按这些假设，搬货的预计总成本更低。",
+      "accent": "预计总成本更低"
+    },
+    {
+      "start": 38.4,
+      "end": 40.8,
+      "text": "搬货成本：80 → 600元。",
+      "accent": "80 → 600"
+    },
+    {
+      "start": 41.2,
+      "end": 46.4,
+      "text": "搬货预计 ¥660，不搬预计 ¥600。",
+      "accent": "¥600"
+    },
+    {
+      "start": 47.6,
+      "end": 51.2,
+      "text": "确认准备项，保留本次成本假设。",
+      "accent": "成本假设"
+    },
+    {
+      "start": 51.6,
+      "end": 54.6,
+      "text": "天气、窗口和选择，一起记入账单。",
+      "accent": "记入账单"
+    },
+    {
+      "start": 56.0,
+      "end": 59.7,
+      "text": "打开应用，算一算你的搬货成本。",
+      "accent": "搬货成本"
+    }
+  ],
   "markers": [
     {
       "id": "result",
@@ -2444,35 +2304,53 @@
       "program": null
     }
   ],
-  "third_party_music_assets": false,
   "seed": 20261019,
   "outputs": {
-    "score_mp3": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\score.mp3",
-    "music_playback_mp3": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\music_playback.mp3",
-    "narration_mp3": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\narration.mp3",
-    "score_mid": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\score.mid",
-    "master_mix_wav": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\master_mix.wav",
-    "intermediate_wav": [
-      "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\score.wav",
-      "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\music_playback.wav",
-      "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\narration.wav",
-      "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\mix_pre_master.wav"
-    ]
+    "score_wav": {
+      "path": "audio/score.wav",
+      "bytes": 11520078,
+      "sha256": "a962713dd737e24370e595d67779845766f629f1ffe0ce880533b6e873afa221"
+    },
+    "music_playback_mp3": {
+      "path": "audio/music_playback.mp3",
+      "bytes": 1441196,
+      "sha256": "2c25fadf2fa2c77bfd6f93ee266d24894e79f25f6ffecfa5ab15fe7be2e89971"
+    },
+    "score_mp3": {
+      "path": "audio/score.mp3",
+      "bytes": 1441196,
+      "sha256": "2c25fadf2fa2c77bfd6f93ee266d24894e79f25f6ffecfa5ab15fe7be2e89971"
+    },
+    "score_mid": {
+      "path": "audio/score.mid",
+      "bytes": 2257,
+      "sha256": "f1e03ca6ff37515d5e9bac746f449131b3fb4a054b37212b3b19770c0b893d9d"
+    },
+    "master_mix_wav": {
+      "path": "audio/master_mix.wav",
+      "bytes": 11520078,
+      "sha256": "a962713dd737e24370e595d67779845766f629f1ffe0ce880533b6e873afa221"
+    }
   },
   "master": {
     "target_lufs": -16.0,
     "target_true_peak_dbtp": -1.5,
     "target_lra": 9.0,
     "first_pass_measurement": {
-      "input_i": -17.63,
-      "input_tp": -3.68,
-      "input_lra": 13.1,
-      "input_thresh": -28.87,
-      "target_offset": 1.22
+      "input_i": -27.44,
+      "input_tp": -14.21,
+      "input_lra": 7.9,
+      "input_thresh": -37.52,
+      "target_offset": -1.18
     },
-    "measured_integrated_lufs": -16.0,
-    "measured_true_peak_dbtp": -1.5,
+    "measured_integrated_lufs": -15.9,
+    "measured_true_peak_dbtp": -2.8,
+    "fade_out_start_seconds": 57.0,
     "fade_out_seconds": 3.0
   },
-  "generated_at_utc": "2026-10-19T05:52:24.735270+00:00"
+  "verification": {
+    "ffprobe_required_duration_seconds": 60.0,
+    "listening_review": "未执行人工听审"
+  },
+  "generated_at_utc": "2026-10-19T07:52:44.587855+00:00"
 }

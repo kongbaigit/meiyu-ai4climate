@@ -1,0 +1,99 @@
+{
+  "版本": "纯配乐与动态文字",
+  "公开发布状态": "等待本轮部署后核验",
+  "应用地址": "https://kongbaigit.github.io/meiyu-ai4climate/",
+  "影片地址": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
+  "原生动画": "https://kongbaigit.github.io/meiyu-ai4climate/promo/native.html",
+  "影片信息": {
+    "edition": "纯配乐与动态文字",
+    "video": "梅雨有数_60秒纯配乐动态文字.mp4",
+    "duration_seconds": 60,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "bytes": 10282564,
+    "sha256": "e0770b609bb0375ed164afd61e30bd1342689a3cc2481e3f90d51b7b10932b7b",
+    "audio_mode": "instrumental_only",
+    "speech_tracks": 0,
+    "text_cues": 12,
+    "scenes": 7
+  },
+  "音轨核对": {
+    "结果": "通过",
+    "音频模式": "instrumental_only",
+    "配音来源轨数": 0,
+    "交付包配音素材": [],
+    "旁白让位压低": false,
+    "实际AAC音轨与纯器乐母带相关系数": 0.9999577797220192,
+    "相对均方根误差": 0.009225950590679015,
+    "核对方法": "最终MP4与纯器乐母带分别解码为48k立体声浮点PCM，去掉首尾各1秒后比较；允许AAC有损差异。",
+    "实际成片LUFS": -16.01,
+    "实际成片dBTP": -2.78,
+    "实际成片LRA": 7.9,
+    "音轨母带sha256": "a962713dd737e24370e595d67779845766f629f1ffe0ce880533b6e873afa221",
+    "实际成片sha256": "e0770b609bb0375ed164afd61e30bd1342689a3cc2481e3f90d51b7b10932b7b",
+    "音乐主观听审": "未完成；技术测量不等于听审通过"
+  },
+  "原生预览": {
+    "结果": "PASS",
+    "检查时点": 49,
+    "单音乐轨": {
+      "count": 1,
+      "music_time": 53.219098,
+      "ready": 4,
+      "mode": "instrumental_only",
+      "speech_tracks": 0,
+      "voice_control": false,
+      "timeline_children": 43
+    },
+    "确定性跳转": true,
+    "手机布局": true,
+    "JavaScript异常": [],
+    "外部媒体请求": []
+  },
+  "成片连续播放": {
+    "kind": "最终MP4关键片段连续解码播放，非主观完整观看或听审",
+    "duration": 60,
+    "segments": [
+      {
+        "start": 9,
+        "at": 12.013721,
+        "callbacks": 91,
+        "maxMediaGap": 0.033333999999999975,
+        "dropped": 0,
+        "total": 92,
+        "error": null
+      },
+      {
+        "start": 21,
+        "at": 24.010677,
+        "callbacks": 92,
+        "maxMediaGap": 0.03333400000000353,
+        "dropped": 0,
+        "total": 94,
+        "error": null
+      },
+      {
+        "start": 38,
+        "at": 41.010571,
+        "callbacks": 92,
+        "maxMediaGap": 0.03333400000000353,
+        "dropped": 0,
+        "total": 92,
+        "error": null
+      },
+      {
+        "start": 55,
+        "at": 58.010135,
+        "callbacks": 92,
+        "maxMediaGap": 0.03333400000000353,
+        "dropped": 0,
+        "total": 95,
+        "error": null
+      }
+    ],
+    "errors": []
+  },
+  "说明": "应用功能、冻结数据、模型及既有比赛PDF没有修改。旧配音版保留在Git历史；新版源包移除语音素材和生成依赖。",
+  "限制": "完整主观观看和音乐听审尚未完成，技术检查不等于听审通过。"
+}

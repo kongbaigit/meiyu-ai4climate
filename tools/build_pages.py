@@ -12,10 +12,10 @@ import shutil
 from pathlib import Path
 
 
-VIDEO_NAME = "梅雨有数_60秒宣传片.mp4"
-PROMO_DIR_NAME = "梅雨有数_搬货决策版_20261019"
-EXPECTED_VIDEO_SIZE = 9_598_986
-EXPECTED_VIDEO_SHA256 = "164015a6fd553c0ec4d4f31fcc0179982bb11f83321a0323de56daec8dca799b"
+VIDEO_NAME = "梅雨有数_60秒纯配乐动态文字.mp4"
+PROMO_DIR_NAME = "梅雨有数_纯配乐动态文字版_20261019"
+EXPECTED_VIDEO_SIZE = 10_282_564
+EXPECTED_VIDEO_SHA256 = "e0770b609bb0375ed164afd61e30bd1342689a3cc2481e3f90d51b7b10932b7b"
 RECURSIVE_DELETE_PATHS = (Path("media/latest"), Path("site/promo"), Path("site/media"))
 FILE_DELETE_PATHS = (Path("site/index.html"), Path("site/demo.html"), Path("site/.nojekyll"))
 SOURCE_NOTE_OLD = "新版代码和影片为本地交付，未自动发布到公开仓库。".encode("utf-8")
@@ -36,20 +36,12 @@ def copy_file(source: Path, target: Path) -> None:
 
 
 def update_source_note(path: Path) -> None:
-    """保留来源说明其余字节，只把发布状态改成制作时的历史状态。"""
+    """兼容旧来源说明；新来源说明自行写入以 README 为准的状态。"""
 
     data = path.read_bytes()
     if SOURCE_NOTE_OLD in data:
         data = data.replace(SOURCE_NOTE_OLD, SOURCE_NOTE_NEW, 1)
-    elif SOURCE_NOTE_NEW not in data:
-        raise ValueError(f"来源说明缺少可替换的发布状态句：{path}")
-    path.write_bytes(data)
-
-
-def clean_source_readme(path: Path) -> None:
-    data = path.read_bytes()
-    data = data.replace("当前工具不能听取音频，完整人工听审仍待团队确认。".encode("utf-8"), "完整人工听审仍待团队确认。".encode("utf-8"))
-    path.write_bytes(data)
+        path.write_bytes(data)
 
 
 def _is_within(path: Path, parent: Path) -> bool:
@@ -107,7 +99,7 @@ def resolve_promo_dir(root: Path, requested: Path | None) -> Path | None:
         return _validate_promo_dir(root, default_promo_dir(root))
     except FileNotFoundError:
         latest = root / "media" / "latest"
-        required = (latest / "promo60.mp4", latest / "cover.png", latest / "subtitles.srt")
+        required = (latest / "promo60-music.mp4", latest / "cover.png", latest / "subtitles.srt")
         if all(path.is_file() for path in required):
             return None
         raise
@@ -154,7 +146,7 @@ def promo_page() -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="date" content="2026-10-19">
-  <title>梅雨有数 · 60 秒搬货决策宣传片</title>
+  <title>梅雨有数 · 60 秒纯配乐动态文字宣传片</title>
   <style>
     :root { color-scheme: light; --ink: #173c35; --green: #286c60; --paper: #f1f1e9; --line: #d7dfd1; }
     * { box-sizing: border-box; }
@@ -166,6 +158,7 @@ def promo_page() -> str:
     .card { background: #fffef8; border: 1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 16px 42px #173c3512; }
     video { display: block; width: 100%; height: auto; border-radius: 10px; background: #102d2d; }
     .links { display: flex; flex-wrap: wrap; gap: 14px 22px; margin: 20px 0 0; }
+    .view-tip { margin: 10px 0 0; color: #61766b; font-size: 13px; }
     a { color: var(--green); }
     .note { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 20px; color: #5e7368; font-size: 14px; }
     .note p { margin: 8px 0; }
@@ -178,25 +171,26 @@ def promo_page() -> str:
     <header>
       <div>
         <h1>梅雨有数</h1>
-        <p>60 秒搬货决策宣传片</p>
+        <p>60 秒纯配乐 · 动态文字 · 无配音</p>
       </div>
       <p><time datetime="2026-10-19">2026 年 10 月 19 日</time></p>
     </header>
-    <section class="card" aria-label="梅雨有数 60 秒宣传片">
-      <video controls playsinline preload="metadata" poster="../media/promo60-cover.png">
-        <source src="../media/promo60.mp4" type="video/mp4">
-        <track kind="captions" srclang="zh-CN" label="中文字幕" src="../media/promo60.vtt">
+    <section class="card" aria-label="梅雨有数 60 秒纯配乐动态文字宣传片">
+      <video controls playsinline preload="metadata" poster="../media/promo60-music-cover.png" aria-describedby="viewing-tip">
+        <source src="../media/promo60-music.mp4" type="video/mp4">
+        <track kind="captions" srclang="zh-CN" label="可选文字轨" src="../media/promo60-music.vtt">
         当前浏览器不支持 HTML5 视频，请下载 MP4 文件查看。
       </video>
     </section>
+    <p class="view-tip" id="viewing-tip">手机建议横屏或全屏观看，文字更清楚。</p>
     <nav class="links" aria-label="页面链接">
       <a href="../index.html">返回应用</a>
       <a href="../demo.html">查看历史演示</a>
+      <a href="native.html">打开原生动画预览</a>
     </nav>
     <section class="note">
-      <p><span class="tag">示例</span>影片使用 60% 的假设概率、不搬预计损失 1,000 元、搬货成本 80 元和搬后预计损失 100 元来说明计算方式。数字是情景估算，不代表已经实现的收益。</p>
-      <p><span class="tag">日期</span>影片和天气来源快照对应 2026 年 10 月 19 日。影片不请求实时天气；在线播放会加载影片文件。应用页面按页面自身规则检查天气，并复用有效缓存。关闭页面后不会留下 Python 后台。</p>
-      <p><span class="tag">字幕</span>影片画面已经烧录中文字幕，播放器另外提供可选中文字幕轨。</p>
+      <p><span class="tag">影片</span>本版包含 12 段动态文字和 7 个场景，只使用原创器乐，不含配音。画面中的文字是影片内容，播放器另外提供可选文字轨。</p>
+      <p><span class="tag">日期</span>影片和制作素材对应 2026 年 10 月 19 日。影片不请求实时天气；在线播放会加载影片文件。应用页面按页面自身规则检查天气，并复用有效缓存。关闭页面后不会留下 Python 后台。</p>
       <p>完整人工听审尚未检查，技术检查不能代替人工看完和听完。源码和来源说明保留在仓库的 <code>media/latest/</code>。</p>
     </section>
   </main>
@@ -224,17 +218,18 @@ def copy_latest_materials(root: Path, promo_dir: Path, latest: Path) -> None:
         copy_file(item, latest / "source" / item.relative_to(source))
 
     top_level = {
-        VIDEO_NAME: "promo60.mp4",
+        VIDEO_NAME: "promo60-music.mp4",
         "封面.png": "cover.png",
         "原创配乐.mp3": "soundtrack.mp3",
-        "中文旁白.mp3": "narration.mp3",
-        "中文字幕.srt": "subtitles.srt",
+        "原创配乐.mid": "score.mid",
+        "动态文字.srt": "subtitles.srt",
         "来源说明.md": "source-note.md",
+        "预览.html": "preview.html",
     }
     for source_name, target_name in top_level.items():
         copy_file(promo_dir / source_name, latest / target_name)
     update_source_note(latest / "source-note.md")
-    (latest / "subtitles.vtt").write_bytes(srt_to_vtt(promo_dir / "中文字幕.srt"))
+    (latest / "subtitles.vtt").write_bytes(srt_to_vtt(promo_dir / "动态文字.srt"))
 
 
 def build_pages(root: Path, promo_dir: Path | None) -> dict[str, str]:
@@ -242,7 +237,7 @@ def build_pages(root: Path, promo_dir: Path | None) -> dict[str, str]:
     latest = root / "media" / "latest"
     if promo_dir is not None:
         promo_dir = _validate_promo_dir(root, promo_dir)
-    video = promo_dir / VIDEO_NAME if promo_dir is not None else latest / "promo60.mp4"
+    video = promo_dir / VIDEO_NAME if promo_dir is not None else latest / "promo60-music.mp4"
     if video.stat().st_size != EXPECTED_VIDEO_SIZE:
         raise ValueError(f"影片大小不符：{video.stat().st_size}，预期 {EXPECTED_VIDEO_SIZE}")
     video_hash = sha256(video)
@@ -253,7 +248,6 @@ def build_pages(root: Path, promo_dir: Path | None) -> dict[str, str]:
         copy_latest_materials(root, promo_dir, latest)
     elif not (latest / "subtitles.vtt").is_file():
         (latest / "subtitles.vtt").write_bytes(srt_to_vtt(latest / "subtitles.srt"))
-    clean_source_readme(latest / "source" / "README.md")
     remove_path(root, site / "index.html", recursive=False)
     remove_path(root, site / "demo.html", recursive=False)
     remove_path(root, site / ".nojekyll", recursive=False)
@@ -263,12 +257,13 @@ def build_pages(root: Path, promo_dir: Path | None) -> dict[str, str]:
 
     copy_file(root / "index.html", site / "index.html")
     copy_file(root / "demo.html", site / "demo.html")
-    copy_file(latest / "promo60.mp4", site / "media" / "promo60.mp4")
-    copy_file(latest / "cover.png", site / "media" / "promo60-cover.png")
-    (site / "media" / "promo60.vtt").write_bytes((latest / "subtitles.vtt").read_bytes())
+    copy_file(latest / "promo60-music.mp4", site / "media" / "promo60-music.mp4")
+    copy_file(latest / "cover.png", site / "media" / "promo60-music-cover.png")
+    (site / "media" / "promo60-music.vtt").write_bytes((latest / "subtitles.vtt").read_bytes())
     (site / ".nojekyll").write_bytes(b"")
     (site / "promo" / "index.html").parent.mkdir(parents=True, exist_ok=True)
     (site / "promo" / "index.html").write_text(promo_page(), encoding="utf-8", newline="\n")
+    copy_file(latest / "preview.html", site / "promo" / "native.html")
 
     return {
         "video_size": str(video.stat().st_size),

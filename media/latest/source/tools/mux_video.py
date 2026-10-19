@@ -30,7 +30,7 @@ def main():
     log.write_bytes(run.stderr)
     if run.returncode:
         raise RuntimeError(run.stderr.decode('utf-8',errors='replace')[-4000:])
-    report={'output':args.output.name,'bytes':args.output.stat().st_size,'sha256':hashlib.sha256(args.output.read_bytes()).hexdigest(),'duration':args.duration,'fps':30,'width':1920,'height':1080,'video_pipeline':'Canvas -> VideoFrame -> WebCodecs Annex-B -> stream-copy H.264/AAC MP4','screenshots_used':False,'video_reencoded':False,'audio_master':'master_mix.wav, loudnorm target -16 LUFS / -1.5 dBTP','encoding_log':log.name}
+    report={'output':args.output.name,'bytes':args.output.stat().st_size,'sha256':hashlib.sha256(args.output.read_bytes()).hexdigest(),'duration':args.duration,'fps':30,'width':1920,'height':1080,'video_pipeline':'Canvas -> VideoFrame -> WebCodecs Annex-B -> stream-copy H.264/AAC MP4','screenshots_used':False,'video_reencoded':False,'audio_mode':'instrumental_only','speech_tracks':0,'audio_master':'master_mix.wav, loudnorm target -16 LUFS / -1.5 dBTP','encoding_log':log.name}
     args.output.with_suffix('.encoding.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(report,ensure_ascii=False))
 
