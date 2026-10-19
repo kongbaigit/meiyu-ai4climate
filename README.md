@@ -16,12 +16,12 @@
 
 ## 在线演示
 
-以下为计划地址，公开部署状态待本轮发布前最终核对：
+2026年10月19日已更新并核验以下在线入口：
 
 - [直接打开应用](https://kongbaigit.github.io/meiyu-ai4climate/)：自动检查天气，填写金额后比较搬与不搬。
 - [观看60秒宣传片](https://kongbaigit.github.io/meiyu-ai4climate/promo/)：直接在线播放，支持手机和可选文字轨。
 
-纯配乐版的最终尺寸、SHA-256 和公开部署状态由本轮发布前最终核对；检查记录见[纯配乐版发布检查](docs/music-only-release-check.json)。旧版影片检查记录不用于证明新成片。构建与运行边界见[在线演示说明](docs/online-demo.md)，完整人工听审仍待团队确认。
+纯配乐版为60秒、1920×1080、30fps，已核对线上7个文件、视频分段加载与浏览器实际播放。成片摘要和详细结果见[纯配乐版发布检查](docs/music-only-release-check.json)。构建与运行边界见[在线演示说明](docs/online-demo.md)，完整主观观看和音乐听审仍待团队确认。
 
 ## 评审与报名入口
 

@@ -1,6 +1,6 @@
 {
   "版本": "纯配乐与动态文字",
-  "公开发布状态": "等待本轮部署后核验",
+  "公开发布状态": "已部署，线上文件与本地最终文件一致，实际播放检查通过",
   "应用地址": "https://kongbaigit.github.io/meiyu-ai4climate/",
   "影片地址": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
   "原生动画": "https://kongbaigit.github.io/meiyu-ai4climate/promo/native.html",
@@ -95,5 +95,237 @@
     "errors": []
   },
   "说明": "应用功能、冻结数据、模型及既有比赛PDF没有修改。旧配音版保留在Git历史；新版源包移除语音素材和生成依赖。",
-  "限制": "完整主观观看和音乐听审尚未完成，技术检查不等于听审通过。"
+  "限制": "完整主观观看和音乐听审尚未完成，技术检查不等于听审通过。",
+  "核验时间UTC": "2026-10-19T11:02:51.511727+00:00",
+  "源码提交": "379dbc77b4029a1338c52e5ddd0fcf4d608ef3a5",
+  "Pages提交": "5cec32d74fc59f883427252df2a738321af69ba9",
+  "部署": {
+    "结果": "success",
+    "工作流": "https://github.com/kongbaigit/meiyu-ai4climate/actions/runs/39241545446"
+  },
+  "线上文件核验": {
+    "status": "PASS",
+    "base": "https://kongbaigit.github.io/meiyu-ai4climate/",
+    "checked_at_utc": "2026-10-19T11:02:14.997976+00:00",
+    "files": [
+      {
+        "path": "index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/",
+        "status_code": 200,
+        "bytes": 56902,
+        "sha256": "b39619f9cc9828b30dffc720c26d9d2377be5ad8230b197c90a5943b6a98ea6d",
+        "expected_sha256": "b39619f9cc9828b30dffc720c26d9d2377be5ad8230b197c90a5943b6a98ea6d",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "demo.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/demo.html",
+        "status_code": 200,
+        "bytes": 2290956,
+        "sha256": "d182129bc52ccee9356f47cefdc1583a0a06b8570a43675767a846b74cec6d1e",
+        "expected_sha256": "d182129bc52ccee9356f47cefdc1583a0a06b8570a43675767a846b74cec6d1e",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "promo/index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
+        "status_code": 200,
+        "bytes": 3612,
+        "sha256": "e1707a9a2005424738ead4885c623aa4b6a91b41265439c505c112c48b5feedc",
+        "expected_sha256": "e1707a9a2005424738ead4885c623aa4b6a91b41265439c505c112c48b5feedc",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "promo/native.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/promo/native.html",
+        "status_code": 200,
+        "bytes": 2032723,
+        "sha256": "e1c667b444fca04333800ba3bf2dd32791b4be4421eb6defcf48c5c8ac39f996",
+        "expected_sha256": "e1c667b444fca04333800ba3bf2dd32791b4be4421eb6defcf48c5c8ac39f996",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "media/promo60-music-cover.png",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60-music-cover.png",
+        "status_code": 200,
+        "bytes": 324399,
+        "sha256": "25a0f89120bc80287147564d5c8509f7217e43aca04ee9f793a9530375e422b2",
+        "expected_sha256": "25a0f89120bc80287147564d5c8509f7217e43aca04ee9f793a9530375e422b2",
+        "passed": true,
+        "content_type": "image/png"
+      },
+      {
+        "path": "media/promo60-music.vtt",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60-music.vtt",
+        "status_code": 200,
+        "bytes": 944,
+        "sha256": "74b631ee6f63668632bf469edaea61ac99d3a84e9f0a2fa2e36f7cf02395d53e",
+        "expected_sha256": "74b631ee6f63668632bf469edaea61ac99d3a84e9f0a2fa2e36f7cf02395d53e",
+        "passed": true,
+        "content_type": "text/vtt; charset=utf-8"
+      },
+      {
+        "path": "media/promo60-music.mp4",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60-music.mp4",
+        "status_code": 200,
+        "bytes": 10282564,
+        "sha256": "e0770b609bb0375ed164afd61e30bd1342689a3cc2481e3f90d51b7b10932b7b",
+        "expected_sha256": "e0770b609bb0375ed164afd61e30bd1342689a3cc2481e3f90d51b7b10932b7b",
+        "passed": true,
+        "content_type": "video/mp4"
+      }
+    ],
+    "video_range": {
+      "status_code": 206,
+      "content_range": "bytes 0-15/10282564",
+      "bytes": 16,
+      "passed": true
+    }
+  },
+  "线上播放检查": {
+    "status": "PASS",
+    "base": "https://kongbaigit.github.io/meiyu-ai4climate/",
+    "checks": [
+      {
+        "name": "线上影片入口成功",
+        "passed": true,
+        "evidence": {
+          "url": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
+          "status": 200
+        }
+      },
+      {
+        "name": "载入新版纯配乐高清成片",
+        "passed": true,
+        "evidence": {
+          "duration": 60,
+          "width": 1920,
+          "height": 1080,
+          "src": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60-music.mp4",
+          "controls": true,
+          "inline": true,
+          "tracks": [
+            {
+              "kind": "captions",
+              "mode": "disabled"
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "name": "可选字幕没有默认叠加",
+        "passed": true,
+        "evidence": [
+          {
+            "kind": "captions",
+            "mode": "disabled"
+          }
+        ]
+      },
+      {
+        "name": "线上影片实际播放与跳转成功",
+        "passed": true,
+        "evidence": {
+          "time": 44.028875,
+          "error": null,
+          "quality": {
+            "dropped": 1
+          }
+        }
+      },
+      {
+        "name": "手机页面不溢出且提供全屏提示",
+        "passed": true,
+        "evidence": {
+          "width": 390,
+          "document": 390,
+          "hint": "手机建议横屏或全屏观看，文字更清楚。"
+        }
+      },
+      {
+        "name": "线上原生预览入口成功",
+        "passed": true,
+        "evidence": "https://kongbaigit.github.io/meiyu-ai4climate/promo/native.html"
+      },
+      {
+        "name": "原生预览只有音乐和动态文字",
+        "passed": true,
+        "evidence": {
+          "count": 1,
+          "mode": "instrumental_only",
+          "speech": 0,
+          "voice_control": false,
+          "timeline": 43
+        }
+      },
+      {
+        "name": "原生预览音乐实际推进",
+        "passed": true,
+        "evidence": 0.848375
+      },
+      {
+        "name": "原生预览手机布局无横向溢出",
+        "passed": true,
+        "evidence": 390
+      },
+      {
+        "name": "页面没有JavaScript异常",
+        "passed": true,
+        "evidence": []
+      }
+    ],
+    "errors": [],
+    "browser": {
+      "preferred_channel": "msedge",
+      "default_disabled_features": [
+        "AvoidUnnecessaryBeforeUnloadCheckSync",
+        "BoundaryEventDispatchTracksNodeRemoval",
+        "DestroyProfileOnBrowserClose",
+        "DialMediaRouteProvider",
+        "GlobalMediaControls",
+        "HttpsUpgrades",
+        "LensOverlay",
+        "MediaRouter",
+        "PaintHolding",
+        "ThirdPartyStoragePartitioning",
+        "BlockOriginHeaderModificationOnRedirect",
+        "Translate",
+        "AutoDeElevate",
+        "OptimizationHints",
+        "msForceBrowserSignIn",
+        "msEdgeUpdateLaunchServicesPreferredVersion"
+      ],
+      "merged_disabled_features": [
+        "AvoidUnnecessaryBeforeUnloadCheckSync",
+        "BoundaryEventDispatchTracksNodeRemoval",
+        "DestroyProfileOnBrowserClose",
+        "DialMediaRouteProvider",
+        "GlobalMediaControls",
+        "HttpsUpgrades",
+        "LensOverlay",
+        "MediaRouter",
+        "PaintHolding",
+        "ThirdPartyStoragePartitioning",
+        "BlockOriginHeaderModificationOnRedirect",
+        "Translate",
+        "AutoDeElevate",
+        "OptimizationHints",
+        "msForceBrowserSignIn",
+        "msEdgeUpdateLaunchServicesPreferredVersion",
+        "AutofillAiWalletPrivatePasses"
+      ],
+      "merged_feature": "AutofillAiWalletPrivatePasses"
+    },
+    "checked_at_utc": "2026-10-19T11:02:15.458Z"
+  },
+  "独立审查": {
+    "结论": "继续发布，无阻碍两项整改发布的新问题",
+    "范围": "实际编码抽帧、桌面与390px播放器、单音乐原生预览、字幕元数据与手机提示",
+    "限制": "完整主观观看与音乐听审未完成"
+  }
 }
