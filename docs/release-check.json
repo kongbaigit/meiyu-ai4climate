@@ -1,0 +1,91 @@
+{
+  "状态": "已公开发布并完成线上技术核验",
+  "核验时间UTC": "2026-10-19T14:18:25.520736+00:00",
+  "仓库": "https://github.com/kongbaigit/meiyu-ai4climate",
+  "应用": "https://kongbaigit.github.io/meiyu-ai4climate/",
+  "播放器": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
+  "视频直链": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo-full-young-visionaries.mp4",
+  "Pages提交": "4a4f7515eac14475a71fe4f502ca7647a8dd6aca",
+  "实现审查树": "1312fe5fb2672e26c54b291f45085d7dfe5d5cce",
+  "文件核验": {
+    "player_current_version": true,
+    "video_range": {
+      "status": 206,
+      "content_range": "bytes 0-1023/24037485",
+      "bytes": 1024
+    },
+    "video": {
+      "bytes": 24037485,
+      "sha256": "2b52e74cf2302196d46e128802613a280aa584a914dc416fdc727dd3b91d2d86",
+      "matches_local": true
+    },
+    "native_preview": {
+      "bytes": 4072575,
+      "matches_local": true
+    },
+    "application": {
+      "bytes": 56903,
+      "matches_local": true
+    },
+    "historical_demo": {
+      "bytes": 2292028,
+      "matches_local": true
+    }
+  },
+  "播放核验": {
+    "metadata": {
+      "duration": 73.866667,
+      "width": 1920,
+      "height": 1080,
+      "currentSrc": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo-full-young-visionaries.mp4",
+      "controls": true,
+      "tracks": 1
+    },
+    "playback": {
+      "time": 1.030245,
+      "paused": false,
+      "muted": false,
+      "volume": 1,
+      "readyState": 4
+    },
+    "tailEnded": {
+      "ended": true,
+      "currentTime": 73.866667
+    },
+    "desktop": {
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "errors": [],
+    "responseErrors": []
+  },
+  "原生预览": {
+    "状态": "pass",
+    "动画时间": 1.0621999999880791,
+    "配乐时间": 1.020223,
+    "配音轨数": 0,
+    "错误": []
+  },
+  "测试": {
+    "Python通过": 134,
+    "Python跳过": 1,
+    "Python失败": 0,
+    "Node通过": 3,
+    "收尾定点测试通过": 8,
+    "冻结文件摘要通过": 24
+  },
+  "仓库整理": [
+    "保留当前应用、成片与可编辑源工程",
+    "移除旧片、重复PDF、过程台账、AI接手提示词和废弃构建入口",
+    "保留公开数据、冻结实验结果、必要测试、AI使用说明与第三方许可",
+    "主分支仅放源文件，site由构建脚本生成并单独发布到gh-pages"
+  ],
+  "待团队确认": [
+    "完整观看与主观听审",
+    "真实成员信息与最终报名回执"
+  ]
+}

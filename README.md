@@ -5,7 +5,7 @@
 ## 当前入口
 
 - [在线应用](https://kongbaigit.github.io/meiyu-ai4climate/)：自动获取公开集合天气，填写成本假设后比较搬与不搬。
-- [74秒完整宣传片](https://kongbaigit.github.io/meiyu-ai4climate/promo/)：当前选定版本，发布后做线上核验。
+- [74秒完整宣传片](https://kongbaigit.github.io/meiyu-ai4climate/promo/)：现成配乐与动态文字，无配音；已上线并核验。
 - 应用入口文件：`index.html`；成片：`media/latest/promo-full-young-visionaries.mp4`。
 - 原生预览：`media/latest/preview.html`；可编辑源：`media/latest/source/`。
 
@@ -27,7 +27,7 @@
 - 原曲裁切区间：17.313872945628–91.180539612295 秒；原速原调、无循环。
 - SHA-256：`2b52e74cf2302196d46e128802613a280aa584a914dc416fdc727dd3b91d2d86`。
 
-发布前已完成原生导出、媒体技术、实际关键帧和播放器控件检查；线上文件核验及主观观看、听审待发布后完成。完整记录见 [74 秒宣传片发布说明](docs/promo-full-release.md)。
+已完成成片技术、线上文件摘要、实际播放与手机布局核验。团队完整观看与听审仍待完成。完整记录见 [74 秒宣传片发布说明](docs/promo-full-release.md)。
 
 ## 核心方法与边界
 
@@ -62,4 +62,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
 
 项目新增代码采用 MIT 许可；第三方数据、文档和音乐按各自来源条款使用。Soundimage 音乐遵循其 International Public License，不写成 Creative Commons 或等效许可。
 
-历史阶段文件和旧发布记录不作为当前入口；需要追溯时从 Git 历史恢复。当前视频待 GitHub 更新后的线上文件、播放和移动端核验，主观观看与听审也待完成。
+当前主分支保留交付版；旧影片、过程提示词与重复材料已移除，历史版本可从 Git 历史追溯。线上核验记录见 [发布检查](docs/release-check.json)。

@@ -1,8 +1,8 @@
 {
   "schema_version": "meiyu-package-v1",
   "package_root": "meiyu",
-  "generated_at_utc": "2026-10-19T14:11:21.569898Z",
-  "file_count": 228,
+  "generated_at_utc": "2026-10-19T14:21:29.593567Z",
+  "file_count": 229,
   "hash_algorithm": "SHA-256",
   "hash_policy": "逐文件记录字节数与SHA-256；本文件列出但不自哈希，ZIP摘要由外部QA记录。",
   "allowed_top_level_files": [
@@ -72,8 +72,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4197,
-      "sha256": "1130881117f4b3947d0ac9270c1479227d3084774f3a1090e57c8c88f327df46"
+      "bytes": 4160,
+      "sha256": "24d87847ce4bf6e3ba1521eebb360d020f92a66e30622070dc69572b9a007b6c"
     },
     {
       "path": "app.py",
@@ -272,13 +272,18 @@
     },
     {
       "path": "docs/online-demo.md",
-      "bytes": 2491,
-      "sha256": "ca5ad1f44b4665c8cfb052e35fdc1231e5c3234a403b855687de2d4c1218eb96"
+      "bytes": 2569,
+      "sha256": "2c9b0e54ba7afa163ad23584ac5a75e6466e330c464897337be443cc12f99ac3"
     },
     {
       "path": "docs/promo-full-release.md",
-      "bytes": 2095,
-      "sha256": "5212f636808f9bcd2d8bc1473e3ff9b235b2ee7faeb215e30a5aa2f95b87c7e5"
+      "bytes": 2231,
+      "sha256": "cb12f248bba602e29dd8b729feb736d0fee7b5ef8b19320229fb825d3f0e86a9"
+    },
+    {
+      "path": "docs/release-check.json",
+      "bytes": 2591,
+      "sha256": "0ac78aaef9cbbc06efb30ef4910fcc7ea13587b8ff9c81b29d11c50589f47b4a"
     },
     {
       "path": "docs/三分钟答辩讲稿.md",
@@ -317,8 +322,8 @@
     },
     {
       "path": "docs/提交清单.md",
-      "bytes": 2321,
-      "sha256": "91c9f1b0bc10c80992cad2c36b8a16879b0e499ddd3004fb8128b4c1f2ff05d2"
+      "bytes": 2356,
+      "sha256": "772962eeab1eabc8f5ff0ba333a1ced2a5066c87452468d3b04f2710e2d52397"
     },
     {
       "path": "docs/数据与AI使用说明.pdf",
@@ -807,7 +812,7 @@
     },
     {
       "path": "reports/package_manifest.json",
-      "bytes": 40223,
+      "bytes": 40386,
       "sha256": null,
       "self_manifest": true
     },

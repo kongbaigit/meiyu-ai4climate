@@ -2,7 +2,7 @@
 
 ## 发布状态
 
-应用首页已通过线上文件与实际播放核验。74 秒完整版宣传片已准备发布，以下宣传片入口和文件在 GitHub 更新后再做线上核验：
+应用、历史演示、74 秒宣传片与原生预览已发布，公开文件与本地交付一致。播放器实际播放、进度跳转、片尾结束和手机布局检查通过：
 
 - 应用首页：<https://kongbaigit.github.io/meiyu-ai4climate/>
 - 宣传片：<https://kongbaigit.github.io/meiyu-ai4climate/promo/>
@@ -33,6 +33,6 @@
 
 在项目根目录运行 `python tools/build_pages.py`。构建结果应包括 `site/.nojekyll`、`site/media/promo-full-young-visionaries.mp4`、`site/promo/index.html` 和 `site/promo/native.html`，并核对成片 SHA-256 与站内相对链接。
 
-发布前已完成原生导出、媒体技术、实际关键帧和播放器控件检查；线上文件加载、实际播放、移动端布局以及主观观看、听审待发布后完成。
+已完成线上文件加载与摘要、实际播放、进度跳转、片尾结束和移动端布局检查。原生预览的动画与配乐同步播放通过；团队完整观看与听审仍待完成。核验数据见 [发布检查](release-check.json)。
 
 历史阶段文件和旧发布记录不作为当前入口；需要追溯时从 Git 历史恢复。
