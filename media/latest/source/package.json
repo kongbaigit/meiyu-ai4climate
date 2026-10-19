@@ -1,9 +1,0 @@
-{
-  "name": "meiyu-promo-20261019",
-  "version": "2.0.0",
-  "private": true,
-  "description": "梅雨有数原生代码宣传片的导出依赖",
-  "dependencies": {
-    "playwright": "1.62.1"
-  }
-}

@@ -1,9 +1,0 @@
-.venv/
-.venv-decision/
-__pycache__/
-.pytest_cache/
-.pytest-tmp/
-.pytest-tmp-*/
-runtime/
-data/raw/
-*.log

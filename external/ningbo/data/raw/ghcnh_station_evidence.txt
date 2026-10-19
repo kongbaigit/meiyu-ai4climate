@@ -1,4 +1,0 @@
-source_url: https://www.ncei.noaa.gov/oa/global-historical-climatology-network/hourly/doc/ghcnh-station-list.txt
-source_local_path: C:\Users\kongbai\Documents\Codex\2026-10-12\zong\work\meiyu\data\raw\ghcnh-station-list.txt
-source_sha256: ff451fafc8f251560029e9ed31ebf0f4d12a2ddd492516c0b166c3744cad182a
-station_line: CHI0000ZSNB  29.8249  121.4651    4.0    LISHE                                        CN
