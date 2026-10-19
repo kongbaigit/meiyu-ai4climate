@@ -5,5 +5,7 @@ artifacts/** -text
 reports/** -text
 config/** -text
 media/** -text
+site/** -text
+index.html -text
 *.pdf -text
 *.png -text

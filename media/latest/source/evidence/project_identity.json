@@ -1,0 +1,27 @@
+{
+  "base_commit": "79e3056b25b7a7101a44381a98d5410327e10826",
+  "edition": "2026-10-19搬货决策本地版，尚未发布",
+  "sha256": {
+    "src/decision_cost.py": "beef59da7c4666a27b3049beded0e33f5fd28d194e0ca8acfaad3652558b9ad7",
+    "src/decision_weather.py": "626b60334cd4731360b59dbb2b226bc3c0a7c62c03764f244a6ab81fe5ae03d2",
+    "src/decision_server.py": "27502e0b70ab98f560f813c7d6b7ae0333445ab76f7df4230ad72828e52de1e6",
+    "src/weather_worker.py": "381c2b42f3b88b8e231120433d8862d49359be4b970b04a8a1ad6ed3ff681476",
+    "templates/decision_cost.js": "618e2f30c936f6faba62c2df710026063f461563f38be07a8f5cc1a60d60e472",
+    "templates/decision_client.js": "fb49799ff31924ad8054d89f5a317d2e6d1b5ad1486928fd78a08b4ccdd786cc",
+    "templates/decision.html": "986794f77a48f47ed479de611741c8a5c1748bcbe650463848b53f3ffcc1fd2f",
+    "templates/decision.css": "96235a137f6fbb080434586806f7932d7aa24653da1fe37c0ef7f6acdbc6869e",
+    "index.html": "5b5414fa23109cf43a24a37469528ea87f639ba8d320429d4751384b5ff60157"
+  },
+  "cost_scenario": {
+    "p": 0.6,
+    "C_initial": 80,
+    "C_changed": 600,
+    "L0": 1000,
+    "L1": 100,
+    "expected_without": 600,
+    "expected_move_initial": 140,
+    "expected_move_changed": 660,
+    "benefit_initial": 460,
+    "benefit_changed": -60
+  }
+}

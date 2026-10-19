@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scene_id": "actions",
+  "label": "留下账单",
+  "scene_start": 47,
+  "scene_end": 55,
+  "request": {
+    "text": "确认怎么处理，再把这次账单留下。",
+    "voice": "zh-CN-XiaoxiaoNeural",
+    "rate": "+5%",
+    "boundary": "SentenceBoundary"
+  },
+  "source": {
+    "narration_path": "source\\narration.json",
+    "narration_sha256": "f03f3672aaeff1d978dfe53a4c000ffa3b934a56937fa0ffa64cfa1450536ebb"
+  },
+  "audio": {
+    "path": "C:\\Users\\kongbai\\Documents\\Codex\\2026-10-12\\zong\\work\\promo60_20261019\\source\\audio\\voice_actions.mp3",
+    "sha256": "d3597d4037e76631e08099a8aa1bfce468b872a591bacb9102b832ca8c5021ef",
+    "bytes": 20592,
+    "duration_seconds": 3.432
+  },
+  "boundaries": [
+    {
+      "offset_100ns": 1000000,
+      "duration_100ns": 33190477,
+      "start_seconds": 0.1,
+      "end_seconds": 3.4190477,
+      "text": "确认怎么处理，再把这次账单留下。"
+    }
+  ],
+  "edge_tts_version": "7.3.1",
+  "cache": {
+    "reused": false,
+    "reason": "request_or_file_not_cached"
+  },
+  "generated_at_utc": "2026-10-19T05:49:25.133170Z"
+}

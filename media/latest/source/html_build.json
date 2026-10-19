@@ -1,0 +1,8 @@
+{
+  "path": "预览.html",
+  "bytes": 2671293,
+  "sha256": "370889978bdc6afe7188c1596dd00ea52c34700b3917c6426ed52bde25fc5268",
+  "self_contained": true,
+  "external_media_dependencies": [],
+  "source": "source/player.html + film60.js + drawing_helpers.js + film_input.json + vendor + audio"
+}

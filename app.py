@@ -14,6 +14,7 @@ from src.contracts import validate_predictions
 from src.results import load_results
 from src.product_views import show_comparison, show_demo
 from src.online_views import show_online
+from src.decision_view import show_decision
 
 ROOT = Path(__file__).resolve().parent
 KINDS = {"offline_fixed_lead": "固定提前量离线实验", "offline_hindcast": "历史回报方法实验", "operational_replay": "已核实的决策回放"}
@@ -71,7 +72,7 @@ version = bundle.dataset_version
 results = load_results(ROOT, bundle)
 with st.sidebar:
     st.markdown("### 数据包")
-    st.caption("打开页面不自动请求天气；到最新天气页点击按钮可在线更新。")
+    st.caption("搬货决策打开时自动检查天气，页面保持打开时定期重查。独立后台请运行start.cmd。")
     st.caption("版本：" + (version if version else "尚未生成"))
     st.write("样本协议：", "1.0.0")
     if not samples.empty:
@@ -96,7 +97,10 @@ with st.container(key="headline_metrics"):
     cols[2].metric("候选窗口保留率", retention)
     cols[3].metric("已核查来源文件", str(len(bundle.manifest.get("sources", []))))
 
-online, demo, comparison, overview, browser, models = st.tabs(["最新天气", "历史演示", "方法比较", "数据核查", "样本浏览", "模型接入"])
+decision, online, demo, comparison, overview, browser, models = st.tabs(["搬货决策", "最新天气", "历史演示", "方法比较", "数据核查", "样本浏览", "模型接入"])
+
+with decision:
+    show_decision(ROOT)
 
 with online:
     show_online(ROOT)

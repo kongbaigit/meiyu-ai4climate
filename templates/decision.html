@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'self' https://ensemble-api.open-meteo.com; base-uri 'none'; form-action 'none'">
+<title>梅雨有数 · 搬货决策</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2C13 12 5 20 5 27a15 15 0 0 0 30 0C35 20 27 12 20 2' fill='%23286c60'/%3E%3Cpath d='M13 26h14' stroke='%23edf0d9' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>/*__DECISION_CSS__*/</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到计算区域</a>
+<aside class="sidebar">
+  <a class="brand" href="index.html"><svg viewBox="0 0 40 44" aria-hidden="true"><path d="M20 2C13 12 5 20 5 27a15 15 0 0 0 30 0C35 20 27 12 20 2" fill="currentColor"/><path d="M13 26h14" stroke="#dfe9c8" stroke-width="5" stroke-linecap="round"/></svg><span><b>梅雨有数</b><small>MEIYU · PREPARE</small></span></a>
+  <p class="side-caption">雨前搬货成本计算</p>
+  <nav aria-label="主导航"><a class="active" href="#main"><span>01</span> 搬货决策</a><a href="#weather-section"><span>02</span> 天气与完整度</a><a href="demo.html"><span>03</span> 历史实验与证据 ↗</a><a href="https://kongbaigit.github.io/meiyu-ai4climate/promo/" target="_blank" rel="noopener"><span>04</span> 60秒宣传片 ↗</a></nav>
+  <div class="side-bottom"><span class="signal"><i></i> <span id="service-mode">正在检查更新方式</span></span><p>天气自动获取。成本由你设定，结果按这些假设计算。</p><a href="https://github.com/kongbaigit/meiyu-ai4climate" target="_blank" rel="noopener">公开工程 ↗</a></div>
+</aside>
+<main class="main" id="main">
+  <header class="topbar"><span>梅雨有数 / 搬货决策</span><span class="edition">AI for Climate · 参赛原型</span></header>
+  <section class="intro"><div><p class="eyebrow">从天气，到一次具体选择</p><h1>这批货，明天要不要搬？</h1><p>填搬货成本和预计货损，直接比较两种选择。</p></div><div class="mode-switch" role="group" aria-label="计算模式"><button id="mode-live" class="selected" aria-pressed="true">最新天气</button><button id="mode-demo" aria-pressed="false">算账示例</button></div></section>
+  <section class="weather-toolbar" aria-label="天气选择"><div class="field compact"><label for="location">公开天气参考点</label><select id="location"><option value="hangzhou">杭州 · 萧山机场附近网格</option><option value="ningbo">宁波 · 栎社机场附近网格</option></select></div><div class="field window-field"><label for="window">搬货对应的降雨窗口</label><select id="window"><option>正在获取未来窗口…</option></select></div><button id="refresh" class="button secondary"><span aria-hidden="true">↻</span> 更新天气</button><p id="weather-status" class="weather-status" role="status">正在自动获取…</p></section>
+  <p id="demo-banner" class="demo-banner" hidden>算账示例：概率60%和金额均为演示设定，与当前天气无关。你可以修改金额，观察选择如何改变。</p>
+  <div class="decision-grid">
+    <section class="result-card" id="result-card" aria-labelledby="result-title" aria-live="polite">
+      <div class="card-top"><span class="eyebrow" id="result-kicker">按你的设定计算</span><span class="result-icon" id="result-icon" aria-hidden="true">↗</span></div>
+      <h2 id="result-title">先确认成本假设</h2><p id="result-subtitle" class="result-subtitle">获取完整天气并确认金额后，比较搬与不搬。</p>
+      <div class="comparison"><div class="choice" id="choice-keep"><span>不搬 · 预计总成本</span><b id="expected-without">—</b><small id="without-formula">降雨事件估计 × 不搬预计损失</small></div><div class="choice" id="choice-move"><span>搬 · 预计总成本</span><b id="expected-move">—</b><small id="move-formula">搬货成本 + 搬后预计货损</small></div></div>
+      <div class="result-benefit"><span id="benefit-label">两种选择的成本差</span><strong id="benefit">—</strong></div>
+      <div class="result-foot"><span id="threshold-text">金额改变后，结果自动重新计算。</span><span>情景估算 · 非已实现收益</span></div>
+    </section>
+    <section class="cost-card" aria-labelledby="cost-title">
+      <div class="card-top"><h2 id="cost-title">先填两笔钱</h2><span class="unit-tag">人民币 / 元</span></div>
+      <label class="money-field" for="move-cost"><span><b>搬一次要花多少钱</b><small>人工、耗材和耽误营业的成本</small></span><span class="money-input"><span>¥</span><input id="move-cost" type="number" min="0" max="1000000000" step="1" value="80" inputmode="decimal" aria-describedby="input-error"></span></label>
+      <label class="money-field" for="loss-without"><span><b>遇到这类降雨，不搬预计损失</b><small>应考虑可能不受损；不要直接填整批货值</small></span><span class="money-input"><span>¥</span><input id="loss-without" type="number" min="0" max="1000000000" step="1" value="1000" inputmode="decimal" aria-describedby="input-error"></span></label>
+      <details class="residual" id="residual-details"><summary>搬后仍可能损失 <b id="residual-summary">100元</b><span>修改 ↗</span></summary><label for="loss-after">同样降雨下，搬后预计还损失多少（元）</label><input id="loss-after" type="number" min="0" max="1000000000" step="1" value="100" inputmode="decimal"><p>搬货不默认完全免损。只有你确认可以免损时，才填0。</p></details>
+      <p id="input-error" class="input-error" role="alert" hidden></p>
+      <label class="confirmation"><input id="assumptions" type="checkbox"><span>我已核对以上金额；货损是这类降雨发生时的平均损失估计。</span></label>
+      <p class="cost-note">初始金额为示例。此账单只比较所选降雨事件带来的额外成本。</p>
+      <details class="labor-helper"><summary>不知道搬货成本？按人工估算</summary><div class="labor-fields"><label>人数<input id="labor-people" type="number" min="1" max="100" value="1"></label><label>分钟<input id="labor-minutes" type="number" min="0" max="1440" value="20"></label><label>每小时成本 / 元<input id="labor-rate" type="number" min="0" max="100000" value="30"></label><label>其他成本 / 元<input id="labor-other" type="number" min="0" max="1000000000" value="70"></label></div><button id="apply-labor" class="button secondary">计算并填入搬货成本</button><p>人数 × 分钟 ÷ 60 × 每小时成本 + 其他成本。</p></details>
+    </section>
+  </div>
+  <section class="next-actions" aria-labelledby="actions-title"><div><span class="eyebrow">下一步</span><h2 id="actions-title">确认这次怎么处理</h2><p id="actions-note">准备项可自行勾选，勾选不会改动天气或成本。</p></div><div class="action-list"><label><input type="checkbox" id="action-1"><span><b>确认要搬的货物</b><small>先看低处、易受潮的纸箱和商品。</small></span></label><label><input type="checkbox" id="action-2"><span><b>确认放置位置</b><small>选干燥稳妥的位置，保留通行空间。</small></span></label><label><input type="checkbox" id="action-3"><span><b>留下一次记录</b><small>对照实际花费和货损，修正下次估计。</small></span></label></div><button id="download-record" class="button secondary">下载本次账单 ↓</button></section>
+  <section class="weather-section" id="weather-section"><div class="section-head"><div><p class="eyebrow">数据在这里核对</p><h2>天气和缺口，一起显示。</h2></div><span class="source-tag">Open-Meteo / ECMWF</span></div><div class="weather-facts"><div><span id="probability-label">达到参考降雨阈值的成员占比</span><strong id="probability-value">—</strong><small id="probability-note">未经校准的集合情景估计</small></div><div><span>同一窗口内的预报雨量</span><strong id="rain-value">—</strong><small>集合中位数 / 毫米</small></div><div><span>成员与小时完整度</span><strong id="coverage-value">—</strong><small id="coverage-note">缺小时或成员时暂停建议</small></div></div><div class="week" id="week"></div><details class="evidence-details"><summary>计算方法、自动更新和来源</summary><div class="evidence-grid"><div><h3>概率的含义</h3><p>按同一个北京时间08:00至次日08:00窗口，统计预报降水达到25毫米的完整集合成员比例。它未经本地实况校准，不代表门店积水或货物受损概率。不能套用历史案例的67.9%。</p><h3>成本的含义</h3><p>搬：搬货成本 + 概率 × 搬后预计损失。不搬：概率 × 不搬预计损失。损失须是这类降雨发生时、考虑可能不受损后的平均估计。模型不替你确定真实货损。</p></div><div><h3>自动更新</h3><p id="update-explanation">打开时自动获取，页面保持打开时每小时检查。使用本地服务后，关闭网页仍可按小时检查；电脑和服务需要保持运行。</p><p>天气超过3小时或所选窗口不完整时暂停建议。失败保留旧数据并标记状态，不把缺失当成无雨。后台每日核对站点参考与再分析背景，不修改冻结实验。</p><dl><dt>最后成功获取</dt><dd id="source-time">—</dd><dt>本次窗口</dt><dd id="source-window">—</dd><dt>原始响应摘要</dt><dd id="source-sha">—</dd></dl><a id="source-url" href="https://open-meteo.com/en/docs/ensemble-api" target="_blank" rel="noopener">查看原始接口 ↗</a> · <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">数据来源与条款 ↗</a></div></div><div id="reference-status" class="reference-status">站点实测覆盖另行核查，不用于填补当前预报。</div></details></section>
+  <footer><span>梅雨有数 · 搬货决策原型</span><span>历史实验保留原冻结结果 · 未完成真实商户收益验证</span></footer>
+</main>
+<script>const MEIYU_DECISION_INPUT=/*__DECISION_INPUT__*/;</script>
+<script>/*__DECISION_COST__*/</script>
+<script>/*__DECISION_CLIENT__*/</script>
+</body></html>

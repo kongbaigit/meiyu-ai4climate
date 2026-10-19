@@ -1,4 +1,4 @@
-"""在线天气与完整度页面，只有明确点击刷新按钮才访问外部接口。"""
+"""研究工作台的独立来源与完整度；搬货决策自动预报使用另一条管线。"""
 from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor
@@ -110,7 +110,7 @@ def _snapshot_card(root: Path, key: str, product: str) -> None:
 
 def show_online(root: Path) -> None:
     st.markdown('<div class="section-title">天气可更新，缺口也看得清</div>', unsafe_allow_html=True)
-    st.caption("最新天气、再分析背景和站点参考分别保存；每一类都有获取时刻、来源摘要与完整度。打开页面不会自动请求天气。")
+    st.caption("本页对照来源分别保存，可单独刷新；搬货决策页的集合预报自动更新。每类来源都保留获取时刻、摘要和完整度。")
     left, right = st.columns([2, 1])
     with left:
         key = st.selectbox("公开参考点", list(LOCATIONS), format_func=lambda k: LOCATIONS[k]["name"], key="live_location")

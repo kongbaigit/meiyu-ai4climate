@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="date" content="2026-10-19">
+  <title>梅雨有数 · 60 秒搬货决策宣传片</title>
+  <style>
+    :root { color-scheme: light; --ink: #173c35; --green: #286c60; --paper: #f1f1e9; --line: #d7dfd1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI", "Microsoft YaHei", sans-serif; line-height: 1.7; }
+    main { width: min(960px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0 56px; }
+    header { display: flex; justify-content: space-between; gap: 24px; align-items: baseline; margin-bottom: 20px; }
+    h1 { margin: 0; font-size: clamp(24px, 4vw, 38px); letter-spacing: .04em; }
+    header p { margin: 0; color: #61766b; font-size: 14px; }
+    .card { background: #fffef8; border: 1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 16px 42px #173c3512; }
+    video { display: block; width: 100%; height: auto; border-radius: 10px; background: #102d2d; }
+    .links { display: flex; flex-wrap: wrap; gap: 14px 22px; margin: 20px 0 0; }
+    a { color: var(--green); }
+    .note { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 20px; color: #5e7368; font-size: 14px; }
+    .note p { margin: 8px 0; }
+    .tag { display: inline-block; margin-right: 8px; padding: 2px 9px; border-radius: 999px; background: #e2ecdc; color: var(--green); font-size: 12px; }
+    @media (max-width: 640px) { main { width: min(100% - 20px, 960px); padding-top: 22px; } header { display: block; } header p { margin-top: 6px; } .card { padding: 9px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>梅雨有数</h1>
+        <p>60 秒搬货决策宣传片</p>
+      </div>
+      <p><time datetime="2026-10-19">2026 年 10 月 19 日</time></p>
+    </header>
+    <section class="card" aria-label="梅雨有数 60 秒宣传片">
+      <video controls playsinline preload="metadata" poster="../media/promo60-cover.png">
+        <source src="../media/promo60.mp4" type="video/mp4">
+        <track kind="captions" srclang="zh-CN" label="中文字幕" src="../media/promo60.vtt">
+        当前浏览器不支持 HTML5 视频，请下载 MP4 文件查看。
+      </video>
+    </section>
+    <nav class="links" aria-label="页面链接">
+      <a href="../index.html">返回应用</a>
+      <a href="../demo.html">查看历史演示</a>
+    </nav>
+    <section class="note">
+      <p><span class="tag">示例</span>影片使用 60% 的假设概率、不搬预计损失 1,000 元、搬货成本 80 元和搬后预计损失 100 元来说明计算方式。数字是情景估算，不代表已经实现的收益。</p>
+      <p><span class="tag">日期</span>影片和天气来源快照对应 2026 年 10 月 19 日。影片不请求实时天气；在线播放会加载影片文件。应用页面按页面自身规则检查天气，并复用有效缓存。关闭页面后不会留下 Python 后台。</p>
+      <p><span class="tag">字幕</span>影片画面已经烧录中文字幕，播放器另外提供可选中文字幕轨。</p>
+      <p>完整人工听审尚未检查，技术检查不能代替人工看完和听完。源码和来源说明保留在仓库的 <code>media/latest/</code>。</p>
+    </section>
+  </main>
+</body>
+</html>
