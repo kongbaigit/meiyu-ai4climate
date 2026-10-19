@@ -1,0 +1,139 @@
+{
+  "结果": "通过",
+  "应用地址": "https://kongbaigit.github.io/meiyu-ai4climate/",
+  "影片地址": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
+  "应用及影片工程提交": "cc1c94eb20bd8de0abc2dcda7faa3d5ec2a3c522",
+  "静态部署提交": "caf1a1ccfc738adb0eace0341c1255d0a69e3714",
+  "GitHub部署记录": "https://github.com/kongbaigit/meiyu-ai4climate/actions/runs/39210432474",
+  "部署结论": "success",
+  "文件核对": {
+    "status": "PASS",
+    "base": "https://kongbaigit.github.io/meiyu-ai4climate/",
+    "checked_at_utc": "2026-10-19T06:33:16.101532+00:00",
+    "files": [
+      {
+        "path": "index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/",
+        "status_code": 200,
+        "bytes": 56902,
+        "sha256": "b39619f9cc9828b30dffc720c26d9d2377be5ad8230b197c90a5943b6a98ea6d",
+        "expected_sha256": "b39619f9cc9828b30dffc720c26d9d2377be5ad8230b197c90a5943b6a98ea6d",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "demo.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/demo.html",
+        "status_code": 200,
+        "bytes": 2290956,
+        "sha256": "d182129bc52ccee9356f47cefdc1583a0a06b8570a43675767a846b74cec6d1e",
+        "expected_sha256": "d182129bc52ccee9356f47cefdc1583a0a06b8570a43675767a846b74cec6d1e",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "promo/index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/promo/",
+        "status_code": 200,
+        "bytes": 3454,
+        "sha256": "698c56376568b4c95c2e441b22eae7a5bbed2c9b32ab84a9a308e9ab3b97d91c",
+        "expected_sha256": "698c56376568b4c95c2e441b22eae7a5bbed2c9b32ab84a9a308e9ab3b97d91c",
+        "passed": true,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "path": "media/promo60-cover.png",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60-cover.png",
+        "status_code": 200,
+        "bytes": 321859,
+        "sha256": "ae45e1fb3e36e216c539b3acabf2f256dd2dcb275f2bcf11fa9db88d2c8e0f63",
+        "expected_sha256": "ae45e1fb3e36e216c539b3acabf2f256dd2dcb275f2bcf11fa9db88d2c8e0f63",
+        "passed": true,
+        "content_type": "image/png"
+      },
+      {
+        "path": "media/promo60.vtt",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60.vtt",
+        "status_code": 200,
+        "bytes": 757,
+        "sha256": "45eb1e1e58ac57cde805a2c319b5540a207ae07a3c57334abbe1af47bf9b2ccd",
+        "expected_sha256": "45eb1e1e58ac57cde805a2c319b5540a207ae07a3c57334abbe1af47bf9b2ccd",
+        "passed": true,
+        "content_type": "text/vtt; charset=utf-8"
+      },
+      {
+        "path": "media/promo60.mp4",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/promo60.mp4",
+        "status_code": 200,
+        "bytes": 9598986,
+        "sha256": "164015a6fd553c0ec4d4f31fcc0179982bb11f83321a0323de56daec8dca799b",
+        "expected_sha256": "164015a6fd553c0ec4d4f31fcc0179982bb11f83321a0323de56daec8dca799b",
+        "passed": true,
+        "content_type": "video/mp4"
+      }
+    ],
+    "video_range": {
+      "status_code": 206,
+      "content_range": "bytes 0-15/9598986",
+      "bytes": 16,
+      "passed": true
+    }
+  },
+  "在线交互核对": {
+    "结果": "PASS",
+    "核对时刻UTC": "2026-10-19T06:34:44.685Z",
+    "检查": [
+      {
+        "项目": "应用入口HTTP成功",
+        "通过": true
+      },
+      {
+        "项目": "浏览器实际取得完整集合天气",
+        "通过": true
+      },
+      {
+        "项目": "示例搬货成本正确",
+        "通过": true
+      },
+      {
+        "项目": "成本改变后转为不搬",
+        "通过": true
+      },
+      {
+        "项目": "手机页面无横向溢出",
+        "通过": true
+      },
+      {
+        "项目": "影片入口HTTP成功",
+        "通过": true
+      },
+      {
+        "项目": "影片为原60秒高清成片",
+        "通过": true
+      },
+      {
+        "项目": "烧录字幕不叠加默认字幕轨",
+        "通过": true
+      },
+      {
+        "项目": "影片关键段实际连续播放",
+        "通过": true
+      },
+      {
+        "项目": "影片返回应用链接有效",
+        "通过": true
+      },
+      {
+        "项目": "页面没有JavaScript异常",
+        "通过": true
+      }
+    ],
+    "JavaScript异常": []
+  },
+  "独立审查": "发布前全新审查发现3项问题，均已修正并完成定点复核。桌面、手机和影片页已实际渲染。",
+  "限制": [
+    "完整人工听审尚未完成；技术播放与关键画面检查不等于主观完整观看。",
+    "天气为未经校准的集合情景估计，费用由用户设定，未验证真实商户收益。",
+    "静态网页关闭后不会在GitHub Pages继续运行Python后台。"
+  ]
+}

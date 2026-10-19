@@ -12,24 +12,28 @@
 
 详细口径、运行方法和检查方式见[搬货决策与自动更新说明](docs/decision-guide.md)。完整研究工作台继续使用 `start.ps1`，默认端口为 8513；安装全量依赖后可运行。
 
-静态演示计划地址见[在线演示说明](docs/online-demo.md)：应用首页为 <https://kongbaigit.github.io/meiyu-ai4climate/>，60秒宣传片为 <https://kongbaigit.github.io/meiyu-ai4climate/promo/>。当前状态为待核验，需在 GitHub Pages 发布后实际打开确认。既有比赛 PDF、历史实验和旧影片继续保留归档。
+新版应用和60秒宣传片已发布到 GitHub Pages，并完成公开地址核验。既有比赛 PDF、历史实验和旧影片继续保留归档。
 
-## 在线演示计划（待核验）
+## 在线演示
 
-GitHub Pages 计划发布 `site/` 目录。发布后先核验[应用首页](https://kongbaigit.github.io/meiyu-ai4climate/)和[60秒宣传片](https://kongbaigit.github.io/meiyu-ai4climate/promo/)，再把待核验状态改为已核验；发布前不要把计划地址当作已确认的在线结果。
+- [直接打开应用](https://kongbaigit.github.io/meiyu-ai4climate/)：自动检查天气，填写金额后比较搬与不搬。
+- [观看60秒宣传片](https://kongbaigit.github.io/meiyu-ai4climate/promo/)：直接在线播放，支持手机和可选字幕。
+
+2026年10月19日已验证公开页面、真实天气请求、两种成本结论、手机布局和视频播放。公开文件与本地核验版摘要一致。发布来源为 `gh-pages` 分支根目录，由 `site/` 生成；构建与运行边界见[在线演示说明](docs/online-demo.md)，机器检查记录见[发布检查](docs/online-release-check.json)。完整人工听审仍待团队确认。
 
 ## 评审与报名入口
 
-本仓库公开完整工程、原始公开数据快照、冻结实验、比赛材料及可编辑视频源码。下载后解压，在项目目录打开 demo.html 可体验免安装演示；首次查看历史实验无需联网。
+本仓库公开完整工程、原始公开数据快照、冻结实验、比赛材料及可编辑视频源码。下载后解压，打开 index.html 可体验新版搬货决策；打开 demo.html 可查看无需联网的历史实验。
 
 - [完整工程 ZIP](https://github.com/kongbaigit/meiyu-ai4climate/archive/refs/heads/main.zip)：下载后先解压。
 - [项目说明 PDF](docs/参赛项目说明.pdf)。
-- [169 秒演示视频](media/demo.mp4)：可在 GitHub 查看或下载播放。
+- [60秒宣传片](media/latest/promo60.mp4)：最新成片，可查看或下载播放。
+- [169秒旧演示视频](media/demo.mp4)：保留归档。
 - [数据与 AI 使用说明 PDF](docs/数据与AI使用说明.pdf)。
 - [90 天验证计划 PDF](docs/90天验证计划.pdf)。
 - [三分钟答辩讲稿](docs/三分钟答辩讲稿.md)与[演示事实卡](docs/演示与答辩事实卡.md)。
 
-报名中的项目公开链接可填写本仓库地址：<https://github.com/kongbaigit/meiyu-ai4climate>。GitHub 文件页用于查看和下载源码，在线静态演示的计划地址见上方，完整 Python 应用的启动和复现步骤见下文。
+报名中的项目公开链接可填写本仓库地址：<https://github.com/kongbaigit/meiyu-ai4climate>。演示链接可填写上方应用首页。GitHub 文件页用于查看和下载源码，完整 Python 应用的启动和复现步骤见下文。
 
 2026 年 10 月 19 日发布说明：两处答辩表述已明确，0.0455 与 0.0697 都是测试集 Brier 分数；后者是训练事件率基线在测试集上的分数。数据、模型预测和影片保持原始字节。团队信息补填、影片人工验收和报名提交仍需完成。历史交付记录按其日期阅读。
 
@@ -44,7 +48,7 @@ GitHub Pages 计划发布 `site/` 目录。发布后先核验[应用首页](http
 
 双击本目录的 **demo.html**，即可在 Edge、Chrome 等现代浏览器中体验历史窗口、成本情景、方法比较和数据下载。历史实验和交付快照不需要 Python、网络或 API 密钥；点击“获取最新数据”时才访问公开天气接口。下载的样本与冻结文件保持原始字节，页面会在支持 Web Crypto 的浏览器中再次核对摘要。
 
-这个单文件版本适合先看作品和离线展示；完整实验复现、模型 CSV 接入使用下方的 Python 应用。两者读取同一份冻结结果。公共静态演示按上方计划地址发布，发布完成前保持待核验。
+这个历史单文件版本适合查看冻结实验和离线展示；完整实验复现、模型 CSV 接入使用下方的 Python 应用。两者读取同一份冻结结果。新版公共演示使用上方应用首页。
 
 ## 在这台 Windows 电脑启动完整应用
 
@@ -63,7 +67,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\start.ps1
 
 演示配置关闭了源码热更新。修改 Python 源码后，先停止再启动应用，确保跨模块接口一起刷新。
 
-本机通过验证的环境为 Python 3.13.12；完整依赖版本在 requirements.txt。其他电脑建议安装 Python 3.13，再执行上述命令。本机地址仅在运行电脑可访问，公共静态演示以 Pages 发布后的实际核验结果为准。
+本机通过验证的环境为 Python 3.13.12；完整依赖版本在 requirements.txt。其他电脑建议安装 Python 3.13，再执行上述命令。本机地址仅在运行电脑可访问；公开访问使用上方 GitHub Pages 地址。
 
 ## 怎么看成果
 
