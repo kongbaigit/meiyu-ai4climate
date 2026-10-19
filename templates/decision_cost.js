@@ -78,7 +78,7 @@
         break_even_probability: breakEvenProbability,
       };
 
-      // Bounds above guarantee finite values; retain this guard if formulas change later.
+      // Keep the result JSON-finite.
       if (!Object.keys(result).every(function (key) {
         return key === "state" || result[key] === null || Number.isFinite(result[key]);
       })) {

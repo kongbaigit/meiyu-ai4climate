@@ -26,12 +26,17 @@ ALLOWED_TOP_LEVEL_FILES = frozenset(
     {
         "app.py",
         "demo.html",
+        "index.html",
         "README.md",
         "LICENSE",
         "requirements.txt",
+        "requirements-decision.txt",
         "setup.ps1",
+        "setup-decision.ps1",
         "start.ps1",
         "start.cmd",
+        "start-decision.ps1",
+        "start-decision.cmd",
         ".gitignore",
         ".gitattributes",
     }
@@ -48,6 +53,7 @@ ALLOWED_TOP_LEVEL_DIRECTORIES = frozenset(
         "external",
         "media",
         "templates",
+        "tools",
         ".streamlit",
     }
 )

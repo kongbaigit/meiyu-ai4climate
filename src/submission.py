@@ -14,7 +14,7 @@ def build_html(root: Path, output: Path):
     document = ET.fromstring(html.split('\n', 1)[1])
     if len(document.findall('./body/section')) != 4:
         raise ValueError('排版源必须包含四个章节页。')
-    markdown = ['# 梅雨有数：让降雨概率成为可解释的准备参考', '\n2026-10-18参赛材料。本地提交准备版；团队身份与公开链接按实际信息填写。']
+    markdown = ['# 梅雨有数：让降雨概率成为可解释的准备参考', '\n2026-10-19参赛材料。团队身份按实际信息填写；公开入口以README为准。']
     for section in document.findall('./body/section'):
         for element in section:
             text = ''.join(element.itertext())
@@ -101,7 +101,7 @@ def build_pdf(output: Path, font: Path):
     reader = PdfReader(OUT/'参赛项目说明.pdf')
     assert len(reader.pages) == 4, f'实际页数{len(reader.pages)}，需调整排版'
     full_text = '\n'.join(page.extract_text() for page in reader.pages)
-    for required in ['0.0455','636','240','85/273','六页','4月至9月','169']:
+    for required in ['0.0455','636','240','85/273','六页','4月至9月','73.866666667']:
         assert required in full_text, required
     print('四页PDF生成；关键数字和产品描述提取核对通过。')
 

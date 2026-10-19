@@ -2,33 +2,37 @@
 
 ## 发布状态
 
-2026 年 10 月 19 日，纯配乐动态文字版已部署。以下入口已通过线上文件与实际播放核验：
+应用首页已通过线上文件与实际播放核验。74 秒完整版宣传片已准备发布，以下宣传片入口和文件在 GitHub 更新后再做线上核验：
 
 - 应用首页：<https://kongbaigit.github.io/meiyu-ai4climate/>
-- 60 秒宣传片：<https://kongbaigit.github.io/meiyu-ai4climate/promo/>
+- 宣传片：<https://kongbaigit.github.io/meiyu-ai4climate/promo/>
+- 原生预览：`/promo/native.html`
 
-成片为 60 秒、1920×1080、30fps，大小 10,282,564 字节。线上成片与本地交付的 SHA-256 一致，7 个线上文件和视频分段加载检查均通过；浏览器实际播放、跳转、原生音乐预览和 390px 页面检查也已通过。最终摘要、部署提交和证据见 [纯配乐版发布检查](music-only-release-check.json)。
+## 当前宣传片
 
-## 页面内容
+- Pages 文件：`site/media/promo-full-young-visionaries.mp4`
+- 源文件：`media/latest/promo-full-young-visionaries.mp4`
+- 源工程：`media/latest/source/`
+- 时长：73.866666667 秒；1920×1080、30fps、2216 帧、10 个场景。
+- H.264/AAC，单音轨、无配音。
+- Young Visionaries — Eric Matyas；Soundimage International Public License。
+- 署名：Music by Eric Matyas / www.soundimage.org。
+- 来源：<https://soundimage.org/techno/>；许可：<https://soundimage.org/sample-page/>。
+- 原曲裁切区间 17.313872945628–91.180539612295 秒，原速原调、无循环。
+- SHA-256：`2b52e74cf2302196d46e128802613a280aa584a914dc416fdc727dd3b91d2d86`。
 
-`site/index.html` 是项目当前的搬货决策入口，`site/demo.html` 是按历史日期保留的旧实验演示。`site/promo/` 是独立的 60 秒影片页，包含 12 段动态文字和 7 个场景，只使用原创器乐，不含配音。影片画面已经包含文字，播放器提供可选文字轨，不默认打开；页面还提供返回应用、历史演示和 `native.html` 原生动画预览链接。
+完整事实、检查范围和待办见 [74 秒宣传片发布说明](promo-full-release.md)。
 
-静态媒体使用以下名称，避免浏览器继续复用旧版人声文件：
+## 应用行为
 
-- `site/media/promo60-music.mp4`
-- `site/media/promo60-music-cover.png`
-- `site/media/promo60-music.vtt`
+`site/index.html` 是当前搬货决策入口。页面打开时请求公开集合天气，保持打开时按小时检查；天气超过 3 小时、缺成员或缺小时，页面停止当前天气搬货结论。费用只在浏览器内计算，不上传到天气服务，关闭页面后不会留下后台任务。
 
-可编辑源码、成片、原创配乐、MIDI、字幕、封面和原生预览保留在仓库的 `media/latest/`。完整源码不复制到 Pages 静态目录。
+天气自动更新与历史离线模型分开。当前天气使用通过来源、schema、新鲜度和集合成员身份检查的 Open-Meteo/ECMWF ensemble 快照；集合成员占比未经校准，不是货损概率。模型不在线重新训练；历史模型结果只用于离线研究说明，不替代官方天气预警。成本展示是用户输入的情景假设，不等同实测成本或真实货损。
 
-## 在线前端行为
+## 构建与检查
 
-应用页面保持打开时每小时检查一次天气。更新失败时，如果已有缓存仍在 3 小时内且窗口完整，页面继续使用缓存计算；缓存超过 3 小时、缺成员或缺小时、所选窗口不可用时，页面暂停当前建议。页面关闭后不会留下 Python 后台；完整研究工作台仍在本机通过 `start.ps1` 启动，默认端口为 8513。新版搬货决策服务通过 `start.cmd` 启动，默认端口为 8532。
+在项目根目录运行 `python tools/build_pages.py`。构建结果应包括 `site/.nojekyll`、`site/media/promo-full-young-visionaries.mp4`、`site/promo/index.html` 和 `site/promo/native.html`，并核对成片 SHA-256 与站内相对链接。
 
-历史实验和旧影片按各自日期保留归档。旧版宣传片的配音与检查记录不代表本次纯配乐版本，当前版本只描述原创器乐和动态文字。
+发布前已完成原生导出、媒体技术、实际关键帧和播放器控件检查；线上文件加载、实际播放、移动端布局以及主观观看、听审待发布后完成。
 
-## 构建和检查
-
-在项目根目录运行 `python tools/build_pages.py`。脚本只使用标准库，会复制项目入口和历史演示，转换动态文字 SRT 为 WebVTT，并检查最终成片的大小和 SHA-256。构建结果包括 `site/.nojekyll`、新命名的媒体文件、`site/promo/index.html` 和 `site/promo/native.html`。
-
-发布前检查包括入口文件字节一致、成片摘要一致、字幕时间格式、原生预览链接和站内相对链接。完整人工看完和听完宣传片仍需单独验收，技术检查不能替代这项验收。
+历史阶段文件和旧发布记录不作为当前入口；需要追溯时从 Git 历史恢复。

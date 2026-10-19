@@ -1,27 +1,48 @@
-# 纯配乐动态文字宣传片
+# 梅雨有数：完整节奏版
 
-本片为1920×1080、30fps、60秒，7个场景、12段动态文字。声音只有原创器乐配乐，没有配音、人声轨或语音生成步骤。
+配乐为 Young Visionaries，作者 Eric Matyas。全片约74秒，1920×1080、30帧，只使用配乐和动态文字。
 
-## 修改与重建
+本版保留完整10个场景。原来的168拍画面重排为112拍；转场、表格行、矩阵列和金额出现按所选音乐的节拍及细分点安排。音乐保留原速原调，截取原曲17.313873至91.180540秒，做响度匹配及首尾淡化。
 
-画面修改`film60.js`和`drawing_helpers.js`，文字及时段修改`storyboard.json`，音乐修改`tools/compose_audio.py`。`vendor/decision_cost.js`复用应用的计算模块，金额变化使用同一算式。
+打开成片MP4即可观看。`media/latest/preview.html` 已包含脚本和配乐；本机需提供常见中文字体。视频以HTML/Canvas原生绘制并逐帧编码。
 
-Python 3.12安装`requirements.lock.txt`，Node依赖运行`npm ci --ignore-scripts`。另需FFmpeg，可加入PATH或设置`PROMO_FFMPEG`为其绝对路径。按以下顺序重建：
+## 继续编辑
 
-    python tools/build_inputs.py
-    python tools/compose_audio.py
-    python tools/build_html.py
-    node tools/export_video.cjs --html ../预览.html --out ../新导出.h264 --report ../新导出.json --duration 60
-    python tools/mux_video.py --video ../新导出.h264 --output ../新成片.mp4 --duration 60
+- `source/film.js`：画面、文字与动作。
+- `source/storyboard.json`：场景时长、实际拍点与原叙事拍点映射。
+- `source/music_sync.json`：所选音乐、源起点、时长和许可。
+- `source/audio/`：本项目使用的原曲、处理后母带和预览音频。
+- `source/kinetic_evidence.json`：影片使用的数据快照。片中的60%及金额为明确标注的算账假设，天气画面保留实际获取时间。
 
-音乐合成在本机运行，不连接语音服务。`master_mix.wav`与H264为可重建的中间文件，不进入公开源工程包。
+导出需要Node.js、Python、FFmpeg和Edge。Node依赖已固定在source/package-lock.json；先在source目录执行npm ci。动画库随工程提供。
 
-## 来源与边界
+在仓库的 `media/latest` 目录构建预览：
 
-沿用GSAP 3.15.0、Canvas到VideoFrame/WebCodecs的已验证管线。GSAP时间线实际控制场景、文字分段进入、强调线及成本变化；许可副本在`vendor`。本片没有使用产品截图、录屏或外部视频作为输入。
+```powershell
+python source/tools/build_html.py
+```
 
-天气段保留2026年10月19日北京时间13:48取得的真实响应快照。51成员包含控制成员和50个编号成员；成员占比未经校准，不是货损概率。60%及80、600、1000、100元均为明确标注的算账假设，未声称已经实现收益。
+导出到新的文件名，保留旧版本：
 
-配乐沿用本项目自己的程序合成音色、96 BPM、4/4、24小节。移除配音混合和让位压低段，音乐事件与4轨MIDI在`audio`。未使用第三方歌曲或人声采样，最后3秒淡出。
+```powershell
+node source/tools/export_video.cjs --html preview.html --out 新版.h264 --report 新版导出.json --bitrate 14000000
+python source/tools/mux_video.py --video 新版.h264 --audio source/audio/music_master.flac --output 新版.mp4 --ffmpeg ffmpeg
+```
 
-Windows系统字体未分发，更换系统后须检查排版。技术检测不能替代完整的人工观看与音乐听审。
+若改变配乐裁切或总时长，需同步调整音乐配置、场景时间和母带；本包带有本次裁切、响度与节奏拟合记录。Edge启动参数沿用既有合并逻辑，不能据此声称已经验证规避参数的效果。
+
+## 配乐署名
+
+Young Visionaries
+
+Music by Eric Matyas  
+www.soundimage.org
+
+来源：https://soundimage.org/techno/  
+许可：Soundimage International Public License  
+许可原文：https://soundimage.org/sample-page/  
+署名要求：https://soundimage.org/attribution-info/
+
+本片只对原曲连续截取、调整响度及首尾淡化。发布或再次剪辑时，请保留作者、网站、许可链接和修改说明。音乐素材随本视频源工程提供，适用其自身许可。
+
+检查记录区分运行测试、媒体技术检查、实际画面检查与主观听音；没有把数值节拍拟合写成人工听审通过。

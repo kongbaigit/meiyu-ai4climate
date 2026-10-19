@@ -1,6 +1,6 @@
 {
   "status": "built_from_verified_frozen_results",
-  "generated_at_utc": "2026-10-14T12:23:22.978941+00:00",
+  "generated_at_utc": "2026-10-19T14:11:19.514717+00:00",
   "dataset_version": "meiyu-493c58d793af9bf4",
   "test_sample_count": 240,
   "selected_method": "logistic_rain",
@@ -14,7 +14,7 @@
     "reports/sensitivity_checks.json": "7c294892d18b2153e8648a9a0bec18c8f119aa7b01ddf2d49afc6fbd1cb2fc64",
     "reports/external_validation.json": "f85430a89bcd1f76c31f976f473d3ba62b3601627b89663ef45ae8bc7cc57e8a",
     "docs/action_sources.json": "4e73c6d0b3e42e8805d54471f2ae814dc7a5c51c35e091a45d18c691301e73ad",
-    "docs/data_ai_statement.md": "609d536cc006dbefd01a7de4dfd5d8d59dad5158290a8478fd951a56044af1f3",
+    "docs/data_ai_statement.md": "83a8cd2883aaf6d05d7f9ab9589da5d7e79ffef6a2d951d6a28d59d5067d1a7c",
     "templates/offline.html": "b2bab5eb84abb04ff172dd6b54171f65e8d8091d2959f5767d14a07b44a3d891",
     "src/offline.py": "c6785615070b93d5b8dfd2dbd6290eb00bcadee5d124052ab67cdd4642c42752",
     "reports/temporal_validation.json": "fa2baf5626bb3a14b4452033394ea641b23b5f25ea42dc9b2f5fcf0d81465f77",
@@ -28,8 +28,8 @@
   },
   "output": {
     "path": "demo.html",
-    "sha256": "d182129bc52ccee9356f47cefdc1583a0a06b8570a43675767a846b74cec6d1e",
-    "bytes": 2290956
+    "sha256": "e10745d023e4d04016879f8f402072ed28f069dbecb2a41a0968ab2bf762dea3",
+    "bytes": 2292028
   },
   "limitations": [
     "历史实验冻结；在线天气只在用户点击时更新，另存来源与缓存。",

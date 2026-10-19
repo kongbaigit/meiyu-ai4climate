@@ -1,0 +1,83 @@
+{
+  "kind": "mechanical_three_extraction",
+  "source": {
+    "path": "work/meiyu_decision_20261019/project/media/native_source/app.js",
+    "app_sha256": "1739cdf79c494dcf24672a959a3c730d3fdafc871a0df3531d51eb902ac323f4",
+    "extraction_start": "const glCanvas",
+    "extraction_end": "before function project",
+    "functions": [
+      "init3D",
+      "buildModels",
+      "tilePosition",
+      "particleTarget",
+      "modelFrame"
+    ],
+    "dependencies": [
+      "clamp",
+      "mix",
+      "smooth",
+      "expo",
+      "rand",
+      "TAU",
+      "D",
+      "scenes",
+      "costAt"
+    ]
+  },
+  "adaptation": {
+    "factory": "window.createMeiyuLegacy3D(evidence,timeline,options)",
+    "return_shape": [
+      "canvas",
+      "render(index,u)",
+      "metadata"
+    ],
+    "transparent_canvas": true,
+    "three_path": "vendor/three.min.js",
+    "removed_runtime_paths": [
+      "Canvas2D text/UI",
+      "player controls",
+      "audio/narration"
+    ],
+    "palette": {
+      "blue": "0x286c60",
+      "cyan": "0x99c9b0",
+      "teal": "0x5d9b7c",
+      "orange": "0xe8be78",
+      "grey": "0xb9c5b2",
+      "purple": "0x93ad9a",
+      "white": "0xf1f1df"
+    }
+  },
+  "vendor": {
+    "package": "three",
+    "version": "0.160.1",
+    "revision": "160",
+    "source_path": "work/meiyu_decision_20261019/project/media/native_source/vendor/three.min.js",
+    "source_sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+    "license": "MIT",
+    "license_file": "vendor/THREE_License.txt"
+  },
+  "validation": {
+    "required_renders": [
+      {
+        "scene_index": 0,
+        "local_time": 8
+      },
+      {
+        "scene_index": 1,
+        "local_time": 6
+      },
+      {
+        "scene_index": 5,
+        "local_time": 6
+      }
+    ],
+    "check_dir": "legacy_checks",
+    "actual_webgl_required": true
+  },
+  "notes": [
+    "legacy_evidence.json and legacy_timeline.json are byte-for-byte copies of the frozen native inputs.",
+    "The extracted renderer is a real Three.js WebGLRenderer; init3D errors are propagated and there is no 2D fallback.",
+    "Original source retains Microsoft Huihui narration and old UI elsewhere; this extracted file does not load those paths."
+  ]
+}

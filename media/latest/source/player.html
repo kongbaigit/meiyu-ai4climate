@@ -6,25 +6,28 @@
 <meta name="color-scheme" content="light">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; media-src data: blob:; img-src data: blob:; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2C13 12 5 20 5 27a15 15 0 0 0 30 0C35 20 27 12 20 2' fill='%23286c60'/%3E%3Cpath d='M13 26h14' stroke='%23e9ead8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
-<title>梅雨有数 · 纯配乐动态文字宣传片</title>
+<title>梅雨有数 · Young Visionaries完整节奏版</title>
 <style>
 :root{font-family:"Segoe UI","Microsoft YaHei",sans-serif;color:#173c35;background:#f1f1e9;--green:#286c60}*{box-sizing:border-box}body{margin:0}.shell{max-width:1510px;margin:auto;padding:28px 38px}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:19px;gap:20px}h1{font-size:22px;letter-spacing:2px;font-weight:650;margin:0}header p{margin:5px 0 0;font-size:12px;color:#798479}.edition{font-size:11px;letter-spacing:2px;color:#567166}.viewer{position:relative;border-radius:15px;overflow:hidden;background:#102d2d;box-shadow:0 22px 70px #173c3514}canvas{display:block;width:100%;height:auto;aspect-ratio:16/9}.overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border:1px solid #ecf5d671;background:#173c35bd;backdrop-filter:blur(10px);border-radius:50%;color:#d9e9cc;cursor:pointer;font-size:29px;padding-left:10px}.viewer.playing .overlay{opacity:0;pointer-events:none}.controls{display:flex;gap:13px;align-items:center;padding:17px 0 9px}button{font-family:inherit;cursor:pointer}button.small{padding:9px 15px;border:1px solid #cbd4c5;background:#f9faf3;color:#28594e;border-radius:8px;font-size:12px}.small.primary{background:#286c60;color:#fff;border-color:#286c60;min-width:76px}input[type=range]{accent-color:#286c60}.seek{flex:1;min-width:40px}.time{font-size:12px;color:#5a6f64;font-variant-numeric:tabular-nums;white-space:nowrap}.sound{display:flex;align-items:center;gap:24px;font-size:12px;color:#6e7c70;padding:7px 0}.sound label{display:flex;align-items:center;gap:10px}.sound input{width:95px}.status{margin-left:auto;font-size:11px}.chapters{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.chapters button{border:1px solid #d4dbcd;border-radius:7px;background:transparent;padding:7px 11px;color:#6b7d6b;font-size:11px}.chapters button.active{color:#286c60;border-color:#97b7a4;background:#e5ecdf}.note{display:flex;justify-content:space-between;gap:24px;font-size:11px;line-height:1.8;color:#788473;border-top:1px solid #d9dfd2;margin-top:20px;padding-top:14px}.note p{margin:0}.note a{color:#286c60;text-decoration:none}.viewer:fullscreen{width:100%;height:100%;border-radius:0;display:flex;align-items:center;justify-content:center}.viewer:fullscreen canvas{width:100%;height:100%;object-fit:contain}.sr{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden}button:focus-visible,input:focus-visible{outline:3px solid #6a9b7e;outline-offset:3px}@media(max-width:720px){.shell{padding:18px 12px}.edition{display:none}header h1{font-size:18px}header p{font-size:10px}.controls{gap:7px}.small{padding:7px 9px!important;font-size:10px!important}.time{font-size:10px}.sound{flex-wrap:wrap;font-size:10px;gap:12px}.sound input{width:75px}.status{margin-left:0}.note{display:block}.note p+p{margin-top:8px}.chapters button{font-size:10px;padding:6px 8px}.overlay{width:54px;height:54px;font-size:24px}.viewer{border-radius:10px}}
+@media(max-width:520px){.controls{display:grid;grid-template-columns:auto auto 1fr auto;gap:9px 8px}.controls>.seek{grid-column:1/-1;grid-row:2;width:100%;min-width:0;margin:0}.controls>.time{text-align:right}.sound{line-height:1.7}.note{overflow-wrap:anywhere}}
 </style>
 </head>
 <body>
 <main class="shell">
-<header><div><h1>梅雨有数</h1><p>纯配乐 · 动态文字 · 60秒搬货决策</p></div><span class="edition">2026.10.19 / 01:00 / 1080P</span></header>
+<header><div><h1>梅雨有数</h1><p>数据 · 算法 · 搬货决策 / 现成器乐配乐</p></div><span class="edition">2026.10.19 / 01:14 / 1080P</span></header>
 <section class="viewer" id="viewer" aria-label="梅雨有数新版宣传片">
 <canvas id="film" width="1920" height="1080" role="img" aria-label="梅雨有数原生动画"></canvas>
 <button id="center-play" class="overlay" aria-label="播放影片">▶</button>
 </section>
-<div class="controls"><button id="play" class="small primary">播放</button><button id="restart" class="small">重播</button><label class="sr" for="seek">影片进度</label><input id="seek" class="seek" type="range" min="0" max="60" value="0" step=".01"><span id="time" class="time">00:00 / 01:00</span><button id="fullscreen" class="small">全屏</button></div>
-<div class="sound"><label>原创配乐 <input id="music-volume" type="range" min="0" max="100" value="100" aria-label="原创配乐音量"></label><span class="status" id="audio-status">点击播放后开启声音</span></div>
+<div class="controls"><button id="play" class="small primary">播放</button><button id="restart" class="small">重播</button><label class="sr" for="seek">影片进度</label><input id="seek" class="seek" type="range" min="0" max="73.866666667" value="0" step=".01"><span id="time" class="time">00:00 / 01:14</span><button id="fullscreen" class="small">全屏</button></div>
+<div class="sound"><label>配乐音量 <input id="music-volume" type="range" min="0" max="100" value="100" aria-label="配乐音量"></label><span class="status" id="audio-status">点击播放后开启声音</span></div>
 <nav class="chapters" id="chapters" aria-label="影片章节"></nav>
-<div class="note"><p>空格播放或暂停，左右方向键切换章节。支持拖动、重播和调整配乐音量。全片无配音。<br>天气画面使用2026年10月19日真实响应快照；算账示例的60%为假设，影片本身不联网。</p><p>应用与源工程已公开。未完成真实商户收益验证。<br><a href="https://github.com/kongbaigit/meiyu-ai4climate" target="_blank" rel="noopener">公开工程：kongbaigit/meiyu-ai4climate ↗</a></p></div>
+<div class="note"><p>空格播放或暂停，左右方向键切换章节。支持拖动、重播和调整配乐音量。全片无配音。<br>历史模型与在线集合预报分别展示。天气画面保留实际获取时间；60%为算账假设。手机建议横屏或全屏。</p><p>配乐：Young Visionaries — Eric Matyas<br>Music by Eric Matyas / www.soundimage.org<br><a href="https://soundimage.org/techno/" target="_blank" rel="noopener">作品来源</a> · <a href="https://soundimage.org/sample-page/" target="_blank" rel="noopener">Soundimage International Public License</a><br>原速原调 · 仅截取、响度匹配和首尾淡化</p></div>
 <audio id="music-audio" preload="auto" src="__MUSIC__"></audio>
 </main>
 <script>/*__GSAP__*/</script>
+<script>/*__THREE__*/</script>
+<script>/*__LEGACY__*/</script>
 <script>const FILM_INPUT=/*__INPUT__*/;</script>
 <script>/*__COST__*/</script>
 <script>/*__APP__*/</script>

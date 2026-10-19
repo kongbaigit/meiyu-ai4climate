@@ -1,20 +1,104 @@
 {
-  "status": "passed",
-  "video_sha256": "085c0ea556b42fad0c3939ca27c217e7b534aeddeff255eb35a37cabc9fe3504",
-  "manifest_matches": true,
-  "fps": 30.0,
-  "width": 1920,
-  "height": 1080,
-  "expected_frames": 5070,
-  "decoded_frames": 5070,
-  "duration_seconds": 169.0,
-  "caption_count": 28,
-  "captions_within_video_and_nonoverlapping": true,
-  "last_caption_end_seconds": 165.65,
-  "elapsed_seconds": 52.11,
-  "limitations": [
-    "仅验证视频帧解码、文件身份和字幕时间，不代表音轨已完整听审。",
-    "画面仅抽取35、100、139秒检查；无自动检测全部视觉内容。",
-    "最终影片认可仍需两名成员完整看听。"
-  ]
+  "schema_version": "1.0",
+  "status": "pass",
+  "scope": "实际MP4技术检查；不含主观听审或最终审片结论。",
+  "generated_at_utc": "2026-10-19T13:45:00Z",
+  "changes": "发布版保留已检查的MP4原始字节；本记录中的路径改为仓库相对路径。",
+  "media": {
+    "path": "media/latest/promo-full-young-visionaries.mp4",
+    "size_bytes": 24037485,
+    "format": "mov,mp4,m4a,3gp,3g2,mj2",
+    "duration_seconds": 73.866667,
+    "bit_rate": 2603337,
+    "tags": {
+      "title": "梅雨有数 · Young Visionaries配乐版",
+      "comment": "Young Visionaries — Eric Matyas; Music by Eric Matyas / www.soundimage.org; https://soundimage.org/techno/; https://soundimage.org/sample-page/; 仅作连续裁切、首尾淡变与响度匹配，保留原速原调。",
+      "copyright": "Music: Young Visionaries — Eric Matyas / Soundimage International Public License"
+    },
+    "video": {
+      "codec": "h264",
+      "profile": "High",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "pixel_format": "yuv420p",
+      "frames": 2216,
+      "duration_seconds": 73.866667
+    },
+    "audio": {
+      "codec": "aac",
+      "profile": "LC",
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bit_rate": 259555,
+      "duration_seconds": 73.866,
+      "frames": 3464
+    },
+    "sha256": "2b52e74cf2302196d46e128802613a280aa584a914dc416fdc727dd3b91d2d86"
+  },
+  "checks": {
+    "ffprobe_contract": {
+      "pass": true,
+      "verified": "73.866666667秒、2216帧、1920×1080/30、1个AAC立体声音轨。"
+    },
+    "tags_source": {
+      "pass": true,
+      "contains_soundimage": true,
+      "contains_cc_claim": false,
+      "verified": "容器comment/copyright均标注 Young Visionaries、Eric Matyas、Soundimage International Public License；未标作CC。"
+    },
+    "full_decode": {
+      "pass": true,
+      "exit_code": 0,
+      "command": "ffmpeg -map 0:v:0 -map 0:a:0 -f null NUL"
+    },
+    "audio_measurement": {
+      "pass": true,
+      "method": "ffmpeg loudnorm 单次测量，针对解码后的AAC",
+      "input_lufs": -17.08,
+      "input_true_peak_dbTP": -2,
+      "input_lra_lu": 0.8,
+      "input_threshold_lufs": -27.09
+    },
+    "head_tail_nonzero": {
+      "pass": true,
+      "window_seconds": 0.25,
+      "head": {
+        "n_samples": 26624,
+        "mean_volume_db": -14.9,
+        "max_volume_db": -3.8,
+        "nonzero": true
+      },
+      "tail": {
+        "n_samples": 25024,
+        "mean_volume_db": -34.5,
+        "max_volume_db": -19.4,
+        "nonzero": true
+      }
+    },
+    "actual_mp4_frames": {
+      "pass": true,
+      "frame_count": 36,
+      "nonzero_png_count": 36,
+      "categories": {
+        "scene_mid": 10,
+        "scene_boundary_after_0_1_and_0_4": 18,
+        "ensemble_visual_beats_85_to_86": 3,
+        "result_actual_beats_80_90_94_after_0_1": 3,
+        "tail_credit_72_5_and_73_8": 2
+      },
+      "sample_png": {
+        "file": "scene_mid_1_opening.png",
+        "width": 1920,
+        "height": 1080,
+        "pixel_format": "rgb24"
+      }
+    }
+  },
+  "summary_zh": {
+    "验证": "ffprobe、H.264/AAC双流完整解码、AAC响度与true peak、头尾0.25秒非零，以及实际MP4关键时间点抽帧均完成。",
+    "抽帧": "实际MP4抽出36张：10场景中段、18个场景边界后0.1/0.4秒、集合视觉拍85–86、实际拍80/90/94后0.1秒、片尾72.5/73.8秒。",
+    "未解项": "不评价主观听感、画面审美或最终交付验收。"
+  }
 }

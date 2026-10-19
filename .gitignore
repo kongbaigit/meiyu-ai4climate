@@ -7,3 +7,8 @@ __pycache__/
 runtime/
 data/raw/
 *.log
+
+# 静态站点由tools/build_pages.py生成，独立发布到gh-pages。
+/site/
+/dist/
+/build/

@@ -1,27 +1,54 @@
 {
-  "base_commit": "79e3056b25b7a7101a44381a98d5410327e10826",
-  "edition": "2026-10-19搬货决策本地版，尚未发布",
-  "sha256": {
-    "src/decision_cost.py": "beef59da7c4666a27b3049beded0e33f5fd28d194e0ca8acfaad3652558b9ad7",
-    "src/decision_weather.py": "626b60334cd4731360b59dbb2b226bc3c0a7c62c03764f244a6ab81fe5ae03d2",
-    "src/decision_server.py": "27502e0b70ab98f560f813c7d6b7ae0333445ab76f7df4230ad72828e52de1e6",
-    "src/weather_worker.py": "381c2b42f3b88b8e231120433d8862d49359be4b970b04a8a1ad6ed3ff681476",
-    "templates/decision_cost.js": "618e2f30c936f6faba62c2df710026063f461563f38be07a8f5cc1a60d60e472",
-    "templates/decision_client.js": "fb49799ff31924ad8054d89f5a317d2e6d1b5ad1486928fd78a08b4ccdd786cc",
-    "templates/decision.html": "986794f77a48f47ed479de611741c8a5c1748bcbe650463848b53f3ffcc1fd2f",
-    "templates/decision.css": "96235a137f6fbb080434586806f7932d7aa24653da1fe37c0ef7f6acdbc6869e",
-    "index.html": "5b5414fa23109cf43a24a37469528ea87f639ba8d320429d4751384b5ff60157"
-  },
-  "cost_scenario": {
-    "p": 0.6,
-    "C_initial": 80,
-    "C_changed": 600,
-    "L0": 1000,
-    "L1": 100,
-    "expected_without": 600,
-    "expected_move_initial": 140,
-    "expected_move_changed": 660,
-    "benefit_initial": 460,
-    "benefit_changed": -60
-  }
+  "source_commit": "ad0617a68a5c0b0483ef4a871ddcd7b0b21d60c4",
+  "historical_sources": [
+    {
+      "path": "data/samples.csv",
+      "role": "historical 636-row sample table",
+      "bytes": 387782,
+      "sha256": "493c58d793af9bf4d9c8e84c8b0a5de48691024925cfa8013a81e4e2c4d1b0db"
+    },
+    {
+      "path": "artifacts/model_parameters.json",
+      "role": "frozen model parameters",
+      "bytes": 3073,
+      "sha256": "297f0d6e4a574b634848fbd92a4354b7b91383439e29b404e2f81e0e5ac60418"
+    },
+    {
+      "path": "reports/evaluation.json",
+      "role": "time split counts and selected method",
+      "bytes": 54470,
+      "sha256": "f14becfd108b0d4ef0b45a72b726e5d91a4a2c2bc12caf484caf46748f6ecbf2"
+    },
+    {
+      "path": "artifacts/sample_splits.csv",
+      "role": "time split assignment",
+      "bytes": 102202,
+      "sha256": "3bea3f8abfa77ea621aa9eb993d7404729aa74071f7fb20b85847fe6c4c615de"
+    },
+    {
+      "path": "artifacts/predictions.csv",
+      "role": "historical example prediction check",
+      "bytes": 570356,
+      "sha256": "65096b2db07625826ad9ea90e2ca9d373fe5f18c088bc50b80a0dc6e349fc961"
+    },
+    {
+      "path": "src/decision_weather.py",
+      "role": "weather parser and (start,end] semantics",
+      "bytes": 37579,
+      "sha256": "626b60334cd4731360b59dbb2b226bc3c0a7c62c03764f244a6ab81fe5ae03d2"
+    },
+    {
+      "path": "evidence/weather_raw.bin",
+      "role": "raw public Open-Meteo ensemble response",
+      "bytes": 49136,
+      "sha256": "2c91ea4481afc3ee2d53bbbe863ec4ed8723a693219ca12b8b1bb319090d1a6c"
+    },
+    {
+      "path": "evidence/weather.json",
+      "role": "parsed weather snapshot summary",
+      "bytes": 4307,
+      "sha256": "82d5e114312e27865364c74541198c8d98e01a33668646e7c573ba926141c3d0"
+    }
+  ],
+  "scope": "视频读取证据，不修改应用与冻结实验。"
 }

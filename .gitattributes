@@ -1,9 +1,11 @@
 # 冻结文件保留原始字节，避免换行转换破坏 SHA256。
-* text=auto
+* text=auto eol=lf
 data/** -text
 artifacts/** -text
 reports/** -text
 config/** -text
+external/** -text
+docs/新增时间段验证协议.md -text
 media/** -text
 site/** -text
 index.html -text
