@@ -2,7 +2,7 @@
 
 An explainable rainfall-preparation reference for Hangzhou small shops | AI for Climate
 
-**English materials prepared 2026-10-24.** The repository's historical and capture dates remain the dates in their evidence. English delivery entries are listed below; public-access results are maintained separately.
+**English materials prepared 2026-10-24.** The repository's historical and capture dates remain the dates in their evidence. English delivery entries are listed below. Public files, playback, seeking and mobile layouts were checked on 24 October; see [the release check](docs/en/english-release-check.json).
 
 ## What the prototype does
 
@@ -17,7 +17,7 @@ The main experiment has 636 paired historical days: 276 training, 120 validation
 - English materials: <https://kongbaigit.github.io/meiyu-ai4climate/en/materials/>
 - Chinese public app retained separately: <https://kongbaigit.github.io/meiyu-ai4climate/>
 - Chinese promotional page retained separately: <https://kongbaigit.github.io/meiyu-ai4climate/promo/>
-- App source: `index.html`; full workbench: `app.py`
+- English app source: `en/index.html`; English historical demo: `en/demo.html`; Chinese app: `index.html`; full research workbench: `app.py`
 
 The English main app at `/en/` automatically requests public **Ensemble** weather while the page remains open. The English static historical demo at `/en/demo.html` keeps history offline and requests its **Ensemble** view only after the user clicks. The original Python/Chinese research workbench (`app.py`) has a separate button-triggered **Forecast** page. A forecast older than three hours, a missing member, or a missing hour stops the relevant stock-relocation conclusion. ERA5 and SSOD shown in English pages are archived explanatory information, not proof of a complete real-time station-and-forecast implementation. Costs are computed in the browser and are not uploaded. The historical model does not retrain online. These behaviors are separate.
 

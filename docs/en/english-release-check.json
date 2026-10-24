@@ -1,0 +1,578 @@
+{
+  "schema_version": "meiyu-english-release-v1",
+  "prepared_on": "2026-10-24",
+  "checked_at_utc": "2026-10-24T10:50:06.371049+00:00",
+  "entry_points": {
+    "english_app": "https://kongbaigit.github.io/meiyu-ai4climate/en/",
+    "english_film": "https://kongbaigit.github.io/meiyu-ai4climate/en/promo/",
+    "english_materials": "https://kongbaigit.github.io/meiyu-ai4climate/en/materials/",
+    "repository": "https://github.com/kongbaigit/meiyu-ai4climate",
+    "chinese_app": "https://kongbaigit.github.io/meiyu-ai4climate/",
+    "chinese_film": "https://kongbaigit.github.io/meiyu-ai4climate/promo/"
+  },
+  "verified_source_commit": "c6846bc537011714a794c5b098184db9562fb248",
+  "verified_pages_commit": "871df74c9817b4a101d40cf53eb0daf9c893fdda",
+  "public_delivery": {
+    "checked_files": 49,
+    "all_status_200_and_byte_identical": true,
+    "mp4_range": {
+      "status": 206,
+      "content_range": "bytes 100000-100999/9853172",
+      "bytes": 1000,
+      "matches_delivery": true
+    },
+    "files": [
+      {
+        "path": "index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/index.html",
+        "status": 200,
+        "bytes": 56954,
+        "sha256": "a4ed4400a25ff75a9b126e3c7741e9d3c8190aa2b4dcaf1707a21f0b853dfe19",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/demo.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/demo.html",
+        "status": 200,
+        "bytes": 1711538,
+        "sha256": "404f2ee784d83af123b04203a9d05337e8bcd1987bff4c207edde12826b57a58",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/index.html",
+        "status": 200,
+        "bytes": 58742,
+        "sha256": "9735b2519c25e4d4a225783b2e4188b3a5cbe2bc9dbaf741ec04114fe2f99856",
+        "matches_delivery": true
+      },
+      {
+        "path": "promo/index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/promo/index.html",
+        "status": 200,
+        "bytes": 4217,
+        "sha256": "529e60b8bf28a2b182ef8a2899ce65102dc9c60d4a08b106c9cc5a4ca14c53a3",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/90-day-validation-plan.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/90-day-validation-plan.html",
+        "status": 200,
+        "bytes": 7186,
+        "sha256": "57aab99c80b5bec6c766e146702c999b88bbb1cb97d30d8b2b4eebdcd4726b01",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/90-day-validation-plan.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/90-day-validation-plan.md",
+        "status": 200,
+        "bytes": 4726,
+        "sha256": "77b4ff27bd5db070b6a21df550c1da36768f41e922342766d8386b148e95bf84",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/90-day-validation-plan.pdf",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/90-day-validation-plan.pdf",
+        "status": 200,
+        "bytes": 83712,
+        "sha256": "f73fd21cc43af68cb03b0399f65b2cc45d1a20caf7213ddc6fa4a6f35c0e7209",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/action-sources.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/action-sources.md",
+        "status": 200,
+        "bytes": 4210,
+        "sha256": "ec90c56304eb30e153e4c1ea255c705729af1d191e550474a731597c3ca62364",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/application-draft.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/application-draft.md",
+        "status": 200,
+        "bytes": 3641,
+        "sha256": "9a21e65be135798ca5ea38fed192d2bc223b20dab4d17477f9f74d0884afc30e",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/competition-check-20261018.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/competition-check-20261018.md",
+        "status": 200,
+        "bytes": 560,
+        "sha256": "3b5e9f009686994f247f61882794fe830acfded9cc6ec4e3125b7faf10cfaeb6",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/competition-requirements-20261018.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/competition-requirements-20261018.md",
+        "status": 200,
+        "bytes": 3205,
+        "sha256": "fdcb8e5a01d9f7a4f62b9eac4ba2393fe3dba47078b1f74d7e1c79dbec8839e3",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/data-ai-statement.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/data-ai-statement.html",
+        "status": 200,
+        "bytes": 12258,
+        "sha256": "e619476c53c4d7af21c5baaabe4440c193a1d4747ee1baed5ae9d17ebc4a57bb",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/data-ai-statement.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/data-ai-statement.md",
+        "status": 200,
+        "bytes": 11998,
+        "sha256": "7130e02a35c470c582bbd926ef7dbb592671e96006eba45aa16f09ccc3266e54",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/data-ai-statement.pdf",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/data-ai-statement.pdf",
+        "status": 200,
+        "bytes": 92618,
+        "sha256": "d1a3bd681130941a15c5062251e08c76e1f8c663174d8dc382ff2c0880ba563a",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/data-dictionary.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/data-dictionary.md",
+        "status": 200,
+        "bytes": 4815,
+        "sha256": "ed3f8728f264ca740a3e29d7f441269a6c2f0a772b60a024fd177ca684a5d8fb",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/decision-guide.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/decision-guide.md",
+        "status": 200,
+        "bytes": 5778,
+        "sha256": "9b1584fa4d1ef4c5fe8a1377b257178b39309e9cc325deda7b1753a1a3b1d8ec",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/demo-fact-sheet.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/demo-fact-sheet.md",
+        "status": 200,
+        "bytes": 3570,
+        "sha256": "40f5e92d33868fd2df69af293c02dc7fd9c196b5f025852a60888fb588021a30",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/model-result-contract.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/model-result-contract.md",
+        "status": 200,
+        "bytes": 1822,
+        "sha256": "a4fce4559ac782ee106dc3142cfa4c9d5a4307cfcefd6d4e44e9f448808e605f",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/online-data-completeness.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/online-data-completeness.md",
+        "status": 200,
+        "bytes": 5017,
+        "sha256": "0de2d6e672f74844918eac092c675750bc7ebf2cfd0c99eaf75c2e21ebaff4a7",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/online-demo.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/online-demo.md",
+        "status": 200,
+        "bytes": 3677,
+        "sha256": "55728850866a222d33ad9455d8085058a75444200839cde1e044caac945a83db",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/project-description.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/project-description.html",
+        "status": 200,
+        "bytes": 12408,
+        "sha256": "269a64a1707d777545597f218b7442576d4ae8054997a93b2d9674a1608add09",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/project-description.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/project-description.md",
+        "status": 200,
+        "bytes": 8093,
+        "sha256": "0f14ff280fa9814a424a2045f24b5c0bba21da4b662a52af798fe9dbc5a78f18",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/project-description.pdf",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/project-description.pdf",
+        "status": 200,
+        "bytes": 117539,
+        "sha256": "ac9d47956a918c73327eef27ff9b83b5249e261176cd033f533b95031afacfca",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/promo-full-release.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/promo-full-release.md",
+        "status": 200,
+        "bytes": 1647,
+        "sha256": "1f86a87ec72ae1fb358a0c9c475cf6aa409b6528554590906ba5491cdde80dc6",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/qa-rehearsal.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/qa-rehearsal.md",
+        "status": 200,
+        "bytes": 3101,
+        "sha256": "83e166bc54d39a4b06d1d87c514628a37f78f80c6ebb1cac5c175dc441257f0e",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/remote-user-testing.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/remote-user-testing.md",
+        "status": 200,
+        "bytes": 3541,
+        "sha256": "b81b48d9b07876bb18955f04e40248b7574c299d51bd6c5836a341baa70c47d4",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/reproduction-and-delivery.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/reproduction-and-delivery.md",
+        "status": 200,
+        "bytes": 3322,
+        "sha256": "78e89db8eda2e69c047f8e0f3efd3299da2c8ca6bff25c1475dba5805c59526e",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/submission-checklist.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/submission-checklist.md",
+        "status": 200,
+        "bytes": 2871,
+        "sha256": "7e745b845140f2f80e3e3c68a74e79aad2a15ab39f0f726102b4b2a80698c5b3",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/temporal-validation-protocol.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/temporal-validation-protocol.md",
+        "status": 200,
+        "bytes": 3566,
+        "sha256": "5d55b35c26ad4b71cd10c0c4cf7f1e3cf5289392fdf3f968c40398edb616bb3e",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/temporal-validation-results.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/temporal-validation-results.md",
+        "status": 200,
+        "bytes": 2525,
+        "sha256": "c2d06a2b7e0b901b870ddeb1c925396df04e01bb7f4b7a51bab62da947ad511a",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/three-minute-pitch.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/three-minute-pitch.md",
+        "status": 200,
+        "bytes": 2963,
+        "sha256": "4502c26fe73a54c03503cdae2dbb8fa78765a104ada6dda97c1f23a245edc885",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/video-human-acceptance.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/video-human-acceptance.md",
+        "status": 200,
+        "bytes": 2782,
+        "sha256": "c0453d74ac27261d92540139b88c0fc8bd7b646f1aec522e18b97430eb2f5e29",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/video-technical-check.json",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/video-technical-check.json",
+        "status": 200,
+        "bytes": 2214,
+        "sha256": "7d3333acd447df38cc82087612824bdb48b5fd23d5b55e3914bb2fdbb84bda00",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/materials/index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/materials/index.html",
+        "status": 200,
+        "bytes": 4916,
+        "sha256": "19cf3b9cfb22c307d71514d47b180c879216e607511caedf46af6a1b5b30a293",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/presentation/meiyu-prepare-pitch.pdf",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/presentation/meiyu-prepare-pitch.pdf",
+        "status": 200,
+        "bytes": 687086,
+        "sha256": "d741651578f024ac323f306fb81757e6eb60f0e2beab6d9e1d4de7fc13bdd450",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/presentation/meiyu-prepare-pitch.pptx",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/presentation/meiyu-prepare-pitch.pptx",
+        "status": 200,
+        "bytes": 68227,
+        "sha256": "3522e5d87fce63d2c9ee2a1f698fc0576908e000f318750660bc5db819782d61",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/presentation/speaker-notes.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/presentation/speaker-notes.md",
+        "status": 200,
+        "bytes": 8708,
+        "sha256": "5385142ff0f888ba777374e126290ca5e9a6b0fa8e594eb68816f8789ca3b64f",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/promo/index.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/promo/index.html",
+        "status": 200,
+        "bytes": 3757,
+        "sha256": "10feedb4721afda475e728d6c8b67cb581d47f1c98ffb4f829efd434eeb502a0",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/promo/native.html",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/promo/native.html",
+        "status": 200,
+        "bytes": 4582526,
+        "sha256": "2cca68352d6f749716f341b37ccd71ea34d410b8e04b5fdb1104ba12b71fd792",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/00-start-here.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/00-start-here.md",
+        "status": 200,
+        "bytes": 4231,
+        "sha256": "1367a451dc652eed4531af63f580ee8541839e4230768cef54cfb4250ddbc172",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/01-recruitment-and-participation.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/01-recruitment-and-participation.md",
+        "status": 200,
+        "bytes": 3365,
+        "sha256": "f8ca3842a6aea48a222d8ffff14dc8659ac445263f3b8e7b13e201fccd443957",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/02-host-verbatim-script.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/02-host-verbatim-script.md",
+        "status": 200,
+        "bytes": 6189,
+        "sha256": "9bed647e420e9dbad7bf34ea2ec21d241eb1daa21a7c8b4fd39c4a609baabf38",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/03-participant-task-card.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/03-participant-task-card.md",
+        "status": 200,
+        "bytes": 1220,
+        "sha256": "e3ac39bf7ac384b60305f8b98b2ee8340bdd7eac039df71036a66955848132c9",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/04-scoring-and-decision-rules.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/04-scoring-and-decision-rules.md",
+        "status": 200,
+        "bytes": 5764,
+        "sha256": "f4b93b96e0f518a97b2df8f80eeff3f9a26505e1739d3bd86b51a147ddfc45b5",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/05-blank-individual-record.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/05-blank-individual-record.md",
+        "status": 200,
+        "bytes": 3191,
+        "sha256": "f1314a786420e5f3a9f47d772a32b8e664d39212f38adf6271001ff0c3ec7d25",
+        "matches_delivery": true
+      },
+      {
+        "path": "en/docs/user-testing-kit/06-results-and-remediation.md",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/en/docs/user-testing-kit/06-results-and-remediation.md",
+        "status": 200,
+        "bytes": 4684,
+        "sha256": "80048d5d155376f1541d4243a0f47271e85f87e8e610b611d187f245fe04b726",
+        "matches_delivery": true
+      },
+      {
+        "path": "media/en/captions.vtt",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/en/captions.vtt",
+        "status": 200,
+        "bytes": 1201,
+        "sha256": "9764b8e5784b4884400513d87eb33edd53bf5365aacb0fa3e23715535562570a",
+        "matches_delivery": true
+      },
+      {
+        "path": "media/en/cover.png",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/en/cover.png",
+        "status": 200,
+        "bytes": 407065,
+        "sha256": "e141e71590fa87cecec5cd5f188e3d003923b40b53a75b885365b482dab2456e",
+        "matches_delivery": true
+      },
+      {
+        "path": "media/en/meiyu-prepare-en.mp4",
+        "url": "https://kongbaigit.github.io/meiyu-ai4climate/media/en/meiyu-prepare-en.mp4",
+        "status": 200,
+        "bytes": 9853172,
+        "sha256": "0958cc924e5a767dbb94abbb2de0ee17f56a0b855595cebe75f2f9a3208f35ba",
+        "matches_delivery": true
+      }
+    ]
+  },
+  "browser": {
+    "checked_at_utc": "2026-10-24T10:49:52.878Z",
+    "passed": true,
+    "script_errors": [],
+    "checks": [
+      {
+        "name": "hypothetical_cost",
+        "keep": "¥ 600.00",
+        "relocate": "¥ 140.00"
+      },
+      {
+        "name": "tie_540",
+        "title": "The expected costs are equal",
+        "keep": "¥ 600.00",
+        "relocate": "¥ 600.00"
+      },
+      {
+        "name": "keep_600",
+        "title": "Keep in place under these assumptions",
+        "keep": "¥ 600.00",
+        "relocate": "¥ 660.00"
+      },
+      {
+        "name": "historical_months",
+        "count": 8
+      },
+      {
+        "name": "public_video_play_seek_end",
+        "duration": 87.066667,
+        "width": 1920,
+        "height": 1080,
+        "source": "https://kongbaigit.github.io/meiyu-ai4climate/media/en/meiyu-prepare-en.mp4",
+        "ended": true,
+        "play": true,
+        "seek": 45.5
+      },
+      {
+        "name": "mobile_width",
+        "route": "en/",
+        "width": 390
+      },
+      {
+        "name": "mobile_width",
+        "route": "en/demo.html",
+        "width": 390
+      },
+      {
+        "name": "mobile_width",
+        "route": "en/promo/",
+        "width": 390
+      },
+      {
+        "name": "mobile_width",
+        "route": "en/materials/",
+        "width": 390
+      },
+      {
+        "name": "mobile_width",
+        "route": "",
+        "width": 390
+      }
+    ]
+  },
+  "video": {
+    "file": "media/en/meiyu-prepare-en.mp4",
+    "sha256": "0958cc924e5a767dbb94abbb2de0ee17f56a0b855595cebe75f2f9a3208f35ba",
+    "bytes": 9853172,
+    "duration_seconds": 87.06666666666666,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 2612,
+    "scenes": 10,
+    "beats": 132,
+    "audio_tracks": 1,
+    "voiceover": false,
+    "full_decode": "passed",
+    "independent_encoded_frame_inspection": "passed",
+    "music": "Young Visionaries — Eric Matyas",
+    "license": "Soundimage International Public License"
+  },
+  "presentation": {
+    "editable_slides": 10,
+    "native_tables": 1,
+    "native_charts": 2,
+    "embedded_chart_workbooks": 2,
+    "whole_slide_pictures": 0,
+    "pdf": "Rendered viewing copy; text is not selectable. Use the editable PPTX."
+  },
+  "formal_pdf_page_counts": {
+    "project-description": 4,
+    "data-ai-statement": 3,
+    "90-day-validation-plan": 2
+  },
+  "tests": {
+    "full_regression": {
+      "passed": 136,
+      "failed": 0,
+      "skipped": 1,
+      "skip_reason": "Live weather API is opt-in; tested separately below."
+    },
+    "final_english_and_package_checks": {
+      "passed": 4,
+      "failed": 0
+    },
+    "javascript_download_checks": {
+      "passed": 3,
+      "failed": 0
+    }
+  },
+  "live_weather_at_check_time": {
+    "checked_at_utc": "2026-10-24T10:44:25.710Z",
+    "source_url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=30.2283&longitude=120.4317&models=ecmwf_ifs025&hourly=precipitation&start_hour=2026-10-25T01%3A00&end_hour=2026-11-01T00%3A00&timezone=UTC&timeformat=iso8601&precipitation_unit=mm&cell_selection=nearest",
+    "http_status": 200,
+    "raw_sha256": "b704eec2607cbbcdab40eb1d217af0eb05cae7b86bca06d3d03e63969db60b00",
+    "source_null_count": 0,
+    "invalid_value_count": 33,
+    "first_invalid_value": {
+      "field": "precipitation_member01",
+      "index": 51,
+      "time": "2026-10-27T04:00",
+      "value": -0.1
+    },
+    "real_api_smoke": "failed: current upstream response contains negative precipitation",
+    "application_behavior": "The invalid response is rejected. No current relocation conclusion is produced; stale evidence is labelled.",
+    "public_browser_status": "Stale · 2026-10-19 13:48 (UTC+08:00)",
+    "public_browser_result": "No relocation conclusion yet",
+    "historical_and_hypothetical_modes": "available",
+    "missing_or_invalid_values_replaced_with_zero": false
+  },
+  "chinese_retention": {
+    "baseline_files_checked": 229,
+    "unchanged_files": 221,
+    "changed_files": [
+      "README.md",
+      "index.html",
+      "reports/package_manifest.json",
+      "src/package.py",
+      "templates/decision.html",
+      "templates/promo.html",
+      "tests/test_decision_view.py",
+      "tools/build_pages.py"
+    ],
+    "scope": "Navigation, bilingual packaging, page build, package manifest and test clock fixtures only. Original research data, models, documents and Chinese film remain byte-identical."
+  },
+  "repository_cleanup": {
+    "temporary_transfer_branch_removed": true,
+    "remaining_branches": [
+      "main",
+      "gh-pages"
+    ],
+    "transfer_parts_or_workflow_in_final_main": false
+  },
+  "remaining_team_work": {
+    "team_identity_and_contact": "Fill using the actual team information.",
+    "two_person_full_viewing_and_listening": "Not signed; technical playback and visual inspection are separate.",
+    "merchant_validation": "Not completed; 90-day plan is a proposed study.",
+    "submission_receipt": "Not claimed."
+  }
+}

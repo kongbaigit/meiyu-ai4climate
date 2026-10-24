@@ -1,8 +1,8 @@
 {
   "schema_version": "meiyu-package-v1",
   "package_root": "meiyu",
-  "generated_at_utc": "2026-10-24T10:47:55.556449Z",
-  "file_count": 307,
+  "generated_at_utc": "2026-10-24T10:53:18.474182Z",
+  "file_count": 308,
   "hash_algorithm": "SHA-256",
   "hash_policy": "逐文件记录字节数与SHA-256；本文件列出但不自哈希，ZIP摘要由外部QA记录。",
   "allowed_top_level_files": [
@@ -76,8 +76,8 @@
     },
     {
       "path": "README.en.md",
-      "bytes": 8274,
-      "sha256": "3e6c26d9fd9331ad04788747f5121b7ebc01d69ee1784f0aa7157e8b22105701"
+      "bytes": 8453,
+      "sha256": "0b791ce30f01a9e7d3abae9fe8e7259923d1395caf88b9f169fe2b486fe7b8c3"
     },
     {
       "path": "README.md",
@@ -338,6 +338,11 @@
       "path": "docs/en/demo-fact-sheet.md",
       "bytes": 3570,
       "sha256": "40f5e92d33868fd2df69af293c02dc7fd9c196b5f025852a60888fb588021a30"
+    },
+    {
+      "path": "docs/en/english-release-check.json",
+      "bytes": 22230,
+      "sha256": "f2e48268858df24121b94e40cf0636d8797da8142951345afde1baa60045e097"
     },
     {
       "path": "docs/en/model-result-contract.md",
@@ -1156,7 +1161,7 @@
     },
     {
       "path": "reports/package_manifest.json",
-      "bytes": 53903,
+      "bytes": 54078,
       "sha256": null,
       "self_manifest": true
     },
