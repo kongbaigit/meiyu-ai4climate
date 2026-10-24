@@ -1,0 +1,45 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:05.275
+Move the stock?
+
+2
+00:00:05.275 --> 00:00:15.824
+Public forecasts and station references form 636 paired historical days.
+
+3
+00:00:15.824 --> 00:00:26.374
+Each row pairs a forecast and reference for the same 24-hour UTC window.
+
+4
+00:00:26.374 --> 00:00:39.561
+The frozen historical model estimates a rainfall reference event. It is an offline experiment.
+
+5
+00:00:39.561 --> 00:00:50.110
+51 ensemble members, 24 hourly values each. A recorded forecast snapshot, not a loss probability.
+
+6
+00:00:50.110 --> 00:00:55.385
+Every member and hour must be complete. Missing values are never replaced with zero.
+
+7
+00:00:55.385 --> 00:01:01.979
+Hypothetical example: p=60%, relocation CNY 80, conditional losses CNY 1,000 and 100.
+
+8
+00:01:01.979 --> 00:01:08.572
+Expected totals: keep CNY 600; relocate CNY 140. The difference of CNY 460 is simulated.
+
+9
+00:01:08.572 --> 00:01:16.484
+Break-even relocation cost: CNY 540. At CNY 600, keeping the goods costs less.
+
+10
+00:01:16.484 --> 00:01:21.759
+Save assumptions, calculation mode, results and forecast sources in a local record.
+
+11
+00:01:21.759 --> 00:01:27.034
+Meiyu Prepare. Compare costs. Decide what to move.
