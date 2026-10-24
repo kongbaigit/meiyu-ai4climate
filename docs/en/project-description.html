@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Meiyu Prepare - Project Description</title>
+<style>
+@page{size:A4;margin:0}*{box-sizing:border-box}body{margin:0;background:#e9eee8;color:#193f3c;font-family:Arial,"Segoe UI",sans-serif;font-size:10.2pt;line-height:1.5}.sheet{position:relative;width:210mm;min-height:297mm;margin:8mm auto;padding:15mm 16mm 19mm;background:#fffdf8;break-after:page;box-shadow:0 2mm 7mm #173b381c}.sheet:last-child{break-after:auto}.eyebrow{color:#277267;font-size:8.5pt;letter-spacing:.1em;text-transform:uppercase;font-weight:700}h1{font-size:25pt;line-height:1.1;margin:4mm 0 2mm;color:#153f3c;max-width:170mm}h2{font-size:14pt;line-height:1.25;margin:6mm 0 2.5mm;color:#1b625b}p{margin:2.3mm 0}.lede{font-size:12pt;color:#42615c;margin:4mm 0 6mm}.callout{padding:4mm 5mm;margin:4mm 0;background:#eef5ee;border-left:4px solid #4a8c79;border-radius:1.5mm}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin:4mm 0 5mm}.metric{padding:3.5mm;background:#f4eadc;border-top:3px solid #c77b51}.metric b{display:block;font-size:16pt;color:#1a6259}.metric span{font-size:8.5pt;color:#576f68}table{width:100%;border-collapse:collapse;margin:3mm 0 4mm;font-size:8.7pt;line-height:1.38}th,td{text-align:left;vertical-align:top;padding:2.1mm 2.2mm;border-bottom:1px solid #d6e3da}th{background:#e4f0e8;color:#1c5c53;font-weight:700}tr:nth-child(even) td{background:#fbfaf3}code{font-family:Consolas,monospace;color:#215d58;font-size:.92em}.formula{font-family:Georgia,serif;font-size:13pt;text-align:center;padding:3mm;margin:3mm 0;background:#f7f0e3;color:#244d47}ul{margin:2mm 0 3mm 5mm;padding-left:5mm}li{margin:1.2mm 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:6mm}.small{font-size:8.5pt;color:#5b736e}.tag{display:inline-block;background:#dceee3;color:#236458;padding:1mm 2.2mm;margin-right:1.2mm;border-radius:4mm;font-size:8.5pt}footer{position:absolute;bottom:8mm;left:16mm;right:16mm;border-top:1px solid #d6e3da;padding-top:1.5mm;color:#66807a;font-size:7.8pt;display:flex;justify-content:space-between}a{color:#216b62;text-decoration:none}@media print{body{background:#fff}.sheet{margin:0;box-shadow:none}}
+</style>
+</head>
+<body>
+<section class="sheet">
+<div class="eyebrow">Meiyu Prepare / AI for Climate · English release prepared 2026-10-24</div>
+<h1>Making rainfall probability an explainable preparation reference</h1>
+<p class="lede">Hangzhou Xiaoshan Airport public reference point · offline method prototype · intended for small shops considering stock relocation</p>
+<div class="callout"><b>Current boundary.</b> Meiyu Prepare is a research prototype. It is not an official warning service, a shop-flood predictor, or a loss-probability product. No real merchant validation, avoided-loss, payment, revenue, or carbon-reduction evidence is claimed.</div>
+<div class="metrics"><div class="metric"><b>636</b><span>paired historical days</span></div><div class="metric"><b>276 / 120 / 240</b><span>train / validation / test days</span></div><div class="metric"><b>18</b><span>reference events in test</span></div></div>
+<h2>Problem and intended users</h2>
+<p>Meiyu Prepare is for Hangzhou small shops that may need to sort or relocate moisture-sensitive stock before a heavy-rain scenario. Public market monitoring describes effects of prolonged rain on product quality, harvesting, storage, and transport, but there is no evidence yet that a particular shop needs this prototype, would use it, or would pay for it. Those assumptions remain to be tested with merchants.</p>
+<p>The climate value is adaptation and preparedness. Two years of one-station data cannot attribute climate change or establish a long-term trend. Airport precipitation is not shop flooding, and the prototype does not issue official warnings.</p>
+<h2>Method and result</h2>
+<p>The AI task is to map public numerical-weather inputs to the probability that nominal UTC-day reference precipitation reaches 25 mm. This is a research threshold, not an official warning level. A small logistic regression (<code>logistic_rain</code>, <code>C=10</code>) was selected only on the validation segment. The language model does not generate observations or labels.</p>
+<table><thead><tr><th>Method</th><th>Test Brier</th><th>Role</th></tr></thead><tbody><tr><td>Fixed training-period event rate</td><td>0.0697</td><td>Baseline</td></tr><tr><td>Selected precipitation-probability model</td><td>0.0455</td><td>Validation-selected</td></tr><tr><td>Precipitation + temperature/humidity comparison</td><td>0.0444</td><td>Complete comparison, not selected</td></tr></tbody></table>
+<p>Lower Brier is better. The selected model and original rainfall rule have the same ROC-AUC, 0.9712. The model supplies a probability expression rather than new rainfall-ranking ability.</p>
+<footer><span>Meiyu Prepare · Project description</span><span>1</span></footer>
+</section>
+<section class="sheet">
+<div class="eyebrow">Product, data, and decision boundary</div>
+<h2>Test trade-off</h2>
+<table><thead><tr><th>Fixed 10% scenario threshold</th><th>Hits</th><th>Misses</th><th>False alarms</th><th>Correct exclusions</th></tr></thead><tbody><tr><td>Original 25-mm rule</td><td>7</td><td>11</td><td>4</td><td>218</td></tr><tr><td>Selected model</td><td>12</td><td>6</td><td>9</td><td>213</td></tr></tbody></table>
+<p class="small">Fewer misses come with more false alarms. This is not an equal-false-alarm-rate comparison. The frozen report also retains the original rule's 0/1 squared-error score of 0.0625.</p>
+<h2>Product and data boundary</h2>
+<p>The English main app (<code>/en/</code>) provides the stock-relocation decision and automatically requests the public Hangzhou <b>Ensemble</b>. The English static historical demo (<code>/en/demo.html</code>) keeps the historical evidence offline and its <b>Latest weather &amp; completeness</b> view requests <b>Ensemble</b> only after the user clicks. The original Python/Chinese research workbench (<code>app.py</code>) remains a separate button-triggered <b>Forecast</b> workbench.</p>
+<p>The English pages show numerical forecast evidence, archived ERA5 explanatory context, and archived SSOD reference completeness as separate concepts. They do not claim a complete real-time station-and-forecast implementation. Where the English Ensemble view is available, it shows seven complete future UTC-day windows for Hangzhou or Ningbo, with retrieval time, source, and completeness; an incomplete or stale result pauses the current conclusion. These paths and the original workbench must not be conflated.</p>
+<table><thead><tr><th>Evidence</th><th>What it supports</th><th>What it does not support</th></tr></thead><tbody><tr><td>2024-2025 main data</td><td>731 configured days, 670 complete references, 636 paired days</td><td>Missing days are not no-rain days</td></tr><tr><td>2026 Jan-Sep check</td><td>85/273 paired days and one event</td><td>April-Sep lack complete reference; no 2026 plum-rain claim</td></tr><tr><td>Ningbo 2025</td><td>362 precipitation-reference rows are missing</td><td>No cross-city transfer result</td></tr><tr><td>ERA5 background</td><td>Source-labeled historical context</td><td>Not a station label and cannot fill a missing label</td></tr></tbody></table>
+<p>The primary reference is the airport's nominal UTC day, which may under-report and does not prove exact accumulation boundaries. Previous Runs aggregation can combine different initializations; public availability at one historical decision time is not established. We therefore do not claim a 24-hour operational warning lead time.</p>
+<footer><span>Meiyu Prepare · Project description</span><span>2</span></footer>
+</section>
+<section class="sheet">
+<div class="eyebrow">Decision example and validation path</div>
+<h2>Decision-cost example</h2>
+<p>Let <i>p</i> be the scenario event estimate, <i>C</i> the relocation cost, and <i>L</i><sub>0</sub> and <i>L</i><sub>1</sub> the conditional average losses without and with relocation.</p>
+<div class="formula">E<sub>keep</sub> = pL<sub>0</sub> &nbsp;&nbsp;&nbsp; E<sub>relocate</sub> = C + pL<sub>1</sub></div>
+<p>The expected difference is <i>p</i>(<i>L</i><sub>0</sub> - <i>L</i><sub>1</sub>) - <i>C</i>. A positive value favors <b>Relocate</b>, a negative value favors <b>Keep in place</b>, and equality displays a tie. The browser compares unrounded CNY values and displays two decimals.</p>
+<div class="callout"><b>Hypothetical 60% example.</b> With relocation cost <i>C</i>=CNY 80, conditional losses <i>L</i><sub>0</sub>=CNY 1,000 and <i>L</i><sub>1</sub>=CNY 100, totals are CNY 600 for <b>Keep in place</b> and CNY 140 for <b>Relocate</b>, difference CNY 460. Tie cost is <i>C</i>=CNY 540; at <i>C</i>=CNY 600, choose <b>Keep in place</b>. These are scenario figures only.</div>
+<h2>90-day validation</h2>
+<table><thead><tr><th>Period</th><th>Planned work</th><th>Decision evidence</th></tr></thead><tbody><tr><td>Weeks 1-2</td><td>Confirm user hypothesis; plan 5-8 volunteers</td><td>Need and willingness; if recruitment fails, report desk evaluation only</td></tr><tr><td>Weeks 3-4</td><td>Fixed historical comprehension tests</td><td>Probability, day boundary, non-flood meaning, hypothetical cost</td></tr><tr><td>Weeks 5-8</td><td>Verify forecast availability timing; shadow run</td><td>Decision-time evidence; stop on missing source or hours</td></tr><tr><td>Weeks 9-12</td><td>Review failures; second comprehension round</td><td>Continue, revise, or narrow; no winter-to-plum-rain claim</td></tr></tbody></table>
+<p>The plan target is at least 80% completing the key operation within three minutes and correctly explaining the core limits. This is a pre-specified exploratory target, not an existing result. The 90-day window does not cover a complete next plum-rain season.</p>
+<footer><span>Meiyu Prepare · Project description</span><span>3</span></footer>
+</section>
+<section class="sheet">
+<div class="eyebrow">Delivery and responsible use</div>
+<h2>Team and AI use</h2>
+<p>Team names, organization, role allocation, and contact email are intentionally blank for the team to complete. Codex assisted with public-source lookup, parsing, tests, app implementation, and material drafting. The core model runs locally. The Chinese release film is retained at 73.866666667 seconds, 1920x1080, 30 fps, 2,216 frames, and 10 scenes, with instrumental music and no voice-over; its music is Young Visionaries by Eric Matyas under the Soundimage International Public License, attributed as <code>Music by Eric Matyas / www.soundimage.org</code>.</p>
+<p>The English native-animation cut is 87.066666667 seconds, 1920x1080, 30 fps, 2,612 frames, 10 scenes, and 132 beats, with the same instrumental track and no voice-over.</p>
+<p>English entry points are <code>/en/</code>, <code>/en/promo/</code>, and <code>/en/materials/</code>. See README.en.md for verified publication status. The repository includes source code, public-data snapshots, frozen results, current media source, and validation materials. It does not include proof of real merchant use, avoided loss, payment, or carbon benefit.</p>
+<h2>Evidence links</h2>
+<div class="two"><div><span class="tag">Sources</span><p class="small">NOAA SSODv2, NOAA format documentation, GHCN-Daily, Open-Meteo Forecast, Ensemble, Previous Runs, and Historical Weather APIs. Full links and scope notes are in the Data and AI Statement.</p></div><div><span class="tag">Reproduction</span><p class="small">The data dictionary, model-result contract, source manifest, and reproduction-and-delivery guide preserve fields, hashes, and boundaries. New predictions must use a separate versioned directory.</p></div></div>
+<div class="callout"><b>Safe-use sentence.</b> Use the output to understand a hypothetical preparation scenario and its uncertainty. Do not treat it as official weather, a flood forecast, a loss probability, an emergency instruction, or proof of avoided damage.</div>
+<h2>Next evidence needed</h2><ul><li>Merchant interviews and voluntary comprehension results.</li><li>Verified public-availability times for a real decision replay.</li><li>Complete independent-season station reference and event coverage.</li><li>Human confirmation of final media, team identity, and application receipt.</li></ul>
+<footer><span>Meiyu Prepare · Project description</span><span>4</span></footer>
+</section>
+</body></html>

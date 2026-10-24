@@ -1,5 +1,7 @@
 # 梅雨有数
 
+[English documentation and materials](README.en.md)
+
 面向杭州与宁波小商户的降雨情景与搬货成本计算原型 · AI for Climate
 
 ## 当前入口

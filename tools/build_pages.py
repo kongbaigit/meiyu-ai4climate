@@ -17,6 +17,51 @@ def timestamp(seconds: float) -> str:
     return f"{hours:02}:{minutes:02}:{whole_seconds:02}.{milliseconds:03}"
 
 
+def english_release(root: Path, site: Path) -> dict:
+    """Copy the English edition beside the original Chinese routes."""
+    media = root / "media" / "en"
+    info = json.loads((media / "video-info.json").read_text(encoding="utf-8"))
+    video = media / info["video"]
+    with video.open("rb") as stream:
+        digest = hashlib.file_digest(stream, "sha256").hexdigest()
+    if digest != info["sha256"] or video.stat().st_size != info["bytes"]:
+        raise ValueError("English video differs from video-info.json")
+    required = [root / "en" / "index.html", root / "en" / "demo.html",
+                root / "en" / "materials" / "index.html", root / "templates" / "promo.en.html",
+                media / "cover.png", media / "preview.html",
+                root / "presentations" / "en" / "meiyu-prepare-pitch.pptx",
+                root / "presentations" / "en" / "meiyu-prepare-pitch.pdf"]
+    required += [root / "docs" / "en" / f"{name}.pdf" for name in
+                 ("project-description", "data-ai-statement", "90-day-validation-plan")]
+    for path in required:
+        if not path.is_file():
+            raise FileNotFoundError(path)
+    shutil.copytree(root / "en", site / "en", dirs_exist_ok=True)
+    shutil.copytree(root / "docs" / "en", site / "en" / "docs", dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
+    target = site / "en" / "presentation"
+    target.mkdir(parents=True, exist_ok=True)
+    for filename in ("meiyu-prepare-pitch.pptx", "meiyu-prepare-pitch.pdf", "speaker-notes.md"):
+        shutil.copyfile(root / "presentations" / "en" / filename, target / filename)
+    (site / "en" / "promo").mkdir(parents=True, exist_ok=True)
+    (site / "media" / "en").mkdir(parents=True, exist_ok=True)
+    for source, destination in {
+        video: site / "media" / "en" / info["video"],
+        media / "cover.png": site / "media" / "en" / "cover.png",
+        media / "preview.html": site / "en" / "promo" / "native.html",
+        root / "templates" / "promo.en.html": site / "en" / "promo" / "index.html",
+    }.items():
+        shutil.copyfile(source, destination)
+    storyboard = json.loads((media / "source" / "storyboard.json").read_text(encoding="utf-8"))
+    captions = ["WEBVTT", ""]
+    for number, cue in enumerate(storyboard["text_cues"], 1):
+        if not 0 <= cue["start"] < cue["end"] <= info["duration_seconds"]:
+            raise ValueError("English caption time is outside the video")
+        captions.extend([str(number), f"{timestamp(cue['start'])} --> {timestamp(cue['end'])}", cue["text"], ""])
+    (site / "media" / "en" / "captions.vtt").write_text("\n".join(captions), encoding="utf-8", newline="\n")
+    return {"video_bytes": info["bytes"], "video_sha256": digest, "duration_seconds": info["duration_seconds"]}
+
+
 def build_pages(root: Path) -> dict:
     root = root.resolve(strict=True)
     latest = root / "media" / "latest"
@@ -59,8 +104,11 @@ def build_pages(root: Path) -> dict:
         shutil.copyfile(source, target)
     (site / "media" / "promo-full.vtt").write_text("\n".join(captions), encoding="utf-8", newline="\n")
     (site / ".nojekyll").touch()
-    return {"site": str(site), "video_bytes": info["bytes"], "video_sha256": digest,
-            "duration_seconds": info["duration_seconds"], "captions": len(storyboard["text_cues"])}
+    result = {"site": str(site), "video_bytes": info["bytes"], "video_sha256": digest,
+              "duration_seconds": info["duration_seconds"], "captions": len(storyboard["text_cues"])}
+    if (root / "en" / "index.html").is_file():
+        result["english"] = english_release(root, site)
+    return result
 
 
 if __name__ == "__main__":

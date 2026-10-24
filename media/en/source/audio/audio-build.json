@@ -1,0 +1,28 @@
+{
+  "source": "../../latest/source/audio/original_music.mp3",
+  "start": 6.764338247871896,
+  "end": 93.83100491453855,
+  "duration": 87.06666666666666,
+  "original_speed_and_pitch": true,
+  "looped": false,
+  "target_lufs": -17,
+  "target_true_peak_db": -2,
+  "measurement": {
+    "input_i": "-15.11",
+    "input_tp": "0.56",
+    "input_lra": "1.00",
+    "input_thresh": "-25.11",
+    "output_i": "-16.97",
+    "output_tp": "-2.00",
+    "output_lra": "0.80",
+    "output_thresh": "-26.98",
+    "normalization_type": "dynamic",
+    "target_offset": "-0.03"
+  },
+  "master": "audio/music_master.flac",
+  "playback": "audio/music_playback.mp3",
+  "artist": "Eric Matyas",
+  "title": "Young Visionaries",
+  "license": "Soundimage International Public License",
+  "license_url": "https://soundimage.org/sample-page/"
+}

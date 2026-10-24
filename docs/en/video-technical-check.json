@@ -1,0 +1,72 @@
+{
+  "language": "en",
+  "video_path": "media/en/meiyu-prepare-en.mp4",
+  "sha256": "0958cc924e5a767dbb94abbb2de0ee17f56a0b855595cebe75f2f9a3208f35ba",
+  "bytes": 9853172,
+  "duration_seconds": 87.06666666666666,
+  "video": {
+    "present": true,
+    "index": 0,
+    "codec_name": "h264",
+    "width": 1920,
+    "height": 1080,
+    "duration_seconds": 87.066667,
+    "frame_count": 2612,
+    "frame_count_source": "nb_read_frames",
+    "frame_rate": {
+      "numerator": 30,
+      "denominator": 1,
+      "decimal": 30.0,
+      "text": "30/1"
+    },
+    "frame_rate_source": "avg_frame_rate",
+    "r_frame_rate": "30/1",
+    "avg_frame_rate": "30/1"
+  },
+  "audio": {
+    "stream_count": 1,
+    "present": true,
+    "first_duration_seconds": 87.066,
+    "streams": [
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "duration_seconds": 87.066,
+        "sample_rate": "48000",
+        "channels": 2
+      }
+    ]
+  },
+  "full_decode": true,
+  "specification_checks": {
+    "duration": "passed",
+    "width": "passed",
+    "height": "passed",
+    "fps": "passed"
+  },
+  "native_pipeline": "Canvas / Three.js / GSAP -> VideoFrame -> WebCodecs H.264 -> high-quality H.264 web optimization / AAC mux",
+  "web_delivery_crf": 18,
+  "screenshots_used_in_production": false,
+  "voiceover": false,
+  "visual_review": "Passed independent inspection of the actual encoded frames, scene transitions, cost states, English typography and visible music attribution.",
+  "subjective_listening": "Not claimed. The selected licensed music has technical signal checks only.",
+  "music": {
+    "title": "Young Visionaries",
+    "artist": "Eric Matyas",
+    "source_url": "https://soundimage.org/techno/",
+    "license_name": "Soundimage International Public License",
+    "license_url": "https://soundimage.org/sample-page/",
+    "attribution": "Music by Eric Matyas / www.soundimage.org"
+  },
+  "frozen_forecast_capture_utc": "2026-10-19T11:22:46Z",
+  "hypothetical_cost_example": {
+    "probability": 0.6,
+    "relocation_cost": 80,
+    "conditional_loss_if_kept": 1000,
+    "conditional_loss_after_move": 100,
+    "expected_keep": 600,
+    "expected_relocate": 140,
+    "difference": 460,
+    "currency": "CNY"
+  }
+}

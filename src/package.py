@@ -28,6 +28,7 @@ ALLOWED_TOP_LEVEL_FILES = frozenset(
         "demo.html",
         "index.html",
         "README.md",
+        "README.en.md",
         "LICENSE",
         "requirements.txt",
         "requirements-decision.txt",
@@ -54,6 +55,8 @@ ALLOWED_TOP_LEVEL_DIRECTORIES = frozenset(
         "media",
         "templates",
         "tools",
+        "en",
+        "presentations",
         ".streamlit",
     }
 )

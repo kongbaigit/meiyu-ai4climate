@@ -15,6 +15,16 @@ UTC = timezone.utc
 NOW = datetime(2026, 10, 19, 23, tzinfo=UTC)
 
 
+@pytest.fixture
+def frozen_view_clock(monkeypatch: pytest.MonkeyPatch) -> None:
+    class FrozenDateTime(datetime):
+        @classmethod
+        def now(cls, tz: timezone | None = None) -> datetime:
+            return NOW if tz is not None else NOW.replace(tzinfo=None)
+
+    monkeypatch.setattr(view, "datetime", FrozenDateTime)
+
+
 def _window(start: datetime | None = None, **overrides: Any) -> dict[str, Any]:
     start = start or datetime(2026, 10, 21, tzinfo=UTC)
     value: dict[str, Any] = {
@@ -172,13 +182,15 @@ class _FakeStreamlit:
         self.downloads.append({"label": label, "data": data, **kwargs})
 
 
-def test_render_uses_selected_city_and_confirmation_gates_move_result(monkeypatch: pytest.MonkeyPatch):
+def test_render_uses_selected_city_and_confirmation_gates_move_result(
+    monkeypatch: pytest.MonkeyPatch, frozen_view_clock: None
+):
     fake = _FakeStreamlit(confirmed=False)
     calls: list[tuple[str, bool, bool]] = []
 
     def fake_weather(root: Path, location: str, *, refresh: bool, force: bool) -> dict[str, Any]:
         calls.append((location, refresh, force))
-        return {"status": "fresh", "snapshot": _snapshot(location, fetched=datetime.now(UTC)), "error": None}
+        return {"status": "fresh", "snapshot": _snapshot(location, fetched=NOW), "error": None}
 
     monkeypatch.setattr(view, "st", fake)
     monkeypatch.setattr(view, "get_weather", fake_weather)
@@ -204,11 +216,13 @@ def test_render_uses_selected_city_and_confirmation_gates_move_result(monkeypatc
     assert not any(key in fake.session_state for key in old_confirmation_keys)
 
 
-def test_partial_snapshot_can_use_a_complete_future_window(monkeypatch: pytest.MonkeyPatch):
+def test_partial_snapshot_can_use_a_complete_future_window(
+    monkeypatch: pytest.MonkeyPatch, frozen_view_clock: None
+):
     fake = _FakeStreamlit(confirmed=True)
 
     def fake_weather(root: Path, location: str, *, refresh: bool, force: bool) -> dict[str, Any]:
-        return {"status": "partial", "snapshot": _snapshot(location, fetched=datetime.now(UTC)), "error": None}
+        return {"status": "partial", "snapshot": _snapshot(location, fetched=NOW), "error": None}
 
     monkeypatch.setattr(view, "st", fake)
     monkeypatch.setattr(view, "get_weather", fake_weather)

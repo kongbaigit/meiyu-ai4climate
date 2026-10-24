@@ -1,0 +1,10 @@
+{
+  "path": "preview.html",
+  "bytes": 4582526,
+  "sha256": "2cca68352d6f749716f341b37ccd71ea34d410b8e04b5fdb1104ba12b71fd792",
+  "duration": 87.06666666666666,
+  "self_contained": true,
+  "external_media_dependencies": [],
+  "shared_assets": "../../latest/source/",
+  "language": "en"
+}
